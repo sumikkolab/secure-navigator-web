@@ -58,7 +58,20 @@ SecureNavigator operates 100% offline. It does not connect to any external serve
 
 ## Screenshots
 
-> Screenshots coming soon.
+### Assessment Result Summary
+![Assessment Result Summary](manual/images/en/result-summary.png)
+
+### Attack Scenario Resilience / Improvement Roadmap
+![Attack Scenarios and Roadmap](manual/images/en/attack-scenarios.png)
+
+### Framework Compliance (NIST CSF 2.0)
+![NIST CSF Compliance](manual/images/en/framework-csf.png)
+
+### ATT&CK Technique Coverage (Pro)
+![ATT&CK Matrix](manual/images/en/attack-view-matrix.png)
+
+### Report Preview (Pro)
+![Report Preview](manual/images/en/report-preview.png)
 
 ## Links
 
