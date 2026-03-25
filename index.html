@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecureNavigator — Offline security assessment from the attacker's perspective</title>
+<meta name="description" content="SecureNavigator analyzes your security posture from an attacker's perspective and generates actionable improvement roadmaps. Completely offline.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Yu Gothic UI', sans-serif; line-height: 1.7; color: #1a1a2e; background: #f8f9fa; }
+
+  /* Hero */
+  .hero { background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 50%, #3b82f6 100%); color: #fff; padding: 60px 24px 48px; text-align: center; position: relative; }
+  .hero h1 { font-size: 2.2rem; margin-bottom: 8px; letter-spacing: 0.5px; }
+  .hero .tagline { font-size: 1.15rem; color: #bfdbfe; margin-bottom: 12px; font-weight: 500; }
+  .hero .sub-tagline { font-size: 0.95rem; color: #93c5fd; margin-bottom: 28px; max-width: 620px; margin-left: auto; margin-right: auto; }
+  .hero .badge { display: inline-block; background: #60a5fa; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; margin: 0 4px 8px; }
+  .hero-buttons { margin-top: 24px; }
+  .hero-buttons a { display: inline-block; margin: 6px 8px; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+  .hero-buttons .manual-btn { background: transparent; color: #bfdbfe; border: 1px solid #93c5fd; }
+  .hero-buttons .nav-btn { background: rgba(255,255,255,0.12); color: #e0e7ff; border: 1px solid rgba(255,255,255,0.25); }
+
+  /* Lang toggle */
+  .lang-toggle-hero { position: absolute; top: 12px; right: 24px; }
+  .lang-toggle-hero button { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 5px 14px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
+  .lang-toggle-hero button.active { background: rgba(255,255,255,0.3); }
+
+  /* Container */
+  .container { max-width: 800px; margin: 0 auto; padding: 40px 24px; }
+  h2 { font-size: 1.25rem; margin: 36px 0 12px; color: #1e3a5f; border-left: 3px solid #3b82f6; padding-left: 10px; }
+
+  /* Sections */
+  .section-ja, .section-en { display: none; }
+  .section-ja.visible, .section-en.visible { display: block; }
+
+  /* Why section */
+  .why-section { background: #eff6ff; border-radius: 8px; padding: 24px; margin: 28px 0; }
+  .why-section h2 { margin-top: 0; }
+  .why-section p { font-size: 0.92rem; color: #374151; margin-bottom: 10px; }
+  .why-section strong { color: #1e3a5f; }
+
+  /* Feature cards */
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  @media (max-width: 600px) { .features { grid-template-columns: 1fr; } }
+  .feature-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; }
+  .feature-card h3 { font-size: 0.95rem; color: #1e3a5f; margin-bottom: 6px; }
+  .feature-card p { font-size: 0.85rem; color: #475569; }
+  .pro-badge { background: #f59e0b; color: #fff; font-size: 0.7rem; padding: 1px 6px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
+
+  ul { padding-left: 20px; margin: 8px 0 16px; }
+  li { font-size: 0.9rem; margin-bottom: 4px; }
+
+  /* Comparison table */
+  .compare-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.85rem; }
+  .compare-table th, .compare-table td { border: 1px solid #e2e8f0; padding: 8px 12px; text-align: center; }
+  .compare-table th { background: #f1f5f9; color: #1e3a5f; font-weight: 600; }
+  .compare-table td { background: #fff; }
+  .compare-table td:first-child { text-align: left; font-weight: 500; }
+  .compare-note { font-size: 0.82rem; color: #64748b; margin-top: 8px; font-style: italic; }
+
+  /* Privacy note */
+  .privacy-note { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin: 24px 0; }
+  .privacy-note p { font-size: 0.9rem; color: #166534; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 24px; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; margin-top: 40px; }
+  .footer a { color: #3b82f6; text-decoration: none; margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="lang-toggle-hero">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+  <h1>SecureNavigator</h1>
+  <div class="section-ja visible">
+    <p class="tagline">セキュリティ対策を攻撃視点とガイドラインで整理し、レポートへ変換する</p>
+    <p class="sub-tagline">想定攻撃に対する防御上の弱点を分析し、改善の優先順位を整理。説明・報告・改善検討に使えるレポートを生成するオフライン評価ツール。</p>
+  </div>
+  <div class="section-en">
+    <p class="tagline">Organize security posture by attack scenarios and guidelines, then convert to reports</p>
+    <p class="sub-tagline">Analyze defensive gaps against likely attacks, prioritize improvements, and generate reports for communication and planning. Completely offline.</p>
+  </div>
+  <div>
+    <span class="badge">100% Offline</span>
+    <span class="badge">MITRE ATT&CK</span>
+    <span class="badge">NIST CSF 2.0</span>
+    <span class="badge">日本語 / English</span>
+  </div>
+  <div class="hero-buttons">
+    <div class="section-ja visible">
+      <a href="#compare-ja" class="nav-btn">Free / Pro 比較</a>
+      <a href="manual/index.html" class="manual-btn">マニュアル</a>
+      <a href="support.html" class="nav-btn">サポート</a>
+    </div>
+    <div class="section-en">
+      <a href="#compare-en" class="nav-btn">Free vs. Pro</a>
+      <a href="manual/index.html?lang=en" class="manual-btn">User Manual</a>
+      <a href="support.html?lang=en" class="nav-btn">Support</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ===== 日本語 ===== -->
+  <div class="section-ja visible">
+
+    <div class="why-section">
+      <h2>「対策の有無」ではなく「攻撃が通るかどうか」を整理する</h2>
+      <p>多くのセキュリティ評価ツールは「対策が存在するか」を確認します。しかし実務で必要なのは<strong>「想定される攻撃に対して、どこが弱いのか」</strong>の整理です。</p>
+      <p>SecureNavigator は、MITRE ATT&CK の攻撃手法を基に、<strong>対策の弱点 → 攻撃の進行経路 → 想定被害</strong>をルールベースで分析。防御上の弱点と優先すべき対策を整理し、報告・改善検討に使えるレポートを生成します。</p>
+    </div>
+
+    <h2>主な機能</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>攻撃シナリオシミュレーション</h3>
+        <p>6つの代表的な攻撃シナリオに対して、組織の防御力をステップごとに分析します。</p>
+      </div>
+      <div class="feature-card">
+        <h3>ガイドライン適合状況</h3>
+        <p>IPA 中小企業向けガイドライン、経産省サイバーセキュリティ経営ガイドライン、NIST CSF 2.0 に対する適合率を整理します。</p>
+      </div>
+      <div class="feature-card">
+        <h3>改善ロードマップ</h3>
+        <p>診断結果から「今すぐ」「短期」「中期」「長期」の4段階で優先対策を提示します。</p>
+      </div>
+      <div class="feature-card">
+        <h3>レポート・資料出力 <span class="pro-badge">Pro</span></h3>
+        <p>診断結果を PDF / HTML レポートとして出力。説明・報告・改善検討の資料として活用できます。</p>
+      </div>
+      <div class="feature-card">
+        <h3>高度な分析セクション <span class="pro-badge">Pro</span></h3>
+        <p>成熟度詳細、原因と対策テーブルなど、より深い分析を確認できます。</p>
+      </div>
+      <div class="feature-card">
+        <h3>日本語 / 英語切替</h3>
+        <p>診断・レポートともに日本語と英語に対応しています。</p>
+      </div>
+    </div>
+
+    <h2 id="compare-ja">Free / Pro 比較</h2>
+    <table class="compare-table">
+      <thead>
+        <tr><th>機能</th><th>Free</th><th>Pro</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>診断（全問回答）</td><td>✓</td><td>✓</td></tr>
+        <tr><td>攻撃シナリオシミュレーション</td><td>✓</td><td>✓</td></tr>
+        <tr><td>改善ロードマップ（画面表示）</td><td>✓</td><td>✓</td></tr>
+        <tr><td>IPA 中小企業向けガイドライン適合評価</td><td>✓</td><td>✓</td></tr>
+        <tr><td>経産省サイバーセキュリティ経営ガイドライン適合評価</td><td>—</td><td>✓</td></tr>
+        <tr><td>NIST CSF 2.0 適合評価</td><td>—</td><td>✓</td></tr>
+        <tr><td>高度な分析（成熟度詳細・原因と対策）</td><td>—</td><td>✓</td></tr>
+        <tr><td>ATT&CK テクニック詳細分析</td><td>—</td><td>✓</td></tr>
+        <tr><td>PDF レポート出力</td><td>—</td><td>✓</td></tr>
+        <tr><td>HTML / Markdown レポート出力</td><td>—</td><td>✓</td></tr>
+        <tr><td>ヒアリングシート出力（Excel）</td><td>—</td><td>✓</td></tr>
+        <tr><td>日本語 / 英語切替</td><td>✓</td><td>✓</td></tr>
+        <tr><td>セッション保存数</td><td>1件</td><td>3件</td></tr>
+      </tbody>
+    </table>
+    <p class="compare-note">※ 診断結果のルールベース分析は参考情報であり、セキュリティ状態の完全性や特定目的への適合性を保証するものではありません。</p>
+
+    <div class="privacy-note">
+      <p>🔒 <strong>完全オフライン動作</strong> — SecureNavigator は外部にデータを送信しません。診断データは利用者のローカル環境にのみ保存されます。</p>
+    </div>
+
+    <h2>画面イメージ</h2>
+    <div class="screenshots">
+      <p style="color:#64748b; font-size:0.9rem;">スクリーンショットは準備中です。</p>
+    </div>
+
+    <h2>動作要件</h2>
+    <ul>
+      <li>Windows 10 Version 2004 以降 / Windows 11</li>
+      <li>WebView2 Runtime（PDF 出力に必要。通常は OS に同梱済み）</li>
+      <li>ディスク容量: 約 50 MB</li>
+      <li>インターネット接続: 不要（完全オフライン動作）</li>
+    </ul>
+
+  </div>
+
+  <!-- ===== English ===== -->
+  <div class="section-en">
+
+    <div class="why-section">
+      <h2>Not "Do you have controls?" but "Where are the gaps?"</h2>
+      <p>Most security assessment tools verify whether controls exist. But what practitioners need is: <strong>"Against likely attacks, where are we weak?"</strong></p>
+      <p>SecureNavigator uses MITRE ATT&CK techniques to analyze <strong>control gaps → potential attack paths → estimated impact</strong> through rule-based assessment. It organizes defensive weaknesses and improvement priorities into reports you can use for communication and planning.</p>
+    </div>
+
+    <h2>Key Features</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Attack Scenario Simulation</h3>
+        <p>Analyze your defenses against 6 representative attack scenarios, step by step.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Framework Compliance</h3>
+        <p>Evaluate conformance to IPA SME Guidelines (Japan), METI Cybersecurity Guidelines (Japan), and NIST CSF 2.0.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Improvement Roadmap</h3>
+        <p>Get prioritized recommendations across 4 time horizons: Immediate, Short-term, Mid-term, and Long-term.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Report &amp; Document Export <span class="pro-badge">Pro</span></h3>
+        <p>Export assessment results as PDF / HTML reports for management communication and improvement planning.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Advanced Analysis <span class="pro-badge">Pro</span></h3>
+        <p>Review detailed maturity breakdown, cause-and-action tables, and deeper analysis.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Japanese / English</h3>
+        <p>Both assessment and reports support Japanese and English.</p>
+      </div>
+    </div>
+
+    <h2 id="compare-en">Free vs. Pro</h2>
+    <table class="compare-table">
+      <thead>
+        <tr><th>Feature</th><th>Free</th><th>Pro</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Full Assessment (all questions)</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Attack Scenario Simulation</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Improvement Roadmap (on-screen)</td><td>✓</td><td>✓</td></tr>
+        <tr><td>IPA SME Guidelines Compliance (Japan)</td><td>✓</td><td>✓</td></tr>
+        <tr><td>METI Cybersecurity Guidelines Compliance (Japan)</td><td>—</td><td>✓</td></tr>
+        <tr><td>NIST CSF 2.0 Compliance</td><td>—</td><td>✓</td></tr>
+        <tr><td>Advanced Analysis (maturity detail, cause &amp; action)</td><td>—</td><td>✓</td></tr>
+        <tr><td>ATT&CK Technique Detail Analysis</td><td>—</td><td>✓</td></tr>
+        <tr><td>PDF Report Export</td><td>—</td><td>✓</td></tr>
+        <tr><td>HTML / Markdown Report Export</td><td>—</td><td>✓</td></tr>
+        <tr><td>Hearing Sheet Export (Excel)</td><td>—</td><td>✓</td></tr>
+        <tr><td>Japanese / English</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Saved Sessions</td><td>1</td><td>3</td></tr>
+      </tbody>
+    </table>
+    <p class="compare-note">* Assessment results are rule-based reference information and do not guarantee completeness or fitness for any particular purpose.</p>
+
+    <div class="privacy-note">
+      <p>🔒 <strong>Fully Offline</strong> — SecureNavigator never transmits your data. All assessment data is stored only on your local device.</p>
+    </div>
+
+    <h2>Screenshots</h2>
+    <div class="screenshots">
+      <p style="color:#64748b; font-size:0.9rem;">Screenshots coming soon.</p>
+    </div>
+
+    <h2>System Requirements</h2>
+    <ul>
+      <li>Windows 10 Version 2004 or later / Windows 11</li>
+      <li>WebView2 Runtime (required for PDF export; usually bundled with the OS)</li>
+      <li>Disk space: approx. 50 MB</li>
+      <li>Internet: Not required (fully offline operation)</li>
+    </ul>
+
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 Sumikko Lab. All rights reserved.</p>
+  <p style="margin-top: 8px;">
+    <span class="section-ja visible" style="display:inline">
+      <a href="privacy-policy.html">プライバシーポリシー</a> |
+      <a href="terms-of-use.html">利用規約</a> |
+      <a href="manual/index.html">マニュアル</a> |
+      <a href="support.html">サポート</a>
+    </span>
+    <span class="section-en" style="display:none">
+      <a href="privacy-policy.html?lang=en">Privacy Policy</a> |
+      <a href="terms-of-use.html?lang=en">Terms of Use</a> |
+      <a href="manual/index.html?lang=en">Manual</a> |
+      <a href="support.html?lang=en">Support</a>
+    </span>
+  </p>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.section-ja').forEach(el => el.classList.toggle('visible', lang === 'ja'));
+  document.querySelectorAll('.section-en').forEach(el => el.classList.toggle('visible', lang === 'en'));
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  // footer
+  document.querySelectorAll('.footer .section-ja').forEach(el => el.style.display = lang === 'ja' ? 'inline' : 'none');
+  document.querySelectorAll('.footer .section-en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
+}
+if (new URLSearchParams(window.location.search).get('lang') === 'en') switchLang('en');
+</script>
+</body>
+</html>

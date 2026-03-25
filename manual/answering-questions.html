@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 3: Answering Questions — SecureNavigator | SumikkoLab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">目次</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>Chapter 3: 質問への回答</h1>
+    <p class="subtitle">カード UI、回答選択肢、ナビゲーション、表示モード</p>
+
+    <h2>ヒアリング画面の概要</h2>
+    <p>ヒアリング画面では、組織のセキュリティ対策に関する質問が表示されます。質問はテーマごとにグループ化されており、各テーマ内の質問に順番に回答していきます。すべての質問に回答すると、結果画面に進むことができます。</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="ヒアリング画面。カード形式で質問が表示され、4つの回答ボタンが並んでいる">
+      <div class="caption">ヒアリング画面（フォーカスモード）</div>
+    </div>
+
+    <h2>カード UI</h2>
+    <p>各質問はカード形式で表示されます。カードには質問テキスト、所属するテーマ名、および回答選択肢が含まれます。現在の質問に回答すると、自動的に次の質問に進みます。</p>
+
+    <h2>回答選択肢</h2>
+    <p>各質問に対して、以下の4つの選択肢から回答を選びます。</p>
+    <table class="manual-table">
+      <tr><th>選択肢</th><th>意味</th></tr>
+      <tr><td>実施済み</td><td>対策が組織内で導入・運用されている。</td></tr>
+      <tr><td>一部実施</td><td>対策は部分的に導入されているが、全体には行き渡っていない。</td></tr>
+      <tr><td>未実施</td><td>対策が導入されていない。</td></tr>
+      <tr><td>未確認</td><td>対策の実施状況が不明。確認が必要な場合に選択。</td></tr>
+    </table>
+
+    <div class="info-box">
+      <p>「未確認」を選択した質問は、後から見直すために自動的にマークされます。すべての質問に回答した後で、未確認の項目だけを絞り込んで確認できます。</p>
+    </div>
+
+    <h2>ナビゲーション</h2>
+    <p>ヒアリング画面では、以下の方法で質問間を移動できます。</p>
+    <ul>
+      <li><strong>前へ / 次へボタン</strong>: 画面下部のボタンで、前の質問や次の質問に移動します。</li>
+      <li><strong>アウトラインパネル</strong>: 画面左側にテーマと質問の一覧が表示されます。任意の質問をクリックして直接ジャンプできます。回答済みの質問にはチェックマークが表示されます。</li>
+      <li><strong>進捗バー</strong>: 画面上部に全体の進捗率が表示されます。</li>
+    </ul>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="アウトラインパネルが展開された状態。テーマごとに質問一覧が表示され、回答済みの項目にチェックマークが付いている">
+      <div class="caption">アウトラインパネルと進捗表示</div>
+    </div>
+
+    <h2>表示モード</h2>
+    <p>ヒアリング画面には2つの表示モードがあります。</p>
+
+    <h3>フォーカスモード</h3>
+    <p>1つの質問だけを画面中央に大きく表示するモードです。集中して1問ずつ回答したい場合に適しています。初期設定ではこのモードが選択されています。</p>
+
+    <h3>リストモード</h3>
+    <p>同じテーマ内の質問を一覧形式で表示するモードです。複数の質問をまとめて確認・回答したい場合や、回答の全体像を把握したい場合に便利です。</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="リストモードの表示。複数の質問がテーマごとにリスト形式で表示され、各質問の横に回答選択肢がある">
+      <div class="caption">リストモード表示</div>
+    </div>
+
+    <h2>「あとで見直す」機能</h2>
+    <p>回答に自信がない質問や、後で担当者に確認したい質問には、「あとで見直す」マークを付けることができます。マークされた質問はアウトラインパネルで目印が表示され、フィルタリングで絞り込むことも可能です。</p>
+    <p>「未確認」を選択した質問には自動的にこのマークが付与されます。手動でマークを付けたり外したりすることもできます。</p>
+
+    <div class="chapter-nav">
+      <a href="creating-assessment.html">&larr; 前へ: 診断の作成</a>
+      <a href="viewing-results.html">次へ: 結果の確認 &rarr;</a>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Table of Contents</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>Chapter 3: Answering Questions</h1>
+    <p class="subtitle">Card UI, answer options, navigation, display modes</p>
+
+    <h2>Hearing Screen Overview</h2>
+    <p>The Hearing screen presents questions about your organization's security controls. Questions are grouped by theme, and you answer each question within a theme sequentially. Once all questions are answered, you can proceed to the Results screen.</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Hearing screen showing a question in card format with four answer buttons below it">
+      <div class="caption">Hearing screen (Focus mode)</div>
+    </div>
+
+    <h2>Card UI</h2>
+    <p>Each question is displayed as a card. The card contains the question text, the theme it belongs to, and the answer options. When you answer the current question, the next question is automatically displayed.</p>
+
+    <h2>Answer Options</h2>
+    <p>For each question, select one of the following four options.</p>
+    <table class="manual-table">
+      <tr><th>Option</th><th>Meaning</th></tr>
+      <tr><td>Implemented</td><td>The control has been deployed and is operational within the organization.</td></tr>
+      <tr><td>Partial</td><td>The control is partially in place but not fully deployed across the organization.</td></tr>
+      <tr><td>Not Implemented</td><td>The control has not been deployed.</td></tr>
+      <tr><td>Unverified</td><td>The implementation status is unknown and requires verification.</td></tr>
+    </table>
+
+    <div class="info-box">
+      <p>Questions answered as "Unverified" are automatically flagged for review. After answering all questions, you can filter to show only unverified items.</p>
+    </div>
+
+    <h2>Navigation</h2>
+    <p>The Hearing screen provides multiple ways to navigate between questions.</p>
+    <ul>
+      <li><strong>Back / Next buttons</strong>: Use the buttons at the bottom of the screen to move to the previous or next question.</li>
+      <li><strong>Outline panel</strong>: A list of themes and questions is shown on the left side. Click any question to jump directly to it. Answered questions display a check mark.</li>
+      <li><strong>Progress bar</strong>: The overall completion percentage is shown at the top of the screen.</li>
+    </ul>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Outline panel expanded showing question list grouped by theme, with check marks on answered items">
+      <div class="caption">Outline panel and progress indicator</div>
+    </div>
+
+    <h2>Display Modes</h2>
+    <p>The Hearing screen offers two display modes.</p>
+
+    <h3>Focus Mode</h3>
+    <p>Displays one question at a time in the center of the screen. This mode is ideal for concentrating on each question individually. It is selected by default.</p>
+
+    <h3>List Mode</h3>
+    <p>Displays all questions within the same theme in a list format. This mode is useful when you want to review or answer multiple questions at once, or get an overview of all responses within a theme.</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="List mode view showing multiple questions in a list format with answer options beside each question">
+      <div class="caption">List mode view</div>
+    </div>
+
+    <h2>Review Later</h2>
+    <p>You can flag questions you are unsure about or need to confirm with a colleague by marking them for review later. Flagged questions are indicated in the outline panel and can be filtered for quick access.</p>
+    <p>Questions answered as "Unverified" are automatically flagged. You can also manually add or remove the flag on any question.</p>
+
+    <div class="chapter-nav">
+      <a href="creating-assessment.html?lang=en">&larr; Previous: Creating an Assessment</a>
+      <a href="viewing-results.html?lang=en">Next: Viewing Results &rarr;</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 SumikkoLab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>

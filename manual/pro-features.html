@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 8: Free vs Pro Features — SecureNavigator | SumikkoLab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">目次</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>Chapter 8: Free と Pro の違い</h1>
+    <p class="subtitle">機能比較、Pro で追加される機能、アップグレード方法</p>
+
+    <h2>機能比較表</h2>
+    <table class="manual-table">
+      <tr><th>機能</th><th>Free</th><th>Pro</th></tr>
+      <tr><td>全質問への回答（ヒアリング）</td><td>対応</td><td>対応</td></tr>
+      <tr><td>攻撃シナリオシミュレーション（6シナリオ）</td><td>対応</td><td>対応</td></tr>
+      <tr><td>改善ロードマップ（画面表示）</td><td>対応</td><td>対応</td></tr>
+      <tr><td>弱点マップ（テーマ x レイヤー）</td><td>対応</td><td>対応</td></tr>
+      <tr><td>IPA 中小企業向けガイドライン適合評価</td><td>対応</td><td>対応</td></tr>
+      <tr><td>経産省サイバーセキュリティ経営ガイドライン適合評価</td><td>---</td><td>対応</td></tr>
+      <tr><td>NIST CSF 2.0 適合評価</td><td>---</td><td>対応</td></tr>
+      <tr><td>ATT&CK テクニック詳細分析</td><td>---</td><td>対応</td></tr>
+      <tr><td>ATT&CK マトリクスビュー</td><td>---</td><td>対応</td></tr>
+      <tr><td>完全レポートプレビュー</td><td>簡易版のみ</td><td>対応</td></tr>
+      <tr><td>PDF レポートエクスポート</td><td>---</td><td>対応</td></tr>
+      <tr><td>セッション保存数</td><td>1件</td><td>3件</td></tr>
+    </table>
+
+    <h2>Pro で追加される主な機能</h2>
+
+    <h3>追加フレームワーク適合評価</h3>
+    <p>Free 版では IPA 中小企業向けガイドラインのみ対応していますが、Pro 版では経済産業省のサイバーセキュリティ経営ガイドラインおよび NIST Cybersecurity Framework 2.0 への適合評価も利用できます。これにより、国際基準や国内の経営層向けガイドラインへの対応状況を確認できます。</p>
+
+    <h3>ATT&CK テクニック詳細と マトリクスビュー</h3>
+    <p>Pro 版では、各攻撃ステップに関連する MITRE ATT&CK テクニックの ID、名称、説明を確認でき、さらに ATT&CK マトリクス形式で防御のカバレッジを一覧できます。セキュリティ専門家やコンサルタントが詳細な分析を行う際に有用です。</p>
+
+    <h3>完全レポートと PDF エクスポート</h3>
+    <p>Pro 版では、経営層や監査向けのコンサルタントレベルの完全レポートを生成し、PDF ファイルとしてエクスポートできます。レポートには弱点分析、攻撃シナリオ評価、フレームワーク適合状況、改善ロードマップが網羅的に含まれます。</p>
+
+    <h3>複数セッション</h3>
+    <p>Free 版では診断セッションを1件のみ保存できますが、Pro 版では最大3件まで保存可能です。複数の組織や部門の評価を並行して管理したり、時期を変えて同じ組織を再評価して改善の進捗を確認する際に便利です。</p>
+
+    <h2>アップグレード方法</h2>
+    <ol>
+      <li>Microsoft Store で SecureNavigator のページを開きます。</li>
+      <li>Pro 版のアドオンまたはサブスクリプションを購入します。</li>
+      <li>購入が完了すると、次回起動時に自動的に Pro 版として認識されます。</li>
+    </ol>
+
+    <div class="info-box">
+      <p>Pro へのアップグレード後、既存の Free 版の診断データはそのまま引き継がれます。追加のフレームワーク評価やレポート機能がすぐに利用可能になります。</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="settings.html">&larr; 前へ: 設定</a>
+      <a href="troubleshooting.html">次へ: トラブルシューティング &rarr;</a>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Table of Contents</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>Chapter 8: Free vs Pro Features</h1>
+    <p class="subtitle">Feature comparison, what Pro adds, how to upgrade</p>
+
+    <h2>Feature Comparison Table</h2>
+    <table class="manual-table">
+      <tr><th>Feature</th><th>Free</th><th>Pro</th></tr>
+      <tr><td>Full assessment (all questions)</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Attack scenario simulation (6 scenarios)</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Improvement roadmap (on-screen)</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Weakness map (Theme x Layer)</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>IPA SME Guidelines compliance</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>METI Cybersecurity Management Guidelines compliance</td><td>---</td><td>Yes</td></tr>
+      <tr><td>NIST CSF 2.0 compliance</td><td>---</td><td>Yes</td></tr>
+      <tr><td>ATT&CK technique detail analysis</td><td>---</td><td>Yes</td></tr>
+      <tr><td>ATT&CK matrix view</td><td>---</td><td>Yes</td></tr>
+      <tr><td>Full report preview</td><td>Simplified only</td><td>Yes</td></tr>
+      <tr><td>PDF report export</td><td>---</td><td>Yes</td></tr>
+      <tr><td>Saved sessions</td><td>1</td><td>3</td></tr>
+    </table>
+
+    <h2>What Pro Adds</h2>
+
+    <h3>Additional Framework Compliance</h3>
+    <p>While the Free edition supports only the IPA SME Guidelines, Pro adds compliance evaluation against the METI Cybersecurity Management Guidelines and NIST Cybersecurity Framework 2.0. This lets you check alignment with international standards and domestic executive-level guidelines.</p>
+
+    <h3>ATT&CK Technique Detail and Matrix View</h3>
+    <p>Pro provides MITRE ATT&CK technique IDs, names, and descriptions for each attack step, plus a matrix view showing defense coverage at a glance. This is valuable for security professionals and consultants performing detailed analysis.</p>
+
+    <h3>Full Report and PDF Export</h3>
+    <p>Pro generates a consultant-grade full report for executives and auditors, exportable as a PDF file. The report comprehensively covers weakness analysis, attack scenario evaluation, framework compliance, and the improvement roadmap.</p>
+
+    <h3>Multiple Sessions</h3>
+    <p>The Free edition allows saving 1 assessment session, while Pro supports up to 3. This is useful for evaluating multiple organizations or departments in parallel, or re-assessing the same organization at different times to track improvement progress.</p>
+
+    <h2>How to Upgrade</h2>
+    <ol>
+      <li>Open the SecureNavigator page in the Microsoft Store.</li>
+      <li>Purchase the Pro add-on or subscription.</li>
+      <li>After purchase, the app will automatically recognize your Pro license on the next launch.</li>
+    </ol>
+
+    <div class="info-box">
+      <p>After upgrading to Pro, your existing Free edition assessment data is fully preserved. Additional framework evaluation and report features become available immediately.</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="settings.html?lang=en">&larr; Previous: Settings</a>
+      <a href="troubleshooting.html?lang=en">Next: Troubleshooting &rarr;</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 SumikkoLab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>

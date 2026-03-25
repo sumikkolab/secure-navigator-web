@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 6: Report Preview — SecureNavigator | SumikkoLab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">目次</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>Chapter 6: レポートプレビュー</h1>
+    <p class="subtitle">簡易レポート・完全レポート、PDF エクスポート</p>
+
+    <h2>レポート画面の概要</h2>
+    <p>レポート画面では、診断結果をレポート形式でプレビューできます。レポートの内容はエディション（Free / Pro）によって異なります。</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="レポートプレビュー画面。レポートのプレビューが表示され、上部に PDF エクスポートボタンがある">
+      <div class="caption">レポートプレビュー画面</div>
+    </div>
+
+    <h2>簡易レポート（Free 版）</h2>
+    <p>Free 版では、診断結果の概要を簡易レポートとして画面上でプレビューできます。簡易レポートには以下の内容が含まれます。</p>
+    <ul>
+      <li>診断の概要（診断日時、回答数、総合スコア）</li>
+      <li>優先対策の推奨（上位の改善項目）</li>
+      <li>攻撃シナリオの概要評価</li>
+      <li>IPA ガイドラインへの適合率</li>
+    </ul>
+
+    <div class="info-box">
+      <p>Free 版では画面上でのプレビューのみ利用可能です。PDF ファイルとしてエクスポートするには Pro 版が必要です。</p>
+    </div>
+
+    <h2>完全レポート（Pro 版） <span class="pro-badge">Pro</span></h2>
+    <p>Pro 版では、経営層や監査対応に使用できるコンサルタントレベルの完全レポートを生成できます。完全レポートには、簡易レポートの内容に加えて以下が含まれます。</p>
+    <ul>
+      <li>弱点マップの詳細分析</li>
+      <li>各攻撃シナリオのステップごとの防御評価</li>
+      <li>ATT&CK テクニックとの対応関係</li>
+      <li>経産省サイバーセキュリティ経営ガイドラインへの適合状況</li>
+      <li>NIST CSF 2.0 への適合状況</li>
+      <li>改善ロードマップの全体像</li>
+    </ul>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="完全レポートのプレビュー。複数セクションにわたる詳細なレポートが表示されている">
+      <div class="caption">完全レポートのプレビュー（Pro 版）</div>
+    </div>
+
+    <h2>PDF エクスポート <span class="pro-badge">Pro</span></h2>
+    <p>Pro 版では、レポートを PDF ファイルとしてエクスポートできます。エクスポートされた PDF は、経営層への報告、社内会議での共有、監査対応の資料として利用できます。</p>
+    <ol>
+      <li>レポートプレビュー画面で内容を確認します。</li>
+      <li>画面上部の「PDF エクスポート」ボタンをクリックします。</li>
+      <li>保存先を選択すると、PDF ファイルが生成されます。</li>
+    </ol>
+
+    <div class="warn-box">
+      <p>PDF エクスポートには WebView2 Runtime が必要です。通常は Windows に同梱されていますが、環境によっては別途インストールが必要な場合があります。詳しくは<a href="troubleshooting.html">トラブルシューティング</a>を参照してください。</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="attack-view.html">&larr; 前へ: 攻撃ビュー</a>
+      <a href="settings.html">次へ: 設定 &rarr;</a>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Table of Contents</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>Chapter 6: Report Preview</h1>
+    <p class="subtitle">Simplified and full reports, PDF export</p>
+
+    <h2>Report Screen Overview</h2>
+    <p>The Report screen lets you preview assessment results in a report format. The report content varies depending on your edition (Free or Pro).</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Report preview screen showing the report content with a PDF export button at the top">
+      <div class="caption">Report preview screen</div>
+    </div>
+
+    <h2>Simplified Report (Free Edition)</h2>
+    <p>The Free edition provides an on-screen preview of the assessment results as a simplified report. The simplified report includes:</p>
+    <ul>
+      <li>Assessment overview (date, number of responses, overall score)</li>
+      <li>Priority recommendations (top improvement items)</li>
+      <li>Attack scenario overview ratings</li>
+      <li>IPA Guidelines compliance rate</li>
+    </ul>
+
+    <div class="info-box">
+      <p>The Free edition only supports on-screen preview. Exporting as a PDF file requires the Pro edition.</p>
+    </div>
+
+    <h2>Full Report (Pro Edition) <span class="pro-badge">Pro</span></h2>
+    <p>The Pro edition generates a consultant-grade full report suitable for executive presentations and audit responses. In addition to the simplified report content, the full report includes:</p>
+    <ul>
+      <li>Detailed weakness map analysis</li>
+      <li>Step-by-step defense evaluation for each attack scenario</li>
+      <li>ATT&CK technique mappings</li>
+      <li>METI Cybersecurity Management Guidelines compliance</li>
+      <li>NIST CSF 2.0 compliance</li>
+      <li>Complete improvement roadmap</li>
+    </ul>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Full report preview showing a detailed multi-section report">
+      <div class="caption">Full report preview (Pro edition)</div>
+    </div>
+
+    <h2>PDF Export <span class="pro-badge">Pro</span></h2>
+    <p>The Pro edition allows you to export reports as PDF files. The exported PDF can be used for executive presentations, internal meetings, and audit documentation.</p>
+    <ol>
+      <li>Review the content on the Report preview screen.</li>
+      <li>Click the "PDF Export" button at the top of the screen.</li>
+      <li>Select a save location and the PDF file will be generated.</li>
+    </ol>
+
+    <div class="warn-box">
+      <p>PDF export requires the WebView2 Runtime. It is typically bundled with Windows, but may need to be installed separately in some environments. See <a href="troubleshooting.html?lang=en">Troubleshooting</a> for details.</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="attack-view.html?lang=en">&larr; Previous: Attack View</a>
+      <a href="settings.html?lang=en">Next: Settings &rarr;</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 SumikkoLab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>

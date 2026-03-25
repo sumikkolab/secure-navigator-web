@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 9: Troubleshooting — SecureNavigator | SumikkoLab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">目次</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>Chapter 9: トラブルシューティング</h1>
+    <p class="subtitle">よくある問題と対処方法</p>
+
+    <h2>WebView2 Runtime が見つからない</h2>
+    <p><strong>症状</strong>: アプリ起動時に「WebView2 Runtime が見つかりません」というエラーが表示される。または PDF エクスポート時にエラーが発生する。</p>
+    <p><strong>原因</strong>: SecureNavigator のレポートプレビューと PDF エクスポートには Microsoft Edge WebView2 Runtime が必要です。Windows 11 および最新の Windows 10 には通常プリインストールされていますが、一部の企業管理環境や古い環境では未インストールの場合があります。</p>
+    <p><strong>対処方法</strong>:</p>
+    <ol>
+      <li><a href="https://developer.microsoft.com/ja-jp/microsoft-edge/webview2/" target="_blank">Microsoft 公式サイト</a>から WebView2 Runtime の「Evergreen Bootstrapper」をダウンロードします。</li>
+      <li>ダウンロードしたインストーラーを実行してインストールします。</li>
+      <li>SecureNavigator を再起動します。</li>
+    </ol>
+
+    <div class="info-box">
+      <p>企業管理下の PC で自身でのインストールが制限されている場合は、IT 管理者に WebView2 Runtime の配布を依頼してください。</p>
+    </div>
+
+    <h2>セッション上限に達した</h2>
+    <p><strong>症状</strong>: 新しい診断を作成しようとすると「セッション数の上限に達しています」と表示される。</p>
+    <p><strong>原因</strong>: Free 版では1件、Pro 版では3件のセッション保存上限があります。</p>
+    <p><strong>対処方法</strong>:</p>
+    <ul>
+      <li>不要になった既存のセッションをホーム画面から削除してから、新しい診断を作成してください。</li>
+      <li>より多くのセッションが必要な場合は、Pro 版へのアップグレードを検討してください。Pro 版では最大3件まで保存できます。</li>
+    </ul>
+
+    <div class="warn-box">
+      <p>セッションを削除すると、そのセッションの回答データと結果はすべて失われます。削除前に必要なデータがないか確認してください。</p>
+    </div>
+
+    <h2>利用規約の再同意を求められる</h2>
+    <p><strong>症状</strong>: アプリ起動時に、以前同意済みの利用規約への再同意を求められる。</p>
+    <p><strong>原因</strong>: アプリの更新により利用規約の内容が変更された場合、新しいバージョンの規約への同意が必要になります。これは正常な動作です。</p>
+    <p><strong>対処方法</strong>:</p>
+    <ol>
+      <li>更新された利用規約の内容を確認します。</li>
+      <li>「同意する」をクリックして続行します。</li>
+    </ol>
+    <p>既存の診断データへの影響はありません。同意後、通常通り利用を再開できます。</p>
+
+    <h2>データの保存場所と初期化</h2>
+    <p><strong>データの保存場所</strong>: SecureNavigator のすべてのデータ（セッション、設定、利用規約の同意状態）は以下のフォルダに保存されます。</p>
+    <pre><code>%LocalAppData%\SecureNavigator\</code></pre>
+    <p>通常は <code>C:\Users\[ユーザー名]\AppData\Local\SecureNavigator\</code> に該当します。</p>
+
+    <p><strong>データの初期化</strong>: すべてのデータを初期状態に戻したい場合は、上記フォルダを削除してからアプリを再起動してください。利用規約への再同意が求められ、すべてのセッションと設定がリセットされます。</p>
+
+    <div class="warn-box">
+      <p>データフォルダの削除はすべての診断データの消失を意味します。この操作は取り消せません。必要に応じて、事前にフォルダのバックアップをとってください。</p>
+    </div>
+
+    <h2>アプリが起動しない・クラッシュする</h2>
+    <p><strong>対処方法</strong>:</p>
+    <ol>
+      <li><strong>OS 要件の確認</strong>: Windows 10 Version 2004 以降、または Windows 11 であることを確認してください。</li>
+      <li><strong>WebView2 Runtime の確認</strong>: 上記の手順で WebView2 Runtime がインストールされているか確認してください。</li>
+      <li><strong>アプリの修復</strong>: Windows の「設定 &gt; アプリ &gt; インストール済みアプリ」から SecureNavigator を見つけ、「詳細オプション」から「修復」を実行してください。</li>
+      <li><strong>再インストール</strong>: 修復で解決しない場合は、アプリをアンインストールしてから Microsoft Store から再インストールしてください。</li>
+    </ol>
+
+    <div class="info-box">
+      <p>上記の方法で解決しない場合は、<a href="../support.html">サポートページ</a>から OS バージョン、アプリバージョン、エラーメッセージを添えてお問い合わせください。</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="pro-features.html">&larr; 前へ: Free と Pro の違い</a>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Table of Contents</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>Chapter 9: Troubleshooting</h1>
+    <p class="subtitle">Common issues and solutions</p>
+
+    <h2>WebView2 Runtime Not Found</h2>
+    <p><strong>Symptom</strong>: An error "WebView2 Runtime not found" appears on startup, or an error occurs during PDF export.</p>
+    <p><strong>Cause</strong>: SecureNavigator's report preview and PDF export features require the Microsoft Edge WebView2 Runtime. It is usually pre-installed on Windows 11 and recent Windows 10 builds, but may not be present in some enterprise-managed or older environments.</p>
+    <p><strong>Solution</strong>:</p>
+    <ol>
+      <li>Download the "Evergreen Bootstrapper" from the <a href="https://developer.microsoft.com/en-us/microsoft-edge/webview2/" target="_blank">Microsoft official site</a>.</li>
+      <li>Run the downloaded installer to install the runtime.</li>
+      <li>Restart SecureNavigator.</li>
+    </ol>
+
+    <div class="info-box">
+      <p>If software installation is restricted on your enterprise-managed PC, ask your IT administrator to deploy the WebView2 Runtime.</p>
+    </div>
+
+    <h2>Session Limit Reached</h2>
+    <p><strong>Symptom</strong>: A message "Session limit reached" appears when attempting to create a new assessment.</p>
+    <p><strong>Cause</strong>: The Free edition allows 1 saved session, and the Pro edition allows up to 3.</p>
+    <p><strong>Solution</strong>:</p>
+    <ul>
+      <li>Delete an existing session you no longer need from the Home screen, then create a new assessment.</li>
+      <li>If you need more sessions, consider upgrading to the Pro edition, which supports up to 3 saved sessions.</li>
+    </ul>
+
+    <div class="warn-box">
+      <p>Deleting a session permanently removes all of its response data and results. Verify that you no longer need the data before deleting.</p>
+    </div>
+
+    <h2>Terms Re-acceptance Required</h2>
+    <p><strong>Symptom</strong>: The app asks you to accept terms of use that you have previously accepted.</p>
+    <p><strong>Cause</strong>: When an app update includes changes to the terms of use, acceptance of the new version is required. This is expected behavior.</p>
+    <p><strong>Solution</strong>:</p>
+    <ol>
+      <li>Review the updated terms of use.</li>
+      <li>Click "Accept" to continue.</li>
+    </ol>
+    <p>Your existing assessment data is not affected. After accepting, you can resume normal usage.</p>
+
+    <h2>Data Location and Reset</h2>
+    <p><strong>Data location</strong>: All SecureNavigator data (sessions, settings, terms acceptance state) is stored in the following folder:</p>
+    <pre><code>%LocalAppData%\SecureNavigator\</code></pre>
+    <p>This typically resolves to <code>C:\Users\[username]\AppData\Local\SecureNavigator\</code>.</p>
+
+    <p><strong>Data reset</strong>: To reset all data to the initial state, delete the above folder and restart the application. You will be asked to accept the terms of use again, and all sessions and settings will be reset.</p>
+
+    <div class="warn-box">
+      <p>Deleting the data folder permanently removes all assessment data. This action cannot be undone. Consider backing up the folder before proceeding if needed.</p>
+    </div>
+
+    <h2>App Does Not Start or Crashes</h2>
+    <p><strong>Solution</strong>:</p>
+    <ol>
+      <li><strong>Check OS requirements</strong>: Verify that you are running Windows 10 Version 2004 or later, or Windows 11.</li>
+      <li><strong>Check WebView2 Runtime</strong>: Follow the steps above to verify the WebView2 Runtime is installed.</li>
+      <li><strong>Repair the app</strong>: Go to Windows "Settings &gt; Apps &gt; Installed apps", find SecureNavigator, click "Advanced options", and run "Repair".</li>
+      <li><strong>Reinstall</strong>: If repair does not resolve the issue, uninstall the app and reinstall it from the Microsoft Store.</li>
+    </ol>
+
+    <div class="info-box">
+      <p>If none of the above resolves the issue, please contact us through the <a href="../support.html?lang=en">Support page</a> with your OS version, app version, and error message.</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="pro-features.html?lang=en">&larr; Previous: Free vs Pro Features</a>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 SumikkoLab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>

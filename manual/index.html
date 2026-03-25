@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Manual — SecureNavigator | SumikkoLab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="../index.html">製品情報</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>SecureNavigator ユーザーマニュアル</h1>
+    <p class="subtitle">v1.0 — 最終更新: 2026-03-25</p>
+
+    <h2>目次</h2>
+    <ol>
+      <li><a href="getting-started.html">はじめに</a><br><span style="font-size:0.85rem;color:#64748b;">インストール・初回起動・利用規約の同意</span></li>
+      <li><a href="creating-assessment.html">診断の作成</a><br><span style="font-size:0.85rem;color:#64748b;">クイック診断とプロファイル診断、言語選択、セッション管理</span></li>
+      <li><a href="answering-questions.html">質問への回答</a><br><span style="font-size:0.85rem;color:#64748b;">カード UI、回答選択肢、ナビゲーション、表示モード</span></li>
+      <li><a href="viewing-results.html">結果の確認</a><br><span style="font-size:0.85rem;color:#64748b;">結果サマリ、フレームワーク適合、攻撃シナリオ、改善ロードマップ</span></li>
+      <li><a href="attack-view.html">攻撃ビュー</a><br><span style="font-size:0.85rem;color:#64748b;">シナリオ詳細、攻撃パス、ATT&CK マトリクス</span></li>
+      <li><a href="report-preview.html">レポートプレビュー</a><br><span style="font-size:0.85rem;color:#64748b;">簡易レポート・完全レポート、PDF エクスポート</span></li>
+      <li><a href="settings.html">設定</a><br><span style="font-size:0.85rem;color:#64748b;">言語切替、ライセンス、外部リンク</span></li>
+      <li><a href="pro-features.html">Free と Pro の違い</a><br><span style="font-size:0.85rem;color:#64748b;">機能比較、Pro で追加される機能、アップグレード方法</span></li>
+      <li><a href="troubleshooting.html">トラブルシューティング</a><br><span style="font-size:0.85rem;color:#64748b;">よくある問題と対処方法</span></li>
+    </ol>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="../index.html?lang=en">Product Info</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>SecureNavigator User Manual</h1>
+    <p class="subtitle">v1.0 — Last updated: March 25, 2026</p>
+
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="getting-started.html?lang=en">Getting Started</a><br><span style="font-size:0.85rem;color:#64748b;">Installation, first launch, and terms acceptance</span></li>
+      <li><a href="creating-assessment.html?lang=en">Creating an Assessment</a><br><span style="font-size:0.85rem;color:#64748b;">Quick diagnosis vs profile diagnosis, language, session management</span></li>
+      <li><a href="answering-questions.html?lang=en">Answering Questions</a><br><span style="font-size:0.85rem;color:#64748b;">Card UI, answer options, navigation, display modes</span></li>
+      <li><a href="viewing-results.html?lang=en">Viewing Results</a><br><span style="font-size:0.85rem;color:#64748b;">Result summary, framework compliance, attack scenarios, improvement roadmap</span></li>
+      <li><a href="attack-view.html?lang=en">Attack View</a><br><span style="font-size:0.85rem;color:#64748b;">Scenario detail, attack paths, ATT&CK matrix</span></li>
+      <li><a href="report-preview.html?lang=en">Report Preview</a><br><span style="font-size:0.85rem;color:#64748b;">Simplified and full reports, PDF export</span></li>
+      <li><a href="settings.html?lang=en">Settings</a><br><span style="font-size:0.85rem;color:#64748b;">Language switching, license, external links</span></li>
+      <li><a href="pro-features.html?lang=en">Free vs Pro Features</a><br><span style="font-size:0.85rem;color:#64748b;">Feature comparison, what Pro adds, how to upgrade</span></li>
+      <li><a href="troubleshooting.html?lang=en">Troubleshooting</a><br><span style="font-size:0.85rem;color:#64748b;">Common issues and solutions</span></li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 SumikkoLab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 7: Settings — SecureNavigator | SumikkoLab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">目次</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>Chapter 7: 設定</h1>
+    <p class="subtitle">言語切替、ライセンス、外部リンク</p>
+
+    <h2>設定画面の概要</h2>
+    <p>設定画面では、アプリケーションの動作に関する各種設定を管理できます。ナビゲーションバーの「設定」アイコンからアクセスします。</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="設定画面。言語設定、ライセンス情報、外部リンクのセクションが表示されている">
+      <div class="caption">設定画面</div>
+    </div>
+
+    <h2>言語の切替</h2>
+    <p>SecureNavigator は日本語と英語の2言語に対応しています。設定画面の言語セクションで表示言語を切り替えることができます。</p>
+    <p>言語を変更すると、以下が即座に切り替わります。</p>
+    <ul>
+      <li>アプリケーション全体の UI テキスト</li>
+      <li>ヒアリング画面の質問文と回答選択肢</li>
+      <li>結果画面の表示内容</li>
+      <li>レポートの出力言語</li>
+    </ul>
+
+    <div class="info-box">
+      <p>言語の切替は診断データに影響しません。言語を変更しても、回答済みのデータや診断結果はそのまま保持されます。</p>
+    </div>
+
+    <h2>ライセンス表示</h2>
+    <p>設定画面のライセンスセクションでは、現在のエディション（Free または Pro）とライセンスの状態を確認できます。</p>
+    <table class="manual-table">
+      <tr><th>表示項目</th><th>内容</th></tr>
+      <tr><td>エディション</td><td>Free または Pro</td></tr>
+      <tr><td>ライセンス状態</td><td>有効、期限切れ、未認証など</td></tr>
+      <tr><td>アプリバージョン</td><td>インストールされている SecureNavigator のバージョン番号</td></tr>
+    </table>
+    <p>Pro 版へのアップグレードは Microsoft Store から行います。詳しくは <a href="pro-features.html">Free と Pro の違い</a> を参照してください。</p>
+
+    <h2>外部リンク</h2>
+    <p>設定画面には以下の外部ページへのリンクが用意されています。</p>
+    <ul>
+      <li><strong>プライバシーポリシー</strong>: データの取り扱いに関する方針を確認できます。</li>
+      <li><strong>利用規約</strong>: 利用条件と免責事項を確認できます。</li>
+      <li><strong>製品サイト</strong>: SecureNavigator の製品情報ページを開きます。</li>
+      <li><strong>サポート</strong>: お問い合わせ方法と FAQ を確認できます。</li>
+    </ul>
+
+    <h2>開発モード</h2>
+    <p>設定画面には、テスト用途の開発モードが含まれる場合があります。開発モードでは、デモ用のサンプルデータを使った診断結果の確認や、デバッグ情報の表示が可能です。</p>
+
+    <div class="warn-box">
+      <p>開発モードは開発・検証用途の機能です。通常のご利用では使用する必要はありません。開発モードで生成されたデータは、実際のセキュリティ評価としての正確性を保証しません。</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="report-preview.html">&larr; 前へ: レポートプレビュー</a>
+      <a href="pro-features.html">次へ: Free と Pro の違い &rarr;</a>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Table of Contents</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>Chapter 7: Settings</h1>
+    <p class="subtitle">Language switching, license, external links</p>
+
+    <h2>Settings Screen Overview</h2>
+    <p>The Settings screen lets you manage various application settings. Access it from the "Settings" icon in the navigation bar.</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Settings screen showing language settings, license information, and external links sections">
+      <div class="caption">Settings screen</div>
+    </div>
+
+    <h2>Language Switching</h2>
+    <p>SecureNavigator supports two languages: Japanese and English. You can switch the display language in the language section of the Settings screen.</p>
+    <p>Changing the language immediately updates:</p>
+    <ul>
+      <li>All application UI text</li>
+      <li>Hearing screen question text and answer options</li>
+      <li>Results screen content</li>
+      <li>Report output language</li>
+    </ul>
+
+    <div class="info-box">
+      <p>Language switching does not affect assessment data. Your answered data and assessment results are preserved when changing languages.</p>
+    </div>
+
+    <h2>License Display</h2>
+    <p>The license section of the Settings screen shows your current edition (Free or Pro) and license status.</p>
+    <table class="manual-table">
+      <tr><th>Item</th><th>Description</th></tr>
+      <tr><td>Edition</td><td>Free or Pro</td></tr>
+      <tr><td>License Status</td><td>Active, Expired, Not Authenticated, etc.</td></tr>
+      <tr><td>App Version</td><td>The installed SecureNavigator version number</td></tr>
+    </table>
+    <p>Upgrading to Pro is done through the Microsoft Store. See <a href="pro-features.html?lang=en">Free vs Pro Features</a> for details.</p>
+
+    <h2>External Links</h2>
+    <p>The Settings screen provides links to the following external pages:</p>
+    <ul>
+      <li><strong>Privacy Policy</strong>: Review how your data is handled.</li>
+      <li><strong>Terms of Use</strong>: Review usage terms and disclaimers.</li>
+      <li><strong>Product Site</strong>: Opens the SecureNavigator product information page.</li>
+      <li><strong>Support</strong>: Access contact information and FAQ.</li>
+    </ul>
+
+    <h2>Development Mode</h2>
+    <p>The Settings screen may include a development mode for testing purposes. Development mode allows you to view assessment results using sample demo data and display debug information.</p>
+
+    <div class="warn-box">
+      <p>Development mode is intended for development and testing purposes. It is not needed for regular use. Data generated in development mode does not guarantee accuracy as a real security assessment.</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="report-preview.html?lang=en">&larr; Previous: Report Preview</a>
+      <a href="pro-features.html?lang=en">Next: Free vs Pro Features &rarr;</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 SumikkoLab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>

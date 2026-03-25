@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 2: Creating an Assessment — SecureNavigator | SumikkoLab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">目次</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>Chapter 2: 診断の作成</h1>
+    <p class="subtitle">クイック診断とプロファイル診断、言語選択、セッション管理</p>
+
+    <h2>診断モードの選択</h2>
+    <p>SecureNavigator では、2つの診断モードから選択して新しい診断を開始できます。</p>
+
+    <h3>クイック診断</h3>
+    <p>組織のプロファイル情報を入力せずに、すぐに質問への回答を開始するモードです。短時間で概要レベルの評価を得たい場合に適しています。プロファイル情報がないため、業種や規模に応じた重み付けは適用されません。</p>
+
+    <h3>プロファイル診断</h3>
+    <p>業種、従業員規模、IT 環境の概要などのプロファイル情報を事前に入力してから診断を開始するモードです。入力されたプロファイルに基づいて、質問の重み付けや推奨事項がより組織に適した内容に調整されます。より精度の高い診断結果を得たい場合に推奨されます。</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="診断モード選択画面。クイック診断とプロファイル診断の2つの選択肢が表示されている">
+      <div class="caption">診断モードの選択画面</div>
+    </div>
+
+    <h2>言語の選択</h2>
+    <p>診断を作成する際に、質問文と回答選択肢の表示言語を選択できます。現在、日本語と英語に対応しています。言語の選択は診断データ自体には影響しません。診断の途中でも設定画面から言語を変更できます。</p>
+
+    <h2>セッション管理</h2>
+    <p>SecureNavigator では、診断の進捗をセッションとして保存できます。</p>
+    <table class="manual-table">
+      <tr><th>エディション</th><th>保存可能なセッション数</th></tr>
+      <tr><td>Free</td><td>1 件</td></tr>
+      <tr><td>Pro</td><td>3 件</td></tr>
+    </table>
+    <p>新しいセッションを作成すると、既存のセッションは保持されたまま、新しい診断が開始されます。Free 版でセッション数の上限に達した場合は、既存のセッションを削除してから新しい診断を作成する必要があります。</p>
+
+    <div class="info-box">
+      <p>セッションはアプリを閉じても保存されます。次回起動時にホーム画面から前回の続きを再開できます。</p>
+    </div>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="ホーム画面のセッション一覧。セッション名、進捗率、最終更新日が表示されている">
+      <div class="caption">セッション一覧と再開</div>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="getting-started.html">&larr; 前へ: はじめに</a>
+      <a href="answering-questions.html">次へ: 質問への回答 &rarr;</a>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Table of Contents</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>Chapter 2: Creating an Assessment</h1>
+    <p class="subtitle">Quick diagnosis vs profile diagnosis, language selection, session management</p>
+
+    <h2>Choosing a Diagnosis Mode</h2>
+    <p>SecureNavigator offers two diagnosis modes to start a new assessment.</p>
+
+    <h3>Quick Diagnosis</h3>
+    <p>Start answering questions immediately without entering organizational profile information. This mode is suited for getting a high-level evaluation in a short time. Because no profile data is provided, industry- and size-based weighting is not applied.</p>
+
+    <h3>Profile Diagnosis</h3>
+    <p>Enter profile information such as industry, employee count, and IT environment overview before starting the assessment. The questions and recommendations are adjusted to better fit your organization based on the provided profile. This mode is recommended for a more accurate assessment.</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Diagnosis mode selection screen showing Quick Diagnosis and Profile Diagnosis options">
+      <div class="caption">Diagnosis mode selection screen</div>
+    </div>
+
+    <h2>Language Selection</h2>
+    <p>When creating an assessment, you can choose the display language for questions and answer options. Currently, Japanese and English are supported. Language selection does not affect the assessment data itself. You can also change the language mid-assessment from the Settings screen.</p>
+
+    <h2>Session Management</h2>
+    <p>SecureNavigator saves assessment progress as sessions.</p>
+    <table class="manual-table">
+      <tr><th>Edition</th><th>Maximum Saved Sessions</th></tr>
+      <tr><td>Free</td><td>1</td></tr>
+      <tr><td>Pro</td><td>3</td></tr>
+    </table>
+    <p>Creating a new session keeps existing sessions intact and starts a fresh assessment. If you reach the session limit on the Free edition, you must delete an existing session before creating a new one.</p>
+
+    <div class="info-box">
+      <p>Sessions are preserved when you close the application. You can resume your previous assessment from the Home screen on the next launch.</p>
+    </div>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Home screen session list showing session name, progress percentage, and last updated date">
+      <div class="caption">Session list and resume</div>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="getting-started.html?lang=en">&larr; Previous: Getting Started</a>
+      <a href="answering-questions.html?lang=en">Next: Answering Questions &rarr;</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 SumikkoLab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>

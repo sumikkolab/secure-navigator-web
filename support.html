@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — SecureNavigator | SumikkoLab</title>
+<meta name="description" content="SecureNavigator サポート情報・お問い合わせ">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Yu Gothic UI', sans-serif; line-height: 1.7; color: #1a1a2e; background: #f8f9fa; }
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 24px; }
+  h1 { font-size: 1.5rem; margin-bottom: 8px; color: #0f172a; }
+  .subtitle { font-size: 0.85rem; color: #64748b; margin-bottom: 32px; }
+  h2 { font-size: 1.1rem; margin: 28px 0 8px; color: #1e3a5f; border-left: 3px solid #3b82f6; padding-left: 10px; }
+  p, li { font-size: 0.95rem; margin-bottom: 8px; }
+  ul { padding-left: 20px; margin-bottom: 12px; }
+  .lang-toggle { text-align: right; margin-bottom: 20px; }
+  .lang-toggle button { background: #e2e8f0; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
+  .lang-toggle button.active { background: #3b82f6; color: #fff; }
+  .section-ja, .section-en { display: none; }
+  .section-ja.visible, .section-en.visible { display: block; }
+  .contact-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 16px 0; }
+  .contact-card p { margin-bottom: 4px; }
+  .contact-card a { color: #3b82f6; text-decoration: none; }
+  .contact-card a:hover { text-decoration: underline; }
+  .info-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .info-box p { font-size: 0.9rem; color: #1e40af; margin-bottom: 0; }
+  .privacy-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .privacy-box p { font-size: 0.9rem; color: #166534; margin-bottom: 0; }
+  .step-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 12px 0; }
+  .step-box h3 { font-size: 1rem; color: #1e3a5f; margin-bottom: 8px; }
+  .step-box p { font-size: 0.9rem; }
+  .nav-links { margin-bottom: 24px; font-size: 0.85rem; }
+  .nav-links a { color: #3b82f6; text-decoration: none; margin-right: 16px; }
+  .nav-links a:hover { text-decoration: underline; }
+  .footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+  code { background: #f1f5f9; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">製品情報</a>
+      <a href="privacy-policy.html">プライバシーポリシー</a>
+      <a href="manual/">マニュアル</a>
+    </div>
+
+    <h1>サポート</h1>
+    <p class="subtitle">SecureNavigator — SumikkoLab</p>
+
+    <h2>お問い合わせ</h2>
+    <div class="contact-card">
+      <p><strong>メール:</strong> <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a></p>
+      <p><strong>対応言語:</strong> 日本語・英語</p>
+    </div>
+
+    <h2>不具合の報告方法</h2>
+    <p>不具合が発生した場合は、以下の情報をメールに記載してお送りください。</p>
+
+    <div class="step-box">
+      <h3>Step 1: 状況を記録</h3>
+      <p>問題が発生した際の<strong>再現手順</strong>、<strong>期待する動作</strong>、<strong>実際の動作</strong>を記録してください。可能であればスクリーンショットもお送りください。</p>
+    </div>
+
+    <div class="step-box">
+      <h3>Step 2: 環境情報を確認</h3>
+      <p>以下の情報をご確認ください。</p>
+      <ul>
+        <li>OS バージョン（Windows 10 / 11）</li>
+        <li>SecureNavigator のエディション（Free / Pro）</li>
+        <li>表示言語（日本語 / English）</li>
+        <li>エラーメッセージ（表示された場合）</li>
+      </ul>
+    </div>
+
+    <div class="step-box">
+      <h3>Step 3: メールで送信</h3>
+      <p>上記の情報を <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a> にお送りください。</p>
+    </div>
+
+    <div class="privacy-box">
+      <p><strong>プライバシー:</strong> SecureNavigator は完全オフラインで動作し、診断データを外部に送信しません。サポートのためにスクリーンショット等をお送りいただく場合は、機密情報が含まれていないことをご確認ください。</p>
+    </div>
+
+    <h2>サポートデータの取り扱い</h2>
+    <p>不具合調査のために提供されたデータは、調査目的以外に使用せず、調査完了後速やかに破棄するよう努めます。</p>
+
+    <div class="info-box">
+      <p>本製品に関するサポートはベストエフォートで提供されます。応答時間および問題解決を保証するものではありません。</p>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Product Info</a>
+      <a href="privacy-policy.html?lang=en">Privacy Policy</a>
+      <a href="manual/?lang=en">Manual</a>
+    </div>
+
+    <h1>Support</h1>
+    <p class="subtitle">SecureNavigator — SumikkoLab</p>
+
+    <h2>Contact Us</h2>
+    <div class="contact-card">
+      <p><strong>Email:</strong> <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a></p>
+      <p><strong>Languages:</strong> Japanese, English</p>
+    </div>
+
+    <h2>How to Report Issues</h2>
+    <p>If you encounter a problem, please include the following information in your email.</p>
+
+    <div class="step-box">
+      <h3>Step 1: Document the Issue</h3>
+      <p>Record the <strong>reproduction steps</strong>, <strong>expected behavior</strong>, and <strong>actual behavior</strong>. If possible, include screenshots.</p>
+    </div>
+
+    <div class="step-box">
+      <h3>Step 2: Check Your Environment</h3>
+      <p>Please confirm the following:</p>
+      <ul>
+        <li>OS version (Windows 10 / 11)</li>
+        <li>SecureNavigator edition (Free / Pro)</li>
+        <li>Display language (Japanese / English)</li>
+        <li>Error message (if displayed)</li>
+      </ul>
+    </div>
+
+    <div class="step-box">
+      <h3>Step 3: Send via Email</h3>
+      <p>Send the above information to <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>.</p>
+    </div>
+
+    <div class="privacy-box">
+      <p><strong>Privacy:</strong> SecureNavigator operates entirely offline and does not transmit assessment data. If you send screenshots for support, please ensure they do not contain confidential information.</p>
+    </div>
+
+    <h2>Data Handling</h2>
+    <p>Data provided for investigation purposes will not be used for any other purpose and will be promptly deleted after the investigation is complete.</p>
+
+    <div class="info-box">
+      <p>Support for this product is provided on a best-effort basis. Response times and resolution are not guaranteed.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 SumikkoLab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com" style="color:#64748b;">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+if (new URLSearchParams(window.location.search).get('lang') === 'en') switchLang('en');
+</script>
+</body>
+</html>

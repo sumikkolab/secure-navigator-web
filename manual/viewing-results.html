@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 4: Viewing Results — SecureNavigator | SumikkoLab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">目次</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>Chapter 4: 結果の確認</h1>
+    <p class="subtitle">結果サマリ、フレームワーク適合、攻撃シナリオ、改善ロードマップ</p>
+
+    <h2>結果画面の概要</h2>
+    <p>すべての質問に回答すると、結果画面が利用可能になります。結果画面は複数のセクションで構成されており、組織のセキュリティ対策状況をさまざまな角度から確認できます。</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="結果画面の全体表示。上部にスコア、中央に弱点マップ、下部に攻撃シナリオと改善ロードマップが表示されている">
+      <div class="caption">結果画面の全体表示</div>
+    </div>
+
+    <h2>優先対策の推奨</h2>
+    <p>結果画面の上部には、最も優先度の高い改善項目が表示されます。これは診断結果から自動的に算出されたもので、攻撃の成功を防ぐために最も効果的な対策が提示されます。</p>
+
+    <h2>弱点マップ（テーマ x レイヤーマトリクス）</h2>
+    <p>弱点マップは、セキュリティ対策のテーマ（例: アクセス制御、ネットワーク防御、インシデント対応）と防御レイヤー（例: 予防、検知、対応）を掛け合わせたマトリクス形式で表示されます。</p>
+    <p>各セルは対策の充実度に応じて色分けされ、組織全体のセキュリティ対策のバランスと弱点を視覚的に把握できます。色が薄い（対策が手薄な）領域が、攻撃者にとって狙いやすいポイントです。</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="弱点マップ。テーマ名が行、防御レイヤーが列のマトリクスで、各セルが対策状況に応じて色分けされている">
+      <div class="caption">弱点マップ（テーマ x レイヤーマトリクス）</div>
+    </div>
+
+    <h2>攻撃シナリオテーブル</h2>
+    <p>SecureNavigator は6つの代表的な攻撃シナリオについて、各ステップでの防御成功率をシミュレーションします。テーブルには各シナリオの名称、攻撃ステップ数、防御の総合評価が表示されます。</p>
+    <p>各シナリオの行をクリックすると、攻撃ビュー画面に遷移し、ステップごとの詳細を確認できます。</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="攻撃シナリオテーブル。6つのシナリオが行として表示され、各行にシナリオ名と防御評価が記載されている">
+      <div class="caption">攻撃シナリオテーブル</div>
+    </div>
+
+    <h2>改善ロードマップ</h2>
+    <p>診断結果に基づき、改善施策を4つの時間軸で整理して表示します。</p>
+    <table class="manual-table">
+      <tr><th>時間軸</th><th>内容</th></tr>
+      <tr><td>今すぐ</td><td>既存リソースで即時対応可能な施策。コストをかけずに実行できる設定変更や運用ルールの整備など。</td></tr>
+      <tr><td>短期（1-3ヶ月）</td><td>比較的短期間で導入可能な施策。ツールの設定変更、ポリシーの策定・適用など。</td></tr>
+      <tr><td>中期（3-6ヶ月）</td><td>計画的な導入が必要な施策。新規ツールの検討・導入、体制の構築など。</td></tr>
+      <tr><td>長期（6ヶ月以上）</td><td>組織的な取り組みが必要な施策。セキュリティ文化の醸成、大規模な基盤整備など。</td></tr>
+    </table>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="改善ロードマップ。4つの時間軸ごとに推奨施策がカード形式で一覧表示されている">
+      <div class="caption">改善ロードマップ</div>
+    </div>
+
+    <h2>フレームワーク適合状況</h2>
+    <p>診断結果を各セキュリティフレームワーク・ガイドラインの要件に照らし合わせて、適合率を表示します。</p>
+    <table class="manual-table">
+      <tr><th>フレームワーク</th><th>対応エディション</th></tr>
+      <tr><td>IPA 中小企業の情報セキュリティ対策ガイドライン</td><td>Free / Pro</td></tr>
+      <tr><td>経済産業省 サイバーセキュリティ経営ガイドライン</td><td>Pro のみ</td></tr>
+      <tr><td>NIST Cybersecurity Framework 2.0</td><td>Pro のみ</td></tr>
+    </table>
+
+    <div class="info-box">
+      <p>フレームワーク適合状況は自己点検のための参考情報です。公的な認証や適合証明を意味するものではありません。</p>
+    </div>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="フレームワーク適合状況画面。各フレームワークの適合率がバーチャートで表示されている">
+      <div class="caption">フレームワーク適合状況</div>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="answering-questions.html">&larr; 前へ: 質問への回答</a>
+      <a href="attack-view.html">次へ: 攻撃ビュー &rarr;</a>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Table of Contents</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>Chapter 4: Viewing Results</h1>
+    <p class="subtitle">Result summary, framework compliance, attack scenarios, improvement roadmap</p>
+
+    <h2>Results Screen Overview</h2>
+    <p>Once all questions are answered, the Results screen becomes available. It consists of multiple sections that present your organization's security posture from different perspectives.</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Full results screen showing score at the top, weakness map in the center, and attack scenarios and improvement roadmap below">
+      <div class="caption">Results screen overview</div>
+    </div>
+
+    <h2>Priority Recommendations</h2>
+    <p>The top section of the Results screen highlights the highest-priority improvements. These are automatically calculated from the assessment results and represent the most effective controls for preventing attack success.</p>
+
+    <h2>Weakness Map (Theme x Layer Matrix)</h2>
+    <p>The weakness map is displayed as a matrix combining security themes (e.g., Access Control, Network Defense, Incident Response) and defense layers (e.g., Prevention, Detection, Response).</p>
+    <p>Each cell is color-coded based on the level of control implementation. This allows you to visually grasp the balance and gaps in your organization's security controls. Lightly colored areas (thin coverage) represent the points most vulnerable to attackers.</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Weakness map with theme names as rows and defense layers as columns, cells color-coded by implementation level">
+      <div class="caption">Weakness map (Theme x Layer matrix)</div>
+    </div>
+
+    <h2>Attack Scenarios Table</h2>
+    <p>SecureNavigator simulates 6 representative attack scenarios, evaluating the defense success rate at each step. The table shows each scenario's name, number of attack steps, and overall defense rating.</p>
+    <p>Click on any scenario row to navigate to the Attack View screen and examine step-by-step details.</p>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Attack scenarios table showing 6 scenarios as rows with scenario name and defense rating for each">
+      <div class="caption">Attack scenarios table</div>
+    </div>
+
+    <h2>Improvement Roadmap</h2>
+    <p>Based on the assessment results, improvement measures are organized across four time horizons.</p>
+    <table class="manual-table">
+      <tr><th>Time Horizon</th><th>Description</th></tr>
+      <tr><td>Immediate</td><td>Actions that can be taken right away with existing resources. Configuration changes and operational rule updates that require no additional cost.</td></tr>
+      <tr><td>Short-term (1-3 months)</td><td>Measures that can be implemented in a relatively short period. Tool configuration changes, policy drafting and enforcement.</td></tr>
+      <tr><td>Mid-term (3-6 months)</td><td>Measures requiring planned implementation. Evaluation and deployment of new tools, team structure building.</td></tr>
+      <tr><td>Long-term (6+ months)</td><td>Measures requiring organizational commitment. Building a security culture, large-scale infrastructure improvements.</td></tr>
+    </table>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Improvement roadmap with recommended actions displayed as cards under four time horizon categories">
+      <div class="caption">Improvement roadmap</div>
+    </div>
+
+    <h2>Framework Compliance</h2>
+    <p>Assessment results are mapped against the requirements of each security framework and guideline, displaying compliance rates.</p>
+    <table class="manual-table">
+      <tr><th>Framework</th><th>Available In</th></tr>
+      <tr><td>IPA SME Information Security Guidelines</td><td>Free / Pro</td></tr>
+      <tr><td>METI Cybersecurity Management Guidelines</td><td>Pro only</td></tr>
+      <tr><td>NIST Cybersecurity Framework 2.0</td><td>Pro only</td></tr>
+    </table>
+
+    <div class="info-box">
+      <p>Framework compliance displays are reference information for self-assessment. They do not constitute official certification or conformity attestation.</p>
+    </div>
+
+    <div class="screenshot">
+      <img src="images/placeholder.png" alt="Framework compliance screen showing compliance rates as bar charts for each framework">
+      <div class="caption">Framework compliance</div>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="answering-questions.html?lang=en">&larr; Previous: Answering Questions</a>
+      <a href="attack-view.html?lang=en">Next: Attack View &rarr;</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 SumikkoLab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>
