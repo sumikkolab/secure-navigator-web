@@ -21,9 +21,9 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 
 - **Fully Offline** — All assessment data stays on the local device. No external communication, no telemetry, no cloud dependency.
 - **Attack Scenario Analysis** — Six attack scenarios based on MITRE ATT&CK techniques analyze how attacks progress through an organization's defenses step by step.
-- **3 Compliance Frameworks** — Evaluate conformance to IPA SME Guidelines, METI Cybersecurity Management Guidelines, and NIST CSF 2.0. [Pro]
+- **Multiple Compliance Frameworks** — IPA SME Guidelines available in Free. METI Cybersecurity Guidelines and NIST CSF 2.0 available in Pro.
 - **Improvement Roadmap** — Prioritized recommendations across four time horizons: Immediate, Short-term, Mid-term, and Long-term.
-- **Report Export** — Export assessment results as PDF or HTML reports for reporting and improvement planning. [Pro]
+- **Report Export** — Export assessment results as PDF, HTML, or Markdown reports. [Pro]
 - **Advanced Analysis** — Detailed maturity breakdown, cause-and-action tables, and ATT&CK technique-level analysis. [Pro]
 - **Japanese / English** — Full bilingual support for both assessment interface and generated reports.
 
@@ -47,7 +47,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 
 ## Use Cases
 
-- **Annual security review** — Run a structured assessment to document the current state of defenses and identify gaps.
+- **Periodic security review** — Organize the current state of defenses and clarify priority improvements.
 - **Management reporting** — Generate PDF reports that summarize security posture, defensive gaps, and recommended actions for executive briefings.
 - **Improvement prioritization** — Use the roadmap to determine which security measures to implement first based on attack likelihood and gap severity.
 - **Compliance evaluation** — Assess alignment with IPA, METI, and NIST CSF 2.0 guidelines to understand where the organization stands relative to established frameworks.
