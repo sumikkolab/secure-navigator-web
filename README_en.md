@@ -25,6 +25,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 - **Improvement Roadmap** — Prioritized recommendations across four time horizons: Immediate, Short-term, Mid-term, and Long-term.
 - **Report Export** — Export assessment results as PDF, HTML, or Markdown reports. [Pro]
 - **Advanced Analysis** — Detailed maturity breakdown, cause-and-action tables, and ATT&CK technique-level analysis. [Pro]
+- **AI-related Reference Checks** — Display results referencing NIST AI RMF, ISO/IEC 42001, and METI AI Governance Guidelines. [Pro] (Reference checks only — does not certify or guarantee AI safety, risk levels, or compliance.)
 - **Japanese / English** — Full bilingual support for both assessment interface and generated reports.
 
 ## Free vs. Pro
@@ -37,6 +38,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 | IPA SME Guidelines compliance | ✓ | ✓ |
 | METI Cybersecurity Guidelines compliance | — | ✓ |
 | NIST CSF 2.0 compliance | — | ✓ |
+| AI-related reference checks (results referencing NIST AI RMF / ISO/IEC 42001 / METI AI Governance Guidelines) | — | ✓ |
 | Advanced analysis (maturity detail, cause & action) | — | ✓ |
 | ATT&CK technique detail analysis | — | ✓ |
 | PDF report export | — | ✓ |
