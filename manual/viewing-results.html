@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>結果の確認 | SecureNavigator マニュアル — SumikkoLab</title>
-<meta name="description" content="SecureNavigator の評価結果画面。フレームワーク別スコア、カテゴリ別評価、脅威マッピングの確認方法を解説します。">
+<meta name="description" content="SecureNavigator の評価結果画面。ガイドライン参考確認、カテゴリ別評価、脅威マッピングの確認方法を解説します。">
 <link rel="canonical" href="https://secure-navigator.sumikkolab.com/manual/viewing-results.html">
 <meta property="og:title" content="結果の確認 | SecureNavigator マニュアル — SumikkoLab">
-<meta property="og:description" content="SecureNavigator の評価結果画面。フレームワーク別スコア、カテゴリ別評価、脅威マッピングの確認方法を解説します。">
+<meta property="og:description" content="SecureNavigator の評価結果画面。ガイドライン参考確認、カテゴリ別評価、脅威マッピングの確認方法を解説します。">
 <meta property="og:url" content="https://secure-navigator.sumikkolab.com/manual/viewing-results.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
@@ -29,7 +29,7 @@
     </div>
 
     <h1>Chapter 4: 結果の確認</h1>
-    <p class="subtitle">結果サマリ、フレームワーク適合、攻撃シナリオ、改善ロードマップ</p>
+    <p class="subtitle">結果サマリ、ガイドライン対応状況、攻撃シナリオ、対応候補</p>
 
     <h2>結果画面の概要</h2>
     <p>すべての質問に回答すると、結果画面が利用可能になります。結果画面は複数のセクションで構成されており、組織のセキュリティ対策状況をさまざまな角度から確認できます。</p>
@@ -39,15 +39,15 @@
       <div class="caption">結果画面の全体表示</div>
     </div>
 
-    <h2>優先対策の推奨</h2>
-    <p>結果画面の上部には、最も優先度の高い改善項目が表示されます。これは診断結果から自動的に算出されたもので、攻撃の成功を防ぐために最も効果的な対策が提示されます。</p>
+    <h2>対応候補の表示</h2>
+    <p>結果画面の上部には、検討しやすい対応候補が表示されます。これは診断結果からルールベースで算出された参考情報であり、利用者の環境や運用状況に合わせて判断してください。</p>
 
     <h2>弱点マップ（テーマ x レイヤーマトリクス）</h2>
     <p>弱点マップは、セキュリティ対策のテーマ（例: アクセス制御、ネットワーク防御、インシデント対応）と防御レイヤー（例: 予防、検知、対応）を掛け合わせたマトリクス形式で表示されます。</p>
     <p>各セルは対策の充実度に応じて色分けされ、組織全体のセキュリティ対策のバランスと弱点を視覚的に把握できます。色が薄い（対策が手薄な）領域が、攻撃者にとって狙いやすいポイントです。</p>
 
     <div class="screenshot">
-      <img src="images/ja/attack-scenarios.png" alt="攻撃シナリオの結果とロードマップ表示">
+      <img src="images/ja/attack-scenarios.png" alt="攻撃シナリオの結果と対応候補の表示">
       <div class="caption">攻撃シナリオ結果</div>
     </div>
 
@@ -56,12 +56,12 @@
     <p>各シナリオの行をクリックすると、攻撃ビュー画面に遷移し、ステップごとの詳細を確認できます。</p>
 
     <div class="screenshot">
-      <img src="images/ja/roadmap.png" alt="改善ロードマップ。4つの時間軸ごとに推奨施策が表示され、下部にCSF適合状況が表示されている">
-      <div class="caption">改善ロードマップ</div>
+      <img src="images/ja/roadmap.png" alt="対応候補。4つの時間軸ごとに候補施策が表示され、下部にCSF参考確認が表示されている">
+      <div class="caption">対応候補</div>
     </div>
 
-    <h2>改善ロードマップ</h2>
-    <p>診断結果に基づき、改善施策を4つの時間軸で整理して表示します。</p>
+    <h2>対応候補</h2>
+    <p>診断結果に基づき、改善施策の候補を4つの時間軸で整理して表示します。</p>
     <table class="manual-table">
       <tr><th>時間軸</th><th>内容</th></tr>
       <tr><td>今すぐ</td><td>既存リソースで即時対応可能な施策。コストをかけずに実行できる設定変更や運用ルールの整備など。</td></tr>
@@ -71,12 +71,12 @@
     </table>
 
     <div class="screenshot">
-      <img src="images/ja/framework-ipa.png" alt="IPAガイドライン適合状況の表示">
-      <div class="caption">IPAガイドライン適合状況</div>
+      <img src="images/ja/framework-ipa.png" alt="IPAガイドライン参考確認の表示">
+      <div class="caption">IPAガイドライン参考確認</div>
     </div>
 
-    <h2>フレームワーク適合状況</h2>
-    <p>診断結果を各セキュリティフレームワーク・ガイドラインの要件に照らし合わせて、適合率を表示します。</p>
+    <h2>フレームワーク参考確認</h2>
+    <p>診断結果を各セキュリティフレームワーク・ガイドラインの要素に照らし合わせて、対応状況を参考情報として表示します。</p>
     <table class="manual-table">
       <tr><th>フレームワーク</th><th>対応エディション</th></tr>
       <tr><td>IPA 中小企業の情報セキュリティ対策ガイドライン</td><td>Free / Pro</td></tr>
@@ -85,12 +85,12 @@
     </table>
 
     <div class="info-box">
-      <p>フレームワーク適合状況は自己点検のための参考情報です。公的な認証や適合証明を意味するものではありません。</p>
+      <p>フレームワーク参考確認は自己点検のための参考情報です。公的な認証、適合証明、公式な準拠判定を意味するものではありません。</p>
     </div>
 
     <div class="screenshot">
-      <img src="images/ja/framework-csf.png" alt="NIST CSF 2.0 フレームワーク適合状況の展開表示">
-      <div class="caption">NIST CSF 2.0 フレームワーク適合状況</div>
+      <img src="images/ja/framework-csf.png" alt="NIST CSF 2.0 フレームワーク参考確認の展開表示">
+      <div class="caption">NIST CSF 2.0 フレームワーク参考確認</div>
     </div>
 
     <div class="chapter-nav">
@@ -107,7 +107,7 @@
     </div>
 
     <h1>Chapter 4: Viewing Results</h1>
-    <p class="subtitle">Result summary, framework compliance, attack scenarios, improvement roadmap</p>
+    <p class="subtitle">Result summary, guideline mapping, attack scenarios, action planning</p>
 
     <h2>Results Screen Overview</h2>
     <p>Once all questions are answered, the Results screen becomes available. It consists of multiple sections that present your organization's security posture from different perspectives.</p>
@@ -117,15 +117,15 @@
       <div class="caption">Results screen overview</div>
     </div>
 
-    <h2>Priority Recommendations</h2>
-    <p>The top section of the Results screen highlights the highest-priority improvements. These are automatically calculated from the assessment results and represent the most effective controls for preventing attack success.</p>
+    <h2>Suggested Actions</h2>
+    <p>The top section of the Results screen highlights improvement candidates that may be useful to review first. They are rule-based reference information and should be evaluated against the user's environment and operating context.</p>
 
     <h2>Weakness Map (Theme x Layer Matrix)</h2>
     <p>The weakness map is displayed as a matrix combining security themes (e.g., Access Control, Network Defense, Incident Response) and defense layers (e.g., Prevention, Detection, Response).</p>
     <p>Each cell is color-coded based on the level of control implementation. This allows you to visually grasp the balance and gaps in your organization's security controls. Lightly colored areas (thin coverage) represent the points most vulnerable to attackers.</p>
 
     <div class="screenshot">
-      <img src="images/en/attack-scenarios.png" alt="Attack scenario results and roadmap display">
+      <img src="images/en/attack-scenarios.png" alt="Attack scenario results and action planning display">
       <div class="caption">Attack scenario results</div>
     </div>
 
@@ -134,12 +134,12 @@
     <p>Click on any scenario row to navigate to the Attack View screen and examine step-by-step details.</p>
 
     <div class="screenshot">
-      <img src="images/en/framework-ipa.png" alt="IPA guideline compliance display">
-      <div class="caption">IPA guideline compliance</div>
+      <img src="images/en/framework-ipa.png" alt="IPA guideline reference check display">
+      <div class="caption">IPA guideline reference check</div>
     </div>
 
-    <h2>Improvement Roadmap</h2>
-    <p>Based on the assessment results, improvement measures are organized across four time horizons.</p>
+    <h2>Action Planning</h2>
+    <p>Based on the assessment results, suggested improvement actions are organized across four time horizons.</p>
     <table class="manual-table">
       <tr><th>Time Horizon</th><th>Description</th></tr>
       <tr><td>Immediate</td><td>Actions that can be taken right away with existing resources. Configuration changes and operational rule updates that require no additional cost.</td></tr>
@@ -149,12 +149,12 @@
     </table>
 
     <div class="screenshot">
-      <img src="images/en/roadmap.png" alt="Improvement roadmap with recommended actions and CSF compliance at the bottom">
-      <div class="caption">Improvement roadmap</div>
+      <img src="images/en/roadmap.png" alt="Action planning view with suggested actions and CSF reference checks at the bottom">
+      <div class="caption">Action planning</div>
     </div>
 
-    <h2>Framework Compliance</h2>
-    <p>Assessment results are mapped against the requirements of each security framework and guideline, displaying compliance rates.</p>
+    <h2>Framework Reference Checks</h2>
+    <p>Assessment results are mapped against elements of each security framework and guideline, displaying reference status views.</p>
     <table class="manual-table">
       <tr><th>Framework</th><th>Available In</th></tr>
       <tr><td>IPA SME Information Security Guidelines</td><td>Free / Pro</td></tr>
@@ -163,12 +163,12 @@
     </table>
 
     <div class="info-box">
-      <p>Framework compliance displays are reference information for self-assessment. They do not constitute official certification or conformity attestation.</p>
+      <p>Framework reference checks are reference information for self-assessment. They do not constitute official certification, conformity attestation, or official compliance determination.</p>
     </div>
 
     <div class="screenshot">
-      <img src="images/en/framework-csf.png" alt="NIST CSF 2.0 framework compliance expanded view">
-      <div class="caption">NIST CSF 2.0 framework compliance</div>
+      <img src="images/en/framework-csf.png" alt="NIST CSF 2.0 framework reference check expanded view">
+      <div class="caption">NIST CSF 2.0 framework reference check</div>
     </div>
 
     <div class="chapter-nav">

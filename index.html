@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SecureNavigator | 攻撃者の視点でセキュリティ態勢を評価するオフラインツール</title>
-<meta name="description" content="SecureNavigator は攻撃者の視点からセキュリティ態勢を評価するオフラインツール。MITRE ATT&CK/NIST CSF/CIS Controls等のフレームワークで防御力を可視化し、攻撃経路のリスクをPDFレポートで報告。">
+<title>SecureNavigator | 攻撃視点とガイドラインで整理するオフライン評価ツール</title>
+<meta name="description" content="SecureNavigator は、攻撃シナリオ分析、ガイドライン参考確認、対応候補の整理、レポート生成を支援するオフライン評価ツールです。MITRE ATT&CK、IPA、経産省、NIST CSF 2.0 を参考情報として扱います。">
 <link rel="canonical" href="https://secure-navigator.sumikkolab.com/">
-<meta property="og:title" content="SecureNavigator | 攻撃者の視点でセキュリティ態勢を評価するオフラインツール">
-<meta property="og:description" content="SecureNavigator は攻撃者の視点からセキュリティ態勢を評価するオフラインツール。MITRE ATT&CK/NIST CSF/CIS Controls等のフレームワークで防御力を可視化し、攻撃経路のリスクをPDFレポートで報告。">
+<meta property="og:title" content="SecureNavigator | 攻撃視点とガイドラインで整理するオフライン評価ツール">
+<meta property="og:description" content="SecureNavigator は、攻撃シナリオ分析、ガイドライン参考確認、対応候補の整理、レポート生成を支援するオフライン評価ツールです。MITRE ATT&CK、IPA、経産省、NIST CSF 2.0 を参考情報として扱います。">
 <meta property="og:url" content="https://secure-navigator.sumikkolab.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
@@ -78,7 +78,7 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "SecureNavigator",
-  "description": "攻撃者の視点からセキュリティ態勢を評価するオフラインツール。MITRE ATT&CK / NIST CSF / CIS Controls等のフレームワークで防御力を可視化",
+  "description": "攻撃シナリオ分析、ガイドライン参考確認、対応候補の整理、レポート生成を支援するオフライン評価ツール。",
   "url": "https://secure-navigator.sumikkolab.com/",
   "applicationCategory": "SecurityApplication",
   "operatingSystem": "Windows 10, Windows 11",
@@ -105,11 +105,11 @@
   <h1>SecureNavigator</h1>
   <div class="section-ja visible">
     <p class="tagline">セキュリティ対策を攻撃視点とガイドラインで整理し、レポートへ変換する</p>
-    <p class="sub-tagline">想定攻撃に対する防御上の弱点を分析し、改善の優先順位を整理。説明・報告・改善検討に使えるレポートを生成するオフライン評価ツール。</p>
+    <p class="sub-tagline">想定攻撃に対する防御上の弱点を分析し、着手候補を整理。説明・報告・改善検討に使えるレポートを生成するオフライン評価ツール。</p>
   </div>
   <div class="section-en">
     <p class="tagline">Organize security posture by attack scenarios and guidelines, then convert to reports</p>
-    <p class="sub-tagline">Analyze defensive gaps against likely attacks, prioritize improvements, and generate reports for communication and planning. Completely offline.</p>
+    <p class="sub-tagline">Analyze defensive gaps against likely attacks, organize suggested actions, and generate reports for communication and planning. Completely offline.</p>
   </div>
   <div>
     <span class="badge">100% Offline</span>
@@ -139,7 +139,7 @@
     <div class="why-section">
       <h2>「対策の有無」だけでなく「どこが攻撃経路になりうるか」を整理する</h2>
       <p>多くのセキュリティ評価ツールは「対策が存在するか」を確認します。しかし実務で必要なのは<strong>「想定される攻撃に対して、どこが弱いのか」</strong>の整理です。</p>
-      <p>SecureNavigator は、MITRE ATT&CK の攻撃手法を基に、<strong>対策の弱点 → 攻撃の進行経路 → 想定被害</strong>をルールベースで分析。防御上の弱点と優先すべき対策を整理し、報告・改善検討に使えるレポートを生成します。</p>
+      <p>SecureNavigator は、MITRE ATT&CK の攻撃手法を基に、<strong>対策の弱点 → 攻撃の進行経路 → 想定被害</strong>をルールベースで分析。防御上の弱点と着手候補を整理し、報告・改善検討に使えるレポートを生成します。</p>
     </div>
 
     <h2>主な機能</h2>
@@ -149,12 +149,12 @@
         <p>6つの代表的な攻撃シナリオに対して、組織の防御力をステップごとに分析します。</p>
       </div>
       <div class="feature-card">
-        <h3>ガイドライン適合状況</h3>
-        <p>IPA 中小企業向けガイドライン、経産省サイバーセキュリティ経営ガイドライン、NIST CSF 2.0 に対する適合率を整理します。</p>
+        <h3>ガイドライン参考確認</h3>
+        <p>IPA 中小企業向けガイドライン、経産省サイバーセキュリティ経営ガイドライン、NIST CSF 2.0 を参考に対応状況を整理します。</p>
       </div>
       <div class="feature-card">
-        <h3>改善ロードマップ</h3>
-        <p>診断結果から「今すぐ」「短期」「中期」「長期」の4段階で優先対策を提示します。</p>
+        <h3>対応候補の整理</h3>
+        <p>診断結果から「今すぐ」「短期」「中期」「長期」の4段階で着手候補を表示します。</p>
       </div>
       <div class="feature-card">
         <h3>レポート・資料出力 <span class="pro-badge">Pro</span></h3>
@@ -178,10 +178,10 @@
       <tbody>
         <tr><td>診断（全問回答）</td><td>✓</td><td>✓</td></tr>
         <tr><td>攻撃シナリオシミュレーション</td><td>✓</td><td>✓</td></tr>
-        <tr><td>改善ロードマップ（画面表示）</td><td>✓</td><td>✓</td></tr>
-        <tr><td>IPA 中小企業向けガイドライン適合評価</td><td>✓</td><td>✓</td></tr>
-        <tr><td>経産省サイバーセキュリティ経営ガイドライン適合評価</td><td>—</td><td>✓</td></tr>
-        <tr><td>NIST CSF 2.0 適合評価</td><td>—</td><td>✓</td></tr>
+        <tr><td>対応候補の整理（画面表示）</td><td>✓</td><td>✓</td></tr>
+        <tr><td>IPA 中小企業向けガイドライン参考確認</td><td>✓</td><td>✓</td></tr>
+        <tr><td>経産省サイバーセキュリティ経営ガイドライン参考確認</td><td>—</td><td>✓</td></tr>
+        <tr><td>NIST CSF 2.0 参考確認</td><td>—</td><td>✓</td></tr>
         <tr><td>AI 関連参考確認（NIST AI RMF / 総務省 AI セキュリティガイドライン / UK NCSC Secure AI System Development 関連ガイダンス を参考にした確認結果の表示。準拠・認証・適合判定を示すものではありません）</td><td>—</td><td>✓</td></tr>
         <tr><td>高度な分析（成熟度詳細・原因と対策）</td><td>—</td><td>✓</td></tr>
         <tr><td>ATT&CK テクニック詳細分析</td><td>—</td><td>✓</td></tr>
@@ -231,11 +231,11 @@
       </div>
       <div class="feature-card">
         <h3>Framework Compliance</h3>
-        <p>Evaluate conformance to IPA SME Guidelines (Japan), METI Cybersecurity Guidelines (Japan), and NIST CSF 2.0.</p>
+        <p>Organize status using IPA SME Guidelines (Japan), METI Cybersecurity Guidelines (Japan), and NIST CSF 2.0 as reference material.</p>
       </div>
       <div class="feature-card">
-        <h3>Improvement Roadmap</h3>
-        <p>Get prioritized recommendations across 4 time horizons: Immediate, Short-term, Mid-term, and Long-term.</p>
+        <h3>Action Planning View</h3>
+        <p>View suggested actions across 4 time horizons: Immediate, Short-term, Mid-term, and Long-term.</p>
       </div>
       <div class="feature-card">
         <h3>Report &amp; Document Export <span class="pro-badge">Pro</span></h3>
@@ -259,10 +259,10 @@
       <tbody>
         <tr><td>Full Assessment (all questions)</td><td>✓</td><td>✓</td></tr>
         <tr><td>Attack Scenario Simulation</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Improvement Roadmap (on-screen)</td><td>✓</td><td>✓</td></tr>
-        <tr><td>IPA SME Guidelines Compliance (Japan)</td><td>✓</td><td>✓</td></tr>
-        <tr><td>METI Cybersecurity Guidelines Compliance (Japan)</td><td>—</td><td>✓</td></tr>
-        <tr><td>NIST CSF 2.0 Compliance</td><td>—</td><td>✓</td></tr>
+        <tr><td>Action Planning View (on-screen)</td><td>✓</td><td>✓</td></tr>
+        <tr><td>IPA SME Guidelines reference checks (Japan)</td><td>✓</td><td>✓</td></tr>
+        <tr><td>METI Cybersecurity Guidelines reference checks (Japan)</td><td>—</td><td>✓</td></tr>
+        <tr><td>NIST CSF 2.0 reference checks</td><td>—</td><td>✓</td></tr>
         <tr><td>AI-related Reference Checks (results referencing NIST AI RMF / Japan MIC AI Security Guidelines / UK NCSC Secure AI System Development guidance. Not an indication of compliance, conformity, or certification)</td><td>—</td><td>✓</td></tr>
         <tr><td>Advanced Analysis (maturity detail, cause &amp; action)</td><td>—</td><td>✓</td></tr>
         <tr><td>ATT&CK Technique Detail Analysis</td><td>—</td><td>✓</td></tr>

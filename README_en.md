@@ -1,6 +1,6 @@
 # SecureNavigator
 
-An offline security assessment tool that organizes security posture by attack scenarios and compliance guidelines, then converts findings into actionable reports.
+An offline security assessment tool that organizes security posture by attack scenarios and guideline reference checks, then converts findings into actionable reports.
 
 [日本語版](README.md)
 
@@ -8,7 +8,7 @@ An offline security assessment tool that organizes security posture by attack sc
 
 ## What SecureNavigator Does
 
-SecureNavigator analyzes an organization's security posture from the attacker's perspective using MITRE ATT&CK-based attack scenarios. It evaluates current defenses against six representative attack patterns, identifies defensive gaps, and maps findings to compliance guidelines including IPA SME Guidelines (Japan), METI Cybersecurity Management Guidelines (Japan), and NIST CSF 2.0. The tool generates prioritized improvement roadmaps and exportable reports for communication with management and stakeholders. All processing runs entirely offline — no data ever leaves the user's device.
+SecureNavigator analyzes an organization's security posture from the attacker's perspective using MITRE ATT&CK-based attack scenarios. It reviews defenses against six representative attack patterns, identifies defensive gaps, and maps findings to IPA SME Guidelines (Japan), METI Cybersecurity Management Guidelines (Japan), and NIST CSF 2.0 as reference material. The tool generates exportable reports with suggested action planning for communication with management and stakeholders. All processing runs entirely offline — no data ever leaves the user's device.
 
 ## Who It's For
 
@@ -21,8 +21,8 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 
 - **Fully Offline** — All assessment data stays on the local device. No external communication, no telemetry, no cloud dependency.
 - **Attack Scenario Analysis** — Six attack scenarios based on MITRE ATT&CK techniques analyze how attacks progress through an organization's defenses step by step.
-- **Multiple Compliance Frameworks** — IPA SME Guidelines available in Free. METI Cybersecurity Guidelines and NIST CSF 2.0 available in Pro.
-- **Improvement Roadmap** — Prioritized recommendations across four time horizons: Immediate, Short-term, Mid-term, and Long-term.
+- **Guideline Reference Checks** — IPA SME Guidelines available in Free. METI Cybersecurity Guidelines and NIST CSF 2.0 available in Pro.
+- **Action Planning View** — Suggested actions across four time horizons: Immediate, Short-term, Mid-term, and Long-term.
 - **Report Export** — Export assessment results as PDF, HTML, or Markdown reports. [Pro]
 - **Advanced Analysis** — Detailed maturity breakdown, cause-and-action tables, and ATT&CK technique-level analysis. [Pro]
 - **AI-related Reference Checks** — Display results referencing NIST AI RMF, Japan MIC AI Security Guidelines, and UK NCSC Secure AI System Development guidance. [Pro] (Reference checks only — not an indication of compliance, conformity, or certification.)
@@ -34,10 +34,10 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 |---------|:----:|:---:|
 | Full assessment (all questions) | ✓ | ✓ |
 | Attack scenario simulation | ✓ | ✓ |
-| Improvement roadmap (on-screen) | ✓ | ✓ |
-| IPA SME Guidelines compliance | ✓ | ✓ |
-| METI Cybersecurity Guidelines compliance | — | ✓ |
-| NIST CSF 2.0 compliance | — | ✓ |
+| Action Planning View (on-screen) | ✓ | ✓ |
+| IPA SME Guidelines reference checks | ✓ | ✓ |
+| METI Cybersecurity Guidelines reference checks | — | ✓ |
+| NIST CSF 2.0 reference checks | — | ✓ |
 | AI-related reference checks (results referencing NIST AI RMF / Japan MIC AI Security Guidelines / UK NCSC Secure AI System Development guidance. Not an indication of compliance, conformity, or certification) | — | ✓ |
 | Advanced analysis (maturity detail, cause & action) | — | ✓ |
 | ATT&CK technique detail analysis | — | ✓ |
@@ -49,10 +49,10 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 
 ## Use Cases
 
-- **Periodic security review** — Organize the current state of defenses and clarify priority improvements.
+- **Periodic security review** — Organize the current state of defenses and clarify suggested actions.
 - **Management reporting** — Generate PDF reports that summarize security posture, defensive gaps, and recommended actions for executive briefings.
-- **Improvement prioritization** — Use the roadmap to determine which security measures to implement first based on attack likelihood and gap severity.
-- **Compliance evaluation** — Assess alignment with IPA, METI, and NIST CSF 2.0 guidelines to understand where the organization stands relative to established frameworks.
+- **Action planning** — Use time-horizon views to determine which security measures to consider first based on attack likelihood and gap severity.
+- **Guideline reference checks** — Review status using IPA, METI, and NIST CSF 2.0 guidelines as reference material.
 
 ## Privacy & Offline Operation
 
@@ -63,11 +63,11 @@ SecureNavigator operates 100% offline. It does not connect to any external serve
 ### Assessment Result Summary
 ![Assessment Result Summary](manual/images/en/result-summary.png)
 
-### Attack Scenario Resilience / Improvement Roadmap
-![Attack Scenarios and Roadmap](manual/images/en/attack-scenarios.png)
+### Attack Scenario Resilience / Action Planning
+![Attack Scenarios and Action Planning](manual/images/en/attack-scenarios.png)
 
-### Framework Compliance (NIST CSF 2.0)
-![NIST CSF Compliance](manual/images/en/framework-csf.png)
+### Framework Reference Checks (NIST CSF 2.0)
+![NIST CSF Reference Checks](manual/images/en/framework-csf.png)
 
 ### ATT&CK Technique Coverage (Pro)
 ![ATT&CK Matrix](manual/images/en/attack-view-matrix.png)
