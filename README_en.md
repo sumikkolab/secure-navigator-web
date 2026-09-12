@@ -28,6 +28,12 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 - **AI-related Reference Checks** — Display results referencing NIST AI RMF, Japan MIC AI Security Guidelines, and UK NCSC Secure AI System Development guidance. [Pro] (Reference checks only — not an indication of compliance, conformity, or certification.)
 - **Japanese / English** — Full bilingual support for both assessment interface and generated reports.
 
+## v1.2 Updates
+
+- Updated the runtime to .NET 10.
+- Updated reference information and displays for MITRE ATT&CK, NIST CSF 2.0, and AI-related guidance.
+- Existing assessments remain available.
+
 ## Free vs. Pro
 
 | Feature | Free | Pro |
