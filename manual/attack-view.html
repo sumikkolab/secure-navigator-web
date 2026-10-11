@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>攻撃ビュー | SecureNavigator マニュアル — SumikkoLab</title>
-<meta name="description" content="SecureNavigator の攻撃ビュー機能。攻撃者の視点から見た攻撃経路、防御のギャップ、リスクの可視化方法を解説します。">
+<meta name="description" content="SecureNavigator の攻撃ビュー機能。攻撃の経路図、戦術チップ、状況別の群、用語の補足の見方を解説します。">
 <link rel="canonical" href="https://secure-navigator.sumikkolab.com/manual/attack-view.html">
 <meta property="og:title" content="攻撃ビュー | SecureNavigator マニュアル — SumikkoLab">
-<meta property="og:description" content="SecureNavigator の攻撃ビュー機能。攻撃者の視点から見た攻撃経路、防御のギャップ、リスクの可視化方法を解説します。">
+<meta property="og:description" content="SecureNavigator の攻撃ビュー機能。攻撃の経路図、戦術チップ、状況別の群、用語の補足の見方を解説します。">
 <meta property="og:url" content="https://secure-navigator.sumikkolab.com/manual/attack-view.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
@@ -29,37 +29,43 @@
     </div>
 
     <h1>Chapter 5: 攻撃ビュー</h1>
-    <p class="subtitle">シナリオ詳細、攻撃パス可視化、ATT&CK マトリクス</p>
+    <p class="subtitle">攻撃の経路図、戦術チップ、状況別の群、用語の補足</p>
 
     <h2>攻撃ビュー画面の概要</h2>
-    <p>攻撃ビュー画面は、各攻撃シナリオを詳細に確認するための画面です。結果画面の攻撃シナリオテーブルからシナリオを選択するか、ナビゲーションバーから直接アクセスできます。</p>
+    <p>攻撃ビュー画面（見出し「ATT&CK テクニックカバレッジ」）では、診断の回答から確認できた状況を、ATT&CK の「技術」（個々の手口）ごとに確認できます。結果画面の「ATT&CK を見る」で開き、「結果に戻る」で結果画面に戻ります。</p>
 
     <div class="screenshot">
-      <img src="images/ja/attack-view-matrix.png" alt="ATT&CKマトリクス表示。ランサムウェアシナリオの攻撃テクニックがマトリクス形式で表示されている">
-      <div class="caption">攻撃ビュー画面（ATT&CKマトリクス）</div>
+      <img src="images/ja/attack-view-matrix.png" alt="攻撃ビュー画面の全体。シナリオ選択、経路図、状況別の群が表示されている">
+      <div class="caption">攻撃ビュー画面</div>
     </div>
 
-    <h2>シナリオの選択と詳細</h2>
-    <p>SecureNavigator は6つの代表的な攻撃シナリオを備えています。画面左側のシナリオ一覧から確認したいシナリオを選択すると、右側にその詳細が表示されます。</p>
-    <p>各シナリオの詳細には以下の情報が含まれます。</p>
-    <ul>
-      <li><strong>シナリオ概要</strong>: 攻撃者の目的と手法の説明。</li>
-      <li><strong>攻撃ステップ</strong>: 攻撃の各段階（初期アクセス、権限昇格、横移動、目的達成など）を順に表示。</li>
-      <li><strong>各ステップの防御状況</strong>: そのステップに対応する対策の実施状況と、防御の有効性を示す評価。</li>
-    </ul>
+    <h2>画面の構成（上から）</h2>
+    <ol>
+      <li><strong>見出し、シナリオ選択、経路図</strong>: 「攻撃シナリオ:」で確認したいシナリオを選びます。経路図は、攻撃が外部（左）から内部（右）へ進む流れを段階ごとのカードで示し、各カードにその段階での守りの状態（止められた・検知できる・突破される・未確認・未到達）が表示されます。流れが止まる地点には「ここで流れが止まる」と表示されます。</li>
+      <li><strong>全体の状況</strong>: カバレッジ（網羅度）を表示します。「一部確認」は 0.5 件として換算されます。</li>
+      <li><strong>不足の上位</strong>: 不足の技術のうち、攻撃の流れで先に出るものを表示します。残りは下の「不足」の群で確認できます。</li>
+      <li><strong>戦術チップ（2 行）</strong>: 「戦術で絞り込み」です。「全体」または戦術を選ぶと、開いた群がその戦術の技術だけに絞られます。各チップには、その戦術の不足と一部確認の件数が表示されます。</li>
+      <li><strong>状況別の群</strong>: 技術を状況ごとに分けて表示します。各群は開閉できます。「確認できた」の群は技術名だけを並べます。</li>
+      <li><strong>用語欄</strong>: 「この画面に出る言葉」の欄で、戦術・技術・永続化・権限昇格・防御回避・C2・ハッシュ・DLL などの説明を確認できます（押すと開きます）。</li>
+    </ol>
+
+    <h2>状況別の群</h2>
+    <table class="manual-table">
+      <tr><th>群</th><th>内容</th></tr>
+      <tr><td>不足</td><td>備えが確認できなかった技術。</td></tr>
+      <tr><td>一部確認</td><td>備えの一部だけ確認できた技術。</td></tr>
+      <tr><td>確認できた</td><td>備えが確認できた技術。</td></tr>
+      <tr><td>未回答</td><td>回答がない、または「わからない」の回答で判定できない技術。</td></tr>
+      <tr><td>対象外</td><td>診断の範囲外、または対応する質問が定義されていない技術。</td></tr>
+    </table>
 
     <div class="screenshot">
-      <img src="images/ja/attack-view-scenario.png" alt="ATT&CKマトリクス表示。標的型攻撃シナリオの詳細が表示されている">
-      <div class="caption">攻撃シナリオの詳細表示（標的型攻撃）</div>
+      <img src="images/ja/attack-view-scenario.png" alt="攻撃ビュー画面。標的型攻撃シナリオの経路図が表示されている">
+      <div class="caption">攻撃シナリオの経路図（標的型攻撃）</div>
     </div>
 
-    <h2>攻撃パスの可視化</h2>
-    <p>各シナリオでは、攻撃者が最初の侵入から最終目的の達成までにたどるパス（経路）が可視化されます。防御が弱いステップは赤系の色で強調され、対策が有効なステップは緑系の色で表示されます。</p>
-    <p>攻撃パスを確認することで、「どのステップで攻撃を止められるか」「どこが突破されやすいか」を視覚的に把握できます。</p>
-
-    <h2>ATT&CK テクニック詳細分析 <span class="pro-badge">Pro</span></h2>
-    <p>Pro 版では、各攻撃ステップに関連する MITRE ATT&CK テクニックの詳細情報を確認できます。各テクニックの ID、名称、説明、および対策との対応関係が表示されます。</p>
-    <p>ATT&CK マトリクスビューでは、組織の診断結果を MITRE ATT&CK フレームワークのマトリクス形式にマッピングして表示します。カバーされているテクニックとカバーされていないテクニックが色分けされ、防御のカバレッジを一目で確認できます。</p>
+    <h2>ATT&CK テクニックの詳細 <span class="pro-badge">Pro</span></h2>
+    <p>Pro 版では、各テクニックの詳細（セルの展開・詳細ペイン）を確認できます。Free 版でも、戦術ごとのカバレッジと状況別の群は確認できます。</p>
 
     <div class="screenshot">
       <img src="images/ja/free-attack-restricted.png" alt="Free版での攻撃ビュー制限メッセージ。Pro版へのアップグレードを案内している">
@@ -67,9 +73,8 @@
     </div>
 
     <div class="warn-box">
-      <p>ATT&CK テクニック詳細分析と ATT&CK マトリクスビューは Pro 版のみの機能です。Free 版では攻撃シナリオの概要と各ステップの防御状況まで確認できます。</p>
+      <p>ATT&CK テクニックの詳細は Pro 版のみの機能です。Free 版では、戦術ごとのカバレッジを確認できます。</p>
     </div>
-
     <div class="chapter-nav">
       <a href="viewing-results.html">&larr; 前へ: 結果の確認</a>
       <a href="report-preview.html">次へ: レポートプレビュー &rarr;</a>
@@ -84,37 +89,43 @@
     </div>
 
     <h1>Chapter 5: Attack View</h1>
-    <p class="subtitle">Scenario detail, attack path visualization, ATT&CK matrix</p>
+    <p class="subtitle">Attack flow, tactic chips, status groups, glossary</p>
 
     <h2>Attack View Overview</h2>
-    <p>The Attack View screen provides detailed examination of each attack scenario. You can access it by selecting a scenario from the attack scenarios table on the Results screen, or directly from the navigation bar.</p>
+    <p>The Attack View screen (titled "ATT&CK technique coverage") shows the status confirmed from your answers for each ATT&CK technique (an individual attacker method). Open it with "View ATT&CK" on the Results screen, and return with "Back to results".</p>
 
     <div class="screenshot">
-      <img src="images/en/attack-view-matrix.png" alt="ATT&CK matrix view showing ransomware scenario attack techniques in matrix format">
-      <div class="caption">Attack View screen (ATT&CK matrix)</div>
+      <img src="images/en/attack-view-matrix.png" alt="Attack View screen showing the scenario selector, the attack flow, and the status groups">
+      <div class="caption">Attack View screen</div>
     </div>
 
-    <h2>Scenario Selection and Detail</h2>
-    <p>SecureNavigator includes 6 representative attack scenarios. Select a scenario from the list on the left side to view its details on the right.</p>
-    <p>Each scenario detail includes the following information:</p>
-    <ul>
-      <li><strong>Scenario overview</strong>: Description of the attacker's objectives and methods.</li>
-      <li><strong>Attack steps</strong>: Each phase of the attack (initial access, privilege escalation, lateral movement, objective achievement, etc.) displayed in sequence.</li>
-      <li><strong>Defense status per step</strong>: Implementation status of controls corresponding to each step and an effectiveness rating.</li>
-    </ul>
+    <h2>Screen Layout (top to bottom)</h2>
+    <ol>
+      <li><strong>Heading, scenario selector, and attack flow</strong>: Choose a scenario with "Attack Scenario:". The flow shows an attack moving from outside (left) to inside (right) as cards, one per stage, and each card shows the state of the defenses at that stage (Stopped, Detectable, Breached, Unconfirmed, Not reached). "The flow stops here" marks where the flow stops.</li>
+      <li><strong>Overall status</strong>: Shows the coverage. "Partially confirmed" counts as 0.5.</li>
+      <li><strong>Top gaps</strong>: Shows the gap techniques that appear first in the attack flow. The rest are in the Gap group below.</li>
+      <li><strong>Tactic chips (2 rows)</strong>: "Filter by tactic". Select "All" or a tactic to limit the open groups to that tactic's techniques. Each chip shows its Gap and Partial counts.</li>
+      <li><strong>Status groups</strong>: Techniques are split by status. Each group can be opened and closed. The Confirmed group lists names only.</li>
+      <li><strong>Terms</strong>: "Terms on this screen" explains tactic, technique, persistence, privilege escalation, defense evasion, C2, hash, DLL, and more (select to open).</li>
+    </ol>
+
+    <h2>Status Groups</h2>
+    <table class="manual-table">
+      <tr><th>Group</th><th>Meaning</th></tr>
+      <tr><td>Gap</td><td>Techniques with no confirmed safeguard.</td></tr>
+      <tr><td>Partially confirmed</td><td>Techniques with only some safeguards confirmed.</td></tr>
+      <tr><td>Confirmed</td><td>Techniques with safeguards confirmed.</td></tr>
+      <tr><td>Unanswered</td><td>Techniques that cannot be judged because the answer is missing or "Don't know".</td></tr>
+      <tr><td>Out of scope</td><td>Techniques outside this assessment, or with no matching question defined.</td></tr>
+    </table>
 
     <div class="screenshot">
-      <img src="images/en/attack-view-scenario.png" alt="ATT&CK matrix view showing targeted attack scenario details">
-      <div class="caption">Attack scenario detail view (targeted attack)</div>
+      <img src="images/en/attack-view-scenario.png" alt="Attack View screen showing the attack flow of the targeted attack scenario">
+      <div class="caption">Attack flow of a scenario (targeted attack)</div>
     </div>
 
-    <h2>Attack Path Visualization</h2>
-    <p>Each scenario visualizes the path an attacker takes from initial intrusion to achieving their final objective. Steps with weak defenses are highlighted in red tones, while steps with effective controls are shown in green tones.</p>
-    <p>By reviewing attack paths, you can visually understand where an attack can be stopped and where it is most likely to break through.</p>
-
-    <h2>ATT&CK Technique Detail Analysis <span class="pro-badge">Pro</span></h2>
-    <p>The Pro edition provides detailed MITRE ATT&CK technique information for each attack step. Technique IDs, names, descriptions, and mappings to relevant controls are displayed.</p>
-    <p>The ATT&CK matrix view maps your assessment results onto the MITRE ATT&CK framework in matrix format. Covered and uncovered techniques are color-coded, allowing you to see your defense coverage at a glance.</p>
+    <h2>ATT&CK Technique Detail <span class="pro-badge">Pro</span></h2>
+    <p>The Pro edition shows the details of each technique (expandable cells and a detail pane). The Free edition still shows the coverage for each tactic and the status groups.</p>
 
     <div class="screenshot">
       <img src="images/en/free-attack-restricted.png" alt="Attack view restricted message in Free edition, prompting upgrade to Pro">
@@ -122,9 +133,8 @@
     </div>
 
     <div class="warn-box">
-      <p>ATT&CK technique detail analysis and the ATT&CK matrix view are Pro-only features. The Free edition allows you to view attack scenario overviews and defense status per step.</p>
+      <p>ATT&CK technique detail is a Pro-only feature. The Free edition shows the coverage for each tactic.</p>
     </div>
-
     <div class="chapter-nav">
       <a href="viewing-results.html?lang=en">&larr; Previous: Viewing Results</a>
       <a href="report-preview.html?lang=en">Next: Report Preview &rarr;</a>

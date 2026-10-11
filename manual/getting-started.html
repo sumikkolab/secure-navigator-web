@@ -35,8 +35,7 @@
     <table class="manual-table">
       <tr><th>項目</th><th>要件</th></tr>
       <tr><td>OS</td><td>Windows 10 Version 2004 以降 / Windows 11</td></tr>
-      <tr><td>ランタイム</td><td>WebView2 Runtime（PDF 出力に必要。通常は OS に同梱済み）</td></tr>
-      <tr><td>ディスク容量</td><td>約 50 MB</td></tr>
+      <tr><td>ランタイム</td><td>WebView2 Runtime（PDF 出力に必要）</td></tr>
       <tr><td>インターネット</td><td>不要（完全オフライン動作）</td></tr>
     </table>
 
@@ -55,32 +54,31 @@
     <h2>初回起動と利用規約</h2>
     <p>SecureNavigator を初めて起動すると、利用規約と免責事項の同意画面が表示されます。</p>
     <ol>
-      <li>利用規約の内容を最後までスクロールして確認します。</li>
-      <li>「同意する」ボタンをクリックすると、メイン画面（ホーム画面）に進みます。</li>
-      <li>「同意しない」を選択した場合、アプリは終了します。</li>
+      <li>利用規約と免責事項の内容を確認します。「利用規約を表示」から規約を開けます。</li>
+      <li>「利用規約と免責事項に同意します」にチェックを入れ、「同意して開始」ボタンをクリックすると、セッション選択画面に進みます。</li>
+      <li>「同意しない」を選択した場合は、先に進めません。</li>
     </ol>
-    <p>利用規約の内容が更新された場合は、次回起動時に再度同意を求められます。</p>
 
     <div class="screenshot">
-      <img src="images/ja/terms-dialog.png" alt="利用規約の同意画面。規約テキストと「同意する」「同意しない」ボタンが表示されている">
+      <img src="images/ja/terms-dialog.png" alt="利用規約の同意画面。規約テキストと「同意して開始」「同意しない」ボタンが表示されている">
       <div class="caption">利用規約の同意画面</div>
     </div>
 
     <h2>画面構成の概要</h2>
-    <p>SecureNavigator は左側のナビゲーションバーから主要な画面を切り替えます。</p>
+    <p>SecureNavigator は、診断の流れに沿って、ボタンで次の画面へ進みます。</p>
     <table class="manual-table">
       <tr><th>画面</th><th>説明</th></tr>
-      <tr><td>ホーム</td><td>診断の新規作成や既存セッションの再開ができます。</td></tr>
+      <tr><td>セッション選択</td><td>「新しい診断を開始する」で診断を作成するか、保存済みの診断を開きます。</td></tr>
       <tr><td>ヒアリング</td><td>セキュリティ対策に関する質問に回答する画面です。</td></tr>
-      <tr><td>結果</td><td>診断結果のサマリ、攻撃シナリオ、対応候補、ガイドライン参考確認を確認できます。</td></tr>
-      <tr><td>攻撃ビュー</td><td>各攻撃シナリオの詳細と ATT&CK テクニックとの対応を確認できます。</td></tr>
-      <tr><td>レポート</td><td>レポートのプレビューと PDF 出力（Pro のみ）ができます。</td></tr>
-      <tr><td>設定</td><td>言語の切替、ライセンス管理、外部リンクの表示を行います。</td></tr>
+      <tr><td>診断結果サマリ</td><td>「結果を見る」で開きます。診断結果のサマリ、弱点マップ、攻撃シナリオ、不足がみられる面とテーマ、フレームワークの参考確認を確認できます。</td></tr>
+      <tr><td>ATT&CK テクニックカバレッジ（攻撃ビュー）</td><td>「ATT&CK を見る」で開きます。攻撃の経路図、戦術チップ、状況別の群、用語の補足を確認できます。</td></tr>
+      <tr><td>レポートプレビュー</td><td>「レポートプレビュー」で開きます。プレビュー・保存・PDF 出力は Pro で利用できます。</td></tr>
+      <tr><td>設定</td><td>設定ボタンから開くダイアログです。表示言語の切替、ライセンスの確認、外部リンクの表示を行います。</td></tr>
     </table>
 
     <div class="screenshot">
-      <img src="images/ja/session-start.png" alt="SecureNavigator のホーム画面。左側にナビゲーションバー、中央に診断の開始ボタンが表示されている">
-      <div class="caption">ホーム画面</div>
+      <img src="images/ja/session-start.png" alt="SecureNavigator のセッション選択画面。診断の開始ボタンと保存済みの診断が表示されている">
+      <div class="caption">セッション選択画面</div>
     </div>
 
     <div class="chapter-nav">
@@ -103,8 +101,7 @@
     <table class="manual-table">
       <tr><th>Item</th><th>Requirement</th></tr>
       <tr><td>OS</td><td>Windows 10 Version 2004 or later / Windows 11</td></tr>
-      <tr><td>Runtime</td><td>WebView2 Runtime (required for PDF export; usually included with the OS)</td></tr>
-      <tr><td>Disk Space</td><td>Approximately 50 MB</td></tr>
+      <tr><td>Runtime</td><td>WebView2 Runtime (required for PDF export)</td></tr>
       <tr><td>Internet</td><td>Not required (fully offline operation)</td></tr>
     </table>
 
@@ -123,32 +120,26 @@
     <h2>First Launch and Terms Acceptance</h2>
     <p>When you launch SecureNavigator for the first time, the Terms of Use and Disclaimer acceptance screen is displayed.</p>
     <ol>
-      <li>Scroll through the terms to review the full content.</li>
-      <li>Click "Accept" to proceed to the main screen (Home).</li>
-      <li>If you select "Decline", the application will close.</li>
+      <li>Review the Terms of Use and Disclaimer. Select "View Terms" to open them.</li>
+      <li>Check "I agree to the Terms of Use and Disclaimer", then click "Accept and Start" to proceed to the session selection screen.</li>
+      <li>If you select "Decline", you cannot proceed.</li>
     </ol>
-    <p>If the terms are updated in a future release, you will be asked to accept them again on the next launch.</p>
-
-    <div class="screenshot">
-      <img src="images/en/terms-dialog.png" alt="Terms acceptance screen showing terms text with Accept and Decline buttons">
-      <div class="caption">Terms of Use acceptance screen</div>
-    </div>
 
     <h2>Screen Overview</h2>
-    <p>SecureNavigator uses a navigation bar on the left side to switch between the main screens.</p>
+    <p>SecureNavigator guides you through the screens with buttons, following the flow of the assessment.</p>
     <table class="manual-table">
       <tr><th>Screen</th><th>Description</th></tr>
-      <tr><td>Home</td><td>Create a new assessment or resume an existing session.</td></tr>
+      <tr><td>Session Selection</td><td>Start a new assessment with "Start New Assessment", or open a saved assessment.</td></tr>
       <tr><td>Hearing</td><td>Answer questions about your organization's security controls.</td></tr>
-      <tr><td>Results</td><td>View the result summary, attack scenarios, action planning, and guideline reference checks.</td></tr>
-      <tr><td>Attack View</td><td>Explore each attack scenario in detail with ATT&CK technique mappings.</td></tr>
-      <tr><td>Report</td><td>Preview reports and export to PDF (Pro only).</td></tr>
-      <tr><td>Settings</td><td>Switch language, manage license, and access external links.</td></tr>
+      <tr><td>Diagnosis results summary</td><td>Opened with "View results". View the result summary, weakness map, attack scenarios, layers and themes with gaps, and framework reference checks.</td></tr>
+      <tr><td>ATT&CK technique coverage (Attack View)</td><td>Opened with "View ATT&CK". See the attack flow, tactic chips, status groups, and glossary.</td></tr>
+      <tr><td>Report Preview</td><td>Opened with "Report preview". Preview, saving, and PDF export are available in Pro.</td></tr>
+      <tr><td>Settings</td><td>A dialog opened from the settings button. Switch the display language, check the license, and open external links.</td></tr>
     </table>
 
     <div class="screenshot">
-      <img src="images/en/session-start.png" alt="SecureNavigator Home screen with navigation bar on the left and assessment start button in the center">
-      <div class="caption">Home screen</div>
+      <img src="images/en/session-start.png" alt="SecureNavigator session selection screen with the assessment start button and saved assessments">
+      <div class="caption">Session selection screen</div>
     </div>
 
     <div class="chapter-nav">

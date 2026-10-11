@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>レポートプレビュー | SecureNavigator マニュアル — SumikkoLab</title>
-<meta name="description" content="SecureNavigator のレポートプレビューとPDF出力機能。監査・経営報告向けのセキュリティ評価レポートの生成方法を解説します。">
+<meta name="description" content="SecureNavigator のレポートプレビューとPDF出力機能。レポートのプレビューと、Pro 版での保存・PDF 出力の方法を解説します。">
 <link rel="canonical" href="https://secure-navigator.sumikkolab.com/manual/report-preview.html">
 <meta property="og:title" content="レポートプレビュー | SecureNavigator マニュアル — SumikkoLab">
-<meta property="og:description" content="SecureNavigator のレポートプレビューとPDF出力機能。監査・経営報告向けのセキュリティ評価レポートの生成方法を解説します。">
+<meta property="og:description" content="SecureNavigator のレポートプレビューとPDF出力機能。レポートのプレビューと、Pro 版での保存・PDF 出力の方法を解説します。">
 <meta property="og:url" content="https://secure-navigator.sumikkolab.com/manual/report-preview.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
@@ -29,38 +29,23 @@
     </div>
 
     <h1>Chapter 6: レポートプレビュー</h1>
-    <p class="subtitle">簡易レポート・完全レポート、PDF エクスポート</p>
+    <p class="subtitle">レポートのプレビュー、保存・PDF 出力（Pro）</p>
 
     <h2>レポート画面の概要</h2>
-    <p>レポート画面では、診断結果をレポート形式でプレビューできます。レポートの内容はエディション（Free / Pro）によって異なります。</p>
+    <p>結果画面の「レポートプレビュー」で、診断結果をレポート形式でプレビューできます。レポートのプレビューと保存・PDF 出力は Pro で利用できます。Free 版では「レポートプレビュー」ボタンは無効です。</p>
 
     <div class="screenshot">
-      <img src="images/ja/report-preview.png" alt="レポートプレビュー画面。対応候補とCSF参考確認が表示されている">
+      <img src="images/ja/report-preview.png" alt="レポートプレビュー画面。対策状況に不足がある項目やCSFカバレッジが表示されている">
       <div class="caption">レポートプレビュー画面</div>
     </div>
 
-    <h2>簡易レポート（Free 版）</h2>
-    <p>Free 版では、診断結果の概要を簡易レポートとして画面上でプレビューできます。簡易レポートには以下の内容が含まれます。</p>
+    <h2>レポート（Pro 版） <span class="pro-badge">Pro</span></h2>
+    <p>Pro 版では、診断結果のレポートをプレビューできます。レポートプレビューには以下の節があります。</p>
     <ul>
-      <li>診断の概要（診断日時、回答数、総合スコア）</li>
-      <li>対応候補（上位の改善項目）</li>
-      <li>攻撃シナリオの概要評価</li>
-      <li>IPA ガイドラインを参考にした対応状況</li>
-    </ul>
-
-    <div class="info-box">
-      <p>Free 版では画面上でのプレビューのみ利用可能です。PDF ファイルとしてエクスポートするには Pro 版が必要です。</p>
-    </div>
-
-    <h2>完全レポート（Pro 版） <span class="pro-badge">Pro</span></h2>
-    <p>Pro 版では、経営層や監査対応に使用できるコンサルタントレベルの完全レポートを生成できます。完全レポートには、簡易レポートの内容に加えて以下が含まれます。</p>
-    <ul>
-      <li>弱点マップの詳細分析</li>
-      <li>各攻撃シナリオのステップごとの防御評価</li>
-      <li>ATT&CK テクニックとの対応関係</li>
-      <li>経産省サイバーセキュリティ経営ガイドラインを参考にした対応状況</li>
-      <li>NIST CSF 2.0 を参考にした対応状況</li>
-      <li>対応候補の全体像</li>
+      <li>対策状況に不足がある項目</li>
+      <li>CSF カバレッジ</li>
+      <li>主要リスク</li>
+      <li>想定攻撃シナリオ</li>
     </ul>
 
     <div class="screenshot">
@@ -68,16 +53,16 @@
       <div class="caption">完全レポートのプレビュー — 攻撃シナリオ（Pro 版）</div>
     </div>
 
-    <h2>PDF エクスポート <span class="pro-badge">Pro</span></h2>
-    <p>Pro 版では、レポートを PDF ファイルとしてエクスポートできます。エクスポートされた PDF は、経営層への報告、社内会議での共有、監査対応の資料として利用できます。</p>
+    <h2>PDF 出力と保存 <span class="pro-badge">Pro</span></h2>
+    <p>Pro 版では、レポートを PDF ファイルとして出力できます。HTML / Markdown での保存も Pro 版で利用できます。</p>
     <ol>
       <li>レポートプレビュー画面で内容を確認します。</li>
-      <li>画面上部の「PDF エクスポート」ボタンをクリックします。</li>
+      <li>レポートプレビュー画面の「PDF 出力」ボタンをクリックします。</li>
       <li>保存先を選択すると、PDF ファイルが生成されます。</li>
     </ol>
 
     <div class="warn-box">
-      <p>PDF エクスポートには WebView2 Runtime が必要です。通常は Windows に同梱されていますが、環境によっては別途インストールが必要な場合があります。詳しくは<a href="troubleshooting.html">トラブルシューティング</a>を参照してください。</p>
+      <p>PDF 出力には WebView2 Runtime が必要です。インストールされていない場合は別途インストールしてください。詳しくは<a href="troubleshooting.html">トラブルシューティング</a>を参照してください。</p>
     </div>
 
     <div class="chapter-nav">
@@ -94,38 +79,23 @@
     </div>
 
     <h1>Chapter 6: Report Preview</h1>
-    <p class="subtitle">Simplified and full reports, PDF export</p>
+    <p class="subtitle">Report preview, saving and PDF export (Pro)</p>
 
     <h2>Report Screen Overview</h2>
-    <p>The Report screen lets you preview assessment results in a report format. The report content varies depending on your edition (Free or Pro).</p>
+    <p>The Report Preview screen, opened with "Report preview" on the Results screen, shows the assessment results in a report format. Preview, saving, and PDF export are available in Pro. In the Free edition, the "Report preview" button is disabled.</p>
 
     <div class="screenshot">
-      <img src="images/en/report-preview.png" alt="Report preview screen showing suggested actions and CSF reference checks">
+      <img src="images/en/report-preview.png" alt="Report preview screen showing items with gaps in control status and CSF coverage">
       <div class="caption">Report preview screen</div>
     </div>
 
-    <h2>Simplified Report (Free Edition)</h2>
-    <p>The Free edition provides an on-screen preview of the assessment results as a simplified report. The simplified report includes:</p>
+    <h2>Report (Pro Edition) <span class="pro-badge">Pro</span></h2>
+    <p>The Pro edition lets you preview the full report. The report preview includes the following sections:</p>
     <ul>
-      <li>Assessment overview (date, number of responses, overall score)</li>
-      <li>Suggested actions (top improvement items)</li>
-      <li>Attack scenario overview ratings</li>
-      <li>Status using IPA Guidelines as reference material</li>
-    </ul>
-
-    <div class="info-box">
-      <p>The Free edition only supports on-screen preview. Exporting as a PDF file requires the Pro edition.</p>
-    </div>
-
-    <h2>Full Report (Pro Edition) <span class="pro-badge">Pro</span></h2>
-    <p>The Pro edition generates a consultant-grade full report suitable for executive presentations and audit responses. In addition to the simplified report content, the full report includes:</p>
-    <ul>
-      <li>Detailed weakness map analysis</li>
-      <li>Step-by-step defense evaluation for each attack scenario</li>
-      <li>ATT&CK technique mappings</li>
-      <li>Status using METI Cybersecurity Management Guidelines as reference material</li>
-      <li>Status using NIST CSF 2.0 as reference material</li>
-      <li>Complete action planning view</li>
+      <li>Items with gaps in control status</li>
+      <li>CSF Coverage</li>
+      <li>Key Risks</li>
+      <li>Attack Scenarios</li>
     </ul>
 
     <div class="screenshot">
@@ -133,16 +103,16 @@
       <div class="caption">Full report preview — attack scenarios (Pro edition)</div>
     </div>
 
-    <h2>PDF Export <span class="pro-badge">Pro</span></h2>
-    <p>The Pro edition allows you to export reports as PDF files. The exported PDF can be used for executive presentations, internal meetings, and audit documentation.</p>
+    <h2>PDF Export and Saving <span class="pro-badge">Pro</span></h2>
+    <p>The Pro edition allows you to export reports as PDF files. Saving as HTML / Markdown is also available in Pro.</p>
     <ol>
       <li>Review the content on the Report preview screen.</li>
-      <li>Click the "PDF Export" button at the top of the screen.</li>
+      <li>Click the "Export PDF" button on the Report Preview screen.</li>
       <li>Select a save location and the PDF file will be generated.</li>
     </ol>
 
     <div class="warn-box">
-      <p>PDF export requires the WebView2 Runtime. It is typically bundled with Windows, but may need to be installed separately in some environments. See <a href="troubleshooting.html?lang=en">Troubleshooting</a> for details.</p>
+      <p>PDF export requires the WebView2 Runtime. If it is not installed, install it separately. See <a href="troubleshooting.html?lang=en">Troubleshooting</a> for details.</p>
     </div>
 
     <div class="chapter-nav">

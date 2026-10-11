@@ -32,15 +32,15 @@
     <p class="subtitle">カード UI、回答選択肢、ナビゲーション、表示モード</p>
 
     <h2>ヒアリング画面の概要</h2>
-    <p>ヒアリング画面では、組織のセキュリティ対策に関する質問が表示されます。質問はテーマごとにグループ化されており、各テーマ内の質問に順番に回答していきます。すべての質問に回答すると、結果画面に進むことができます。</p>
+    <p>ヒアリング画面では、組織のセキュリティ対策に関する質問が表示されます。質問はテーマごとにグループ化されており、各テーマ内の質問に順番に回答していきます。「結果を見る」で結果画面に進めます。回答の途中でも暫定結果を確認できます。</p>
 
     <div class="screenshot">
       <img src="images/ja/hearing-card.png" alt="ヒアリング画面。カード形式で質問が表示され、アウトラインパネルと4つの回答ボタンが並んでいる">
-      <div class="caption">ヒアリング画面（フォーカスモード）</div>
+      <div class="caption">ヒアリング画面（1問ずつ表示）</div>
     </div>
 
     <h2>カード UI</h2>
-    <p>各質問はカード形式で表示されます。カードには質問テキスト、所属するテーマ名、および回答選択肢が含まれます。現在の質問に回答すると、自動的に次の質問に進みます。</p>
+    <p>各質問はカード形式で表示されます。カードには質問テキスト、所属するテーマ名、および回答選択肢が含まれます。「回答後に自動で次へ」をオンにすると、回答後に自動で次の質問に進みます。</p>
 
     <h2>回答選択肢</h2>
     <p>各質問に対して、以下の4つの選択肢から回答を選びます。</p>
@@ -53,15 +53,15 @@
     </table>
 
     <div class="info-box">
-      <p>「未確認」を選択した質問は、後から見直すために自動的にマークされます。すべての質問に回答した後で、未確認の項目だけを絞り込んで確認できます。</p>
+      <p>「後で確認」にチェックを入れた質問は、「未回答・後で確認」の一覧でまとめて確認できます。一覧は「未回答または後で確認」「未回答のみ」「後で確認のみ」で絞り込めます。</p>
     </div>
 
     <h2>ナビゲーション</h2>
     <p>ヒアリング画面では、以下の方法で質問間を移動できます。</p>
     <ul>
-      <li><strong>前へ / 次へボタン</strong>: 画面下部のボタンで、前の質問や次の質問に移動します。</li>
-      <li><strong>アウトラインパネル</strong>: 画面左側にテーマと質問の一覧が表示されます。任意の質問をクリックして直接ジャンプできます。回答済みの質問にはチェックマークが表示されます。</li>
-      <li><strong>進捗バー</strong>: 画面上部に全体の進捗率が表示されます。</li>
+      <li><strong>戻る / 次へボタン</strong>: ボタンで、前の質問や次の質問に移動します。</li>
+      <li><strong>質問一覧パネル</strong>: テーマと質問の一覧が表示されます。任意の質問をクリックして直接ジャンプできます。「回答済み n / m」で回答済みの数を確認できます。</li>
+      <li><strong>進捗表示</strong>: 全体とセクション内の進捗が表示されます。</li>
     </ul>
 
     <div class="screenshot">
@@ -70,22 +70,24 @@
     </div>
 
     <h2>表示モード</h2>
-    <p>ヒアリング画面には2つの表示モードがあります。</p>
+    <p>ヒアリング画面には3つの表示モードがあります。</p>
 
-    <h3>フォーカスモード</h3>
-    <p>1つの質問だけを画面中央に大きく表示するモードです。集中して1問ずつ回答したい場合に適しています。初期設定ではこのモードが選択されています。</p>
+    <h3>1問ずつ表示（フォーカス）</h3>
+    <p>1つの質問だけを画面中央に大きく表示するモードです。集中して1問ずつ回答したい場合に適しています。</p>
 
-    <h3>リストモード</h3>
+    <h3>テーマ表示</h3>
     <p>同じテーマ内の質問を一覧形式で表示するモードです。複数の質問をまとめて確認・回答したい場合や、回答の全体像を把握したい場合に便利です。</p>
 
+    <h3>連続表示</h3>
+    <p>質問を連続して並べて表示するモードです。</p>
+
     <div class="screenshot">
-      <img src="images/ja/hearing-list-mode.png" alt="リストモードの表示。複数の質問がテーマごとにリスト形式で表示され、各質問の横に回答選択肢がある">
-      <div class="caption">リストモード表示</div>
+      <img src="images/ja/hearing-list-mode.png" alt="テーマ表示。複数の質問がテーマごとにリスト形式で表示され、各質問の横に回答選択肢がある">
+      <div class="caption">テーマ表示</div>
     </div>
 
-    <h2>「あとで見直す」機能</h2>
-    <p>回答に自信がない質問や、後で担当者に確認したい質問には、「あとで見直す」マークを付けることができます。マークされた質問はアウトラインパネルで目印が表示され、フィルタリングで絞り込むことも可能です。</p>
-    <p>「未確認」を選択した質問には自動的にこのマークが付与されます。手動でマークを付けたり外したりすることもできます。</p>
+    <h2>「後で確認」機能</h2>
+    <p>今すぐ答えられない質問には、「後で確認」にチェックを入れておきます。チェックした質問は、「未回答・後で確認」の一覧でまとめて確認できます。</p>
 
     <div class="chapter-nav">
       <a href="creating-assessment.html">&larr; 前へ: 診断の作成</a>
@@ -104,7 +106,7 @@
     <p class="subtitle">Card UI, answer options, navigation, display modes</p>
 
     <h2>Hearing Screen Overview</h2>
-    <p>The Hearing screen presents questions about your organization's security controls. Questions are grouped by theme, and you answer each question within a theme sequentially. Once all questions are answered, you can proceed to the Results screen.</p>
+    <p>The Hearing screen presents questions about your organization's security controls. Questions are grouped by theme, and you answer each question within a theme sequentially. Select "View Results" to proceed to the Results screen. A provisional result is available even before all questions are answered.</p>
 
     <div class="screenshot">
       <img src="images/en/hearing-card.png" alt="Hearing screen showing a question in card format with outline panel and four answer buttons">
@@ -112,28 +114,28 @@
     </div>
 
     <h2>Card UI</h2>
-    <p>Each question is displayed as a card. The card contains the question text, the theme it belongs to, and the answer options. When you answer the current question, the next question is automatically displayed.</p>
+    <p>Each question is displayed as a card. The card contains the question text, the theme it belongs to, and the answer options. When the automatic-advance option is turned on, the next question is displayed automatically after you answer.</p>
 
     <h2>Answer Options</h2>
     <p>For each question, select one of the following four options.</p>
     <table class="manual-table">
       <tr><th>Option</th><th>Meaning</th></tr>
       <tr><td>Implemented</td><td>The control has been deployed and is operational within the organization.</td></tr>
-      <tr><td>Partial</td><td>The control is partially in place but not fully deployed across the organization.</td></tr>
+      <tr><td>Partially Implemented</td><td>The control is partially in place but not fully deployed across the organization.</td></tr>
       <tr><td>Not Implemented</td><td>The control has not been deployed.</td></tr>
       <tr><td>Unverified</td><td>The implementation status is unknown and requires verification.</td></tr>
     </table>
 
     <div class="info-box">
-      <p>Questions answered as "Unverified" are automatically flagged for review. After answering all questions, you can filter to show only unverified items.</p>
+      <p>Questions marked "Review later" can be reviewed together in the "Unanswered & review later" list, which you can filter to show unanswered questions, review-later questions, or both.</p>
     </div>
 
     <h2>Navigation</h2>
     <p>The Hearing screen provides multiple ways to navigate between questions.</p>
     <ul>
-      <li><strong>Back / Next buttons</strong>: Use the buttons at the bottom of the screen to move to the previous or next question.</li>
-      <li><strong>Outline panel</strong>: A list of themes and questions is shown on the left side. Click any question to jump directly to it. Answered questions display a check mark.</li>
-      <li><strong>Progress bar</strong>: The overall completion percentage is shown at the top of the screen.</li>
+      <li><strong>Back / Next buttons</strong>: Use the buttons to move to the previous or next question.</li>
+      <li><strong>Questions panel</strong>: A list of themes and questions is shown. Click any question to jump directly to it. The number of answered questions is shown in the panel.</li>
+      <li><strong>Progress</strong>: Overall progress and progress within the section are shown.</li>
     </ul>
 
     <div class="screenshot">
@@ -142,22 +144,24 @@
     </div>
 
     <h2>Display Modes</h2>
-    <p>The Hearing screen offers two display modes.</p>
+    <p>The Hearing screen offers three display modes.</p>
 
     <h3>Focus Mode</h3>
-    <p>Displays one question at a time in the center of the screen. This mode is ideal for concentrating on each question individually. It is selected by default.</p>
+    <p>Displays one question at a time in the center of the screen. This mode is ideal for concentrating on each question individually.</p>
 
-    <h3>List Mode</h3>
+    <h3>By Theme</h3>
     <p>Displays all questions within the same theme in a list format. This mode is useful when you want to review or answer multiple questions at once, or get an overview of all responses within a theme.</p>
 
+    <h3>Continuous</h3>
+    <p>Displays the questions one after another in a continuous list.</p>
+
     <div class="screenshot">
-      <img src="images/en/hearing-list-mode.png" alt="List mode view showing multiple questions in a list format with answer options beside each question">
-      <div class="caption">List mode view</div>
+      <img src="images/en/hearing-list-mode.png" alt="By theme view showing multiple questions in a list format with answer options beside each question">
+      <div class="caption">By theme view</div>
     </div>
 
     <h2>Review Later</h2>
-    <p>You can flag questions you are unsure about or need to confirm with a colleague by marking them for review later. Flagged questions are indicated in the outline panel and can be filtered for quick access.</p>
-    <p>Questions answered as "Unverified" are automatically flagged. You can also manually add or remove the flag on any question.</p>
+    <p>If you cannot answer a question right away, mark it as "Review later". Marked questions can be reviewed together in the "Unanswered & review later" list.</p>
 
     <div class="chapter-nav">
       <a href="creating-assessment.html?lang=en">&larr; Previous: Creating an Assessment</a>

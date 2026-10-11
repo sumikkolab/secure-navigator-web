@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>結果の確認 | SecureNavigator マニュアル — SumikkoLab</title>
-<meta name="description" content="SecureNavigator の評価結果画面。ガイドライン参考確認、カテゴリ別評価、脅威マッピングの確認方法を解説します。">
+<meta name="description" content="SecureNavigator の評価結果画面。結果サマリ、弱点マップ、攻撃シナリオ、ガイドライン参考確認の確認方法を解説します。">
 <link rel="canonical" href="https://secure-navigator.sumikkolab.com/manual/viewing-results.html">
 <meta property="og:title" content="結果の確認 | SecureNavigator マニュアル — SumikkoLab">
-<meta property="og:description" content="SecureNavigator の評価結果画面。ガイドライン参考確認、カテゴリ別評価、脅威マッピングの確認方法を解説します。">
+<meta property="og:description" content="SecureNavigator の評価結果画面。結果サマリ、弱点マップ、攻撃シナリオ、ガイドライン参考確認の確認方法を解説します。">
 <meta property="og:url" content="https://secure-navigator.sumikkolab.com/manual/viewing-results.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
@@ -29,47 +29,39 @@
     </div>
 
     <h1>Chapter 4: 結果の確認</h1>
-    <p class="subtitle">結果サマリ、ガイドライン対応状況、攻撃シナリオ、対応候補</p>
+    <p class="subtitle">結果サマリ、ガイドライン対応状況、攻撃シナリオ、不足がみられる面とテーマ</p>
 
     <h2>結果画面の概要</h2>
-    <p>すべての質問に回答すると、結果画面が利用可能になります。結果画面は複数のセクションで構成されており、組織のセキュリティ対策状況をさまざまな角度から確認できます。</p>
+    <p>ヒアリング画面の「結果を見る」で結果画面を開けます。回答の途中では暫定結果が表示されます。結果画面は複数のセクションで構成されており、組織のセキュリティ対策状況をさまざまな角度から確認できます。成熟度・弱点マップ・フレームワークなどの用語には、ポインターを合わせると補足が表示されます。</p>
 
     <div class="screenshot">
       <img src="images/ja/result-summary.png" alt="結果画面の全体表示。上部にKPIスコア、中央に弱点マップが表示されている">
       <div class="caption">結果画面の全体表示</div>
     </div>
 
-    <h2>対応候補の表示</h2>
-    <p>結果画面の上部には、検討しやすい対応候補が表示されます。これは診断結果からルールベースで算出された参考情報であり、利用者の環境や運用状況に合わせて判断してください。</p>
+    <h2>対策が十分でない領域の例</h2>
+    <p>結果画面には、診断結果から、対策が十分でない領域の例が表示されます。これは診断結果からルールベースで算出された参考情報であり、利用者の環境や運用状況に合わせて判断してください。</p>
 
-    <h2>弱点マップ（テーマ x レイヤーマトリクス）</h2>
-    <p>弱点マップは、セキュリティ対策のテーマ（例: アクセス制御、ネットワーク防御、インシデント対応）と防御レイヤー（例: 予防、検知、対応）を掛け合わせたマトリクス形式で表示されます。</p>
-    <p>各セルは対策の充実度に応じて色分けされ、組織全体のセキュリティ対策のバランスと弱点を視覚的に把握できます。色が薄い（対策が手薄な）領域が、攻撃者にとって狙いやすいポイントです。</p>
+    <h2>弱点マップ（領域 x 観点のマトリクス）</h2>
+    <p>弱点マップは、セキュリティ対策の領域ごとに、方針・技術・運用・検知・対応・総合の観点で状況を表示するマトリクスです。</p>
+    <p>各セルは対策の状況に応じて表示され、組織全体のセキュリティ対策のバランスと弱点を把握できます。凡例は、十分（80% 以上）・途中（21〜79%）・不足（20% 以下）です。</p>
 
     <div class="screenshot">
-      <img src="images/ja/attack-scenarios.png" alt="攻撃シナリオの結果と対応候補の表示">
+      <img src="images/ja/attack-scenarios.png" alt="攻撃シナリオの結果の表示">
       <div class="caption">攻撃シナリオ結果</div>
     </div>
 
     <h2>攻撃シナリオテーブル</h2>
-    <p>SecureNavigator は6つの代表的な攻撃シナリオについて、各ステップでの防御成功率をシミュレーションします。テーブルには各シナリオの名称、攻撃ステップ数、防御の総合評価が表示されます。</p>
-    <p>各シナリオの行をクリックすると、攻撃ビュー画面に遷移し、ステップごとの詳細を確認できます。</p>
+    <p>SecureNavigator は6つの代表的な攻撃シナリオについて、回答から各ステップの守りの状態を評価します。表には、攻撃シナリオ・結果・想定被害が表示されます。</p>
+    <p>ステップごとの詳細は、「ATT&CK を見る」で開く攻撃ビュー画面で確認できます。</p>
 
     <div class="screenshot">
-      <img src="images/ja/roadmap.png" alt="対応候補。4つの時間軸ごとに候補施策が表示され、下部にCSF参考確認が表示されている">
-      <div class="caption">対応候補</div>
+      <img src="images/ja/roadmap.png" alt="不足がみられる面とテーマの表示。下部にCSF参考確認が表示されている">
+      <div class="caption">不足がみられる面とテーマ</div>
     </div>
 
-    <h2>対応候補</h2>
-    <p>診断結果に基づき、改善施策の候補を4つの時間軸で整理して表示します。</p>
-    <table class="manual-table">
-      <tr><th>時間軸</th><th>内容</th></tr>
-      <tr><td>今すぐ</td><td>既存リソースで即時対応可能な施策。コストをかけずに実行できる設定変更や運用ルールの整備など。</td></tr>
-      <tr><td>短期（1-3ヶ月）</td><td>比較的短期間で導入可能な施策。ツールの設定変更、ポリシーの策定・適用など。</td></tr>
-      <tr><td>中期（3-6ヶ月）</td><td>計画的な導入が必要な施策。新規ツールの検討・導入、体制の構築など。</td></tr>
-      <tr><td>長期（6ヶ月以上）</td><td>組織的な取り組みが必要な施策。セキュリティ文化の醸成、大規模な基盤整備など。</td></tr>
-    </table>
-
+    <h2>不足がみられる面とテーマ</h2>
+    <p>診断結果から、実施が低い面とテーマを整理して表示します。面は、方針・技術・運用など、守りを見る観点の区分です。テーマは、質問をまとめた話題の区分（認証管理など）です。</p>
     <div class="screenshot">
       <img src="images/ja/framework-ipa.png" alt="IPAガイドライン参考確認の表示">
       <div class="caption">IPAガイドライン参考確認</div>
@@ -107,50 +99,42 @@
     </div>
 
     <h1>Chapter 4: Viewing Results</h1>
-    <p class="subtitle">Result summary, guideline mapping, attack scenarios, action planning</p>
+    <p class="subtitle">Result summary, guideline mapping, attack scenarios, layers and themes with gaps</p>
 
     <h2>Results Screen Overview</h2>
-    <p>Once all questions are answered, the Results screen becomes available. It consists of multiple sections that present your organization's security posture from different perspectives.</p>
+    <p>Select "View Results" on the Hearing screen to open the Results screen. A provisional result is shown while answers are incomplete. It consists of multiple sections that present your organization's security posture from different perspectives. Hover over terms such as maturity, weakness map, and framework to see a short explanation.</p>
 
     <div class="screenshot">
       <img src="images/en/result-summary.png" alt="Full results screen showing KPI score at the top and weakness map in the center">
       <div class="caption">Results screen overview</div>
     </div>
 
-    <h2>Suggested Actions</h2>
-    <p>The top section of the Results screen highlights improvement candidates that may be useful to review first. They are rule-based reference information and should be evaluated against the user's environment and operating context.</p>
+    <h2>Examples of Areas Where Controls Are Not Sufficient</h2>
+    <p>The Results screen shows examples of areas where controls are not sufficient, based on the assessment results. They are rule-based reference information and should be evaluated against the user's environment and operating context.</p>
 
-    <h2>Weakness Map (Theme x Layer Matrix)</h2>
-    <p>The weakness map is displayed as a matrix combining security themes (e.g., Access Control, Network Defense, Incident Response) and defense layers (e.g., Prevention, Detection, Response).</p>
-    <p>Each cell is color-coded based on the level of control implementation. This allows you to visually grasp the balance and gaps in your organization's security controls. Lightly colored areas (thin coverage) represent the points most vulnerable to attackers.</p>
+    <h2>Weakness Map (Domain x Perspective Matrix)</h2>
+    <p>The weakness map is a matrix showing, for each domain, the status in terms of Policy, Technology, Operations, Detection, Response, and Overall.</p>
+    <p>Each cell reflects the control status, and a legend is shown with the map. This allows you to visually grasp the balance and gaps in your organization's security controls.</p>
 
     <div class="screenshot">
-      <img src="images/en/attack-scenarios.png" alt="Attack scenario results and action planning display">
+      <img src="images/en/attack-scenarios.png" alt="Attack scenario results display">
       <div class="caption">Attack scenario results</div>
     </div>
 
     <h2>Attack Scenarios Table</h2>
-    <p>SecureNavigator simulates 6 representative attack scenarios, evaluating the defense success rate at each step. The table shows each scenario's name, number of attack steps, and overall defense rating.</p>
-    <p>Click on any scenario row to navigate to the Attack View screen and examine step-by-step details.</p>
+    <p>SecureNavigator evaluates 6 representative attack scenarios at each step, based on your answers. The table shows the attack scenario, the result, and the expected damage.</p>
+    <p>Select "View ATT&CK" to open the Attack View screen and examine step-by-step details.</p>
 
     <div class="screenshot">
       <img src="images/en/framework-ipa.png" alt="IPA guideline reference check display">
       <div class="caption">IPA guideline reference check</div>
     </div>
 
-    <h2>Action Planning</h2>
-    <p>Based on the assessment results, suggested improvement actions are organized across four time horizons.</p>
-    <table class="manual-table">
-      <tr><th>Time Horizon</th><th>Description</th></tr>
-      <tr><td>Immediate</td><td>Actions that can be taken right away with existing resources. Configuration changes and operational rule updates that require no additional cost.</td></tr>
-      <tr><td>Short-term (1-3 months)</td><td>Measures that can be implemented in a relatively short period. Tool configuration changes, policy drafting and enforcement.</td></tr>
-      <tr><td>Mid-term (3-6 months)</td><td>Measures requiring planned implementation. Evaluation and deployment of new tools, team structure building.</td></tr>
-      <tr><td>Long-term (6+ months)</td><td>Measures requiring organizational commitment. Building a security culture, large-scale infrastructure improvements.</td></tr>
-    </table>
-
+    <h2>Layers and Themes with Gaps</h2>
+    <p>Based on the assessment results, layers and themes with low implementation are listed. A layer is a viewpoint such as policy, technology, or operations. A theme is a topic group of questions, such as authentication.</p>
     <div class="screenshot">
-      <img src="images/en/roadmap.png" alt="Action planning view with suggested actions and CSF reference checks at the bottom">
-      <div class="caption">Action planning</div>
+      <img src="images/en/roadmap.png" alt="Layers and themes with gaps, with CSF reference checks at the bottom">
+      <div class="caption">Layers and themes with gaps</div>
     </div>
 
     <h2>Framework Reference Checks</h2>

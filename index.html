@@ -95,7 +95,7 @@
   },
   "author": {
     "@type": "Organization",
-    "name": "Sumikko Lab",
+    "name": "SumikkoLab",
     "url": "https://secure-navigator.sumikkolab.com/"
   }
 }
@@ -160,7 +160,7 @@
       </div>
       <div class="feature-card">
         <h3>対応候補の整理</h3>
-        <p>診断結果から「今すぐ」「短期」「中期」「長期」の4段階で着手候補を表示します。</p>
+        <p>診断結果から、実施が低い面（方針・技術・検知・対応・運用）ごとに、対応候補とその理由を表示します。期間や順位は示しません。</p>
       </div>
       <div class="feature-card">
         <h3>レポート・資料出力 <span class="pro-badge">Pro</span></h3>
@@ -177,10 +177,12 @@
     </div>
 
     <div class="release-note">
-      <h3>v1.2 更新内容</h3>
+      <h3>v1.3 更新内容</h3>
       <ul>
-        <li>動作基盤を .NET 10 に更新しました。</li>
-        <li>MITRE ATT&CK、NIST CSF 2.0、AI 関連ガイドラインなどの参照情報と表示を更新しました。</li>
+        <li>攻撃面の見せ方を更新しました（左から右の経路図・戦術チップ・状況別の群）。</li>
+        <li>専門用語の補足を追加しました。</li>
+        <li>レポートの英語表記を修正しました。</li>
+        <li>ファイルの保存を、途中で失敗しても元のファイルを壊さない方式に変更しました。</li>
         <li>既存の診断結果は引き続き利用できます。</li>
       </ul>
     </div>
@@ -197,12 +199,11 @@
         <tr><td>IPA 中小企業向けガイドライン参考確認</td><td>✓</td><td>✓</td></tr>
         <tr><td>経産省サイバーセキュリティ経営ガイドライン参考確認</td><td>—</td><td>✓</td></tr>
         <tr><td>NIST CSF 2.0 参考確認</td><td>—</td><td>✓</td></tr>
-        <tr><td>AI 関連参考確認（NIST AI RMF / 総務省 AI セキュリティガイドライン / UK NCSC Secure AI System Development 関連ガイダンス を参考にした確認結果の表示。準拠・認証・適合判定を示すものではありません）</td><td>—</td><td>✓</td></tr>
+        <tr><td>AI 関連参考確認（NIST AI RMF / 総務省 AI セキュリティガイドライン / AI 事業者ガイドライン / IPA 生成AIセキュリティ資料 / UK NCSC Secure AI System Development 関連ガイダンス を参考にした確認結果の表示。準拠・認証・適合判定を示すものではありません）</td><td>バッジ・カバレッジバー</td><td>バッジ・カバレッジバー・詳細</td></tr>
         <tr><td>高度な分析（成熟度詳細・原因と対策）</td><td>—</td><td>✓</td></tr>
         <tr><td>ATT&CK テクニック詳細分析</td><td>—</td><td>✓</td></tr>
         <tr><td>PDF レポート出力</td><td>—</td><td>✓</td></tr>
         <tr><td>HTML / Markdown レポート出力</td><td>—</td><td>✓</td></tr>
-        <tr><td>ヒアリングシート出力（Excel）</td><td>—</td><td>✓</td></tr>
         <tr><td>日本語 / 英語切替</td><td>✓</td><td>✓</td></tr>
         <tr><td>セッション保存数</td><td>1件</td><td>3件</td></tr>
       </tbody>
@@ -222,8 +223,7 @@
     <h2>動作要件</h2>
     <ul>
       <li>Windows 10 Version 2004 以降 / Windows 11</li>
-      <li>WebView2 Runtime（PDF 出力に必要。通常は OS に同梱済み）</li>
-      <li>ディスク容量: 約 50 MB</li>
+      <li>WebView2 Runtime（PDF 出力に必要）</li>
       <li>インターネット接続: 不要（完全オフライン動作）</li>
     </ul>
 
@@ -250,7 +250,7 @@
       </div>
       <div class="feature-card">
         <h3>Action Planning View</h3>
-        <p>View suggested actions across 4 time horizons: Immediate, Short-term, Mid-term, and Long-term.</p>
+        <p>View suggested actions and their reasons for each layer with gaps (policy, technology, detection, response, operations). No time frames or rankings are shown.</p>
       </div>
       <div class="feature-card">
         <h3>Report &amp; Document Export <span class="pro-badge">Pro</span></h3>
@@ -267,10 +267,12 @@
     </div>
 
     <div class="release-note">
-      <h3>v1.2 Updates</h3>
+      <h3>v1.3 Updates</h3>
       <ul>
-        <li>Updated the runtime to .NET 10.</li>
-        <li>Updated reference information and displays for MITRE ATT&CK, NIST CSF 2.0, and AI-related guidance.</li>
+        <li>Updated how the attack view is presented (left-to-right path diagram, tactic chips, groups by situation).</li>
+        <li>Added explanations for technical terms.</li>
+        <li>Corrected English wording in reports.</li>
+        <li>File saving now uses a safe write method that keeps the original file intact if saving fails.</li>
         <li>Existing assessments remain available.</li>
       </ul>
     </div>
@@ -287,12 +289,11 @@
         <tr><td>IPA SME Guidelines reference checks (Japan)</td><td>✓</td><td>✓</td></tr>
         <tr><td>METI Cybersecurity Guidelines reference checks (Japan)</td><td>—</td><td>✓</td></tr>
         <tr><td>NIST CSF 2.0 reference checks</td><td>—</td><td>✓</td></tr>
-        <tr><td>AI-related Reference Checks (results referencing NIST AI RMF / Japan MIC AI Security Guidelines / UK NCSC Secure AI System Development guidance. Not an indication of compliance, conformity, or certification)</td><td>—</td><td>✓</td></tr>
+        <tr><td>AI-related Reference Checks (results referencing NIST AI RMF / Japan MIC AI Security Guidelines / Japan AI Guidelines for Business / IPA generative AI security materials / UK NCSC Secure AI System Development guidance. Not an indication of compliance, conformity, or certification)</td><td>Badge &amp; coverage bar</td><td>Badge, coverage bar &amp; details</td></tr>
         <tr><td>Advanced Analysis (maturity detail, cause &amp; action)</td><td>—</td><td>✓</td></tr>
         <tr><td>ATT&CK Technique Detail Analysis</td><td>—</td><td>✓</td></tr>
         <tr><td>PDF Report Export</td><td>—</td><td>✓</td></tr>
         <tr><td>HTML / Markdown Report Export</td><td>—</td><td>✓</td></tr>
-        <tr><td>Hearing Sheet Export (Excel)</td><td>—</td><td>✓</td></tr>
         <tr><td>Japanese / English</td><td>✓</td><td>✓</td></tr>
         <tr><td>Saved Sessions</td><td>1</td><td>3</td></tr>
       </tbody>
@@ -312,8 +313,7 @@
     <h2>System Requirements</h2>
     <ul>
       <li>Windows 10 Version 2004 or later / Windows 11</li>
-      <li>WebView2 Runtime (required for PDF export; usually bundled with the OS)</li>
-      <li>Disk space: approx. 50 MB</li>
+      <li>WebView2 Runtime (required for PDF export)</li>
       <li>Internet: Not required (fully offline operation)</li>
     </ul>
 
@@ -322,7 +322,7 @@
 </div>
 
 <div class="footer">
-  <p>&copy; 2026 Sumikko Lab. All rights reserved.</p>
+  <p>&copy; 2026 SumikkoLab. All rights reserved.</p>
   <p style="margin-top: 8px;">
     <span class="section-ja visible" style="display:inline">
       <a href="privacy-policy.html">プライバシーポリシー</a> |
