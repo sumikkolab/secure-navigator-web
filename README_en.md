@@ -30,6 +30,8 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 
 ## v1.3 Updates
 
+- The initial questions now fit on one screen, showing the scope of the assessment (themes, questions, estimated time). "Not sure / undecided" is available.
+- Reworked the question screen: switch between Focus and Fast views, filter by theme chips, see each theme's progress on Home, and each answer is saved automatically.
 - Updated how the attack view is presented (left-to-right path diagram, tactic chips, groups by situation).
 - Added explanations for technical terms.
 - Corrected English wording in reports.
