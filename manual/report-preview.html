@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>レポートプレビュー | SecureNavigator マニュアル — Sumikko Lab</title>
+<meta name="description" content="SecureNavigator のレポートプレビューとPDF出力機能。レポートのプレビューと、Pro 版での保存・PDF 出力の方法を解説します。">
+<link rel="canonical" href="https://secure-navigator.sumikkolab.com/manual/report-preview.html">
+<meta property="og:title" content="レポートプレビュー | SecureNavigator マニュアル — Sumikko Lab">
+<meta property="og:description" content="SecureNavigator のレポートプレビューとPDF出力機能。レポートのプレビューと、Pro 版での保存・PDF 出力の方法を解説します。">
+<meta property="og:url" content="https://secure-navigator.sumikkolab.com/manual/report-preview.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="SecureNavigator — Sumikko Lab">
+<meta property="og:image" content="https://secure-navigator.sumikkolab.com/assets/secure-navigator-icon.png">
+<meta property="og:image:alt" content="SecureNavigator のアイコン">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">目次</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>Chapter 6: レポートプレビュー</h1>
+    <p class="subtitle">レポートのプレビュー、保存・PDF 出力（Pro）</p>
+
+    <h2>レポート画面の概要</h2>
+    <p>結果画面の「レポートプレビュー」で、診断結果をレポート形式でプレビューできます。レポートのプレビューと保存・PDF 出力は Pro で利用できます。Free 版では「レポートプレビュー」ボタンは無効です。</p>
+
+    <div class="screenshot">
+      <img src="images/ja/report-preview.png" alt="レポートプレビュー画面。対策状況に不足がある項目やCSFカバレッジが表示されている">
+      <div class="caption">レポートプレビュー画面</div>
+    </div>
+
+    <h2>レポート（Pro 版） <span class="pro-badge">Pro</span></h2>
+    <p>Pro 版では、診断結果のレポートをプレビューできます。レポートプレビューには以下の節があります。</p>
+    <ul>
+      <li>対策状況に不足がある項目</li>
+      <li>CSF カバレッジ</li>
+      <li>主要リスク</li>
+      <li>想定攻撃シナリオ</li>
+    </ul>
+
+    <div class="screenshot">
+      <img src="images/ja/report-preview-attack.png" alt="完全レポートのプレビュー。攻撃シナリオセクションが表示されている">
+      <div class="caption">完全レポートのプレビュー — 攻撃シナリオ（Pro 版）</div>
+    </div>
+
+    <h2>PDF 出力と保存 <span class="pro-badge">Pro</span></h2>
+    <p>Pro 版では、レポートを PDF ファイルとして出力できます。HTML / Markdown での保存も Pro 版で利用できます。</p>
+    <ol>
+      <li>レポートプレビュー画面で内容を確認します。</li>
+      <li>レポートプレビュー画面の「PDF 出力」ボタンをクリックします。</li>
+      <li>保存先を選択すると、PDF ファイルが生成されます。</li>
+    </ol>
+
+    <div class="warn-box">
+      <p>PDF 出力には WebView2 Runtime が必要です。インストールされていない場合は別途インストールしてください。詳しくは<a href="troubleshooting.html">トラブルシューティング</a>を参照してください。</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="attack-view.html">&larr; 前へ: 攻撃ビュー</a>
+      <a href="settings.html">次へ: 設定 &rarr;</a>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Table of Contents</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>Chapter 6: Report Preview</h1>
+    <p class="subtitle">Report preview, saving and PDF export (Pro)</p>
+
+    <h2>Report Screen Overview</h2>
+    <p>The Report Preview screen, opened with "Report preview" on the Results screen, shows the assessment results in a report format. Preview, saving, and PDF export are available in Pro. In the Free edition, the "Report preview" button is disabled.</p>
+
+    <div class="screenshot">
+      <img src="images/en/report-preview.png" alt="Report preview screen showing items with gaps in control status and CSF coverage">
+      <div class="caption">Report preview screen</div>
+    </div>
+
+    <h2>Report (Pro Edition) <span class="pro-badge">Pro</span></h2>
+    <p>The Pro edition lets you preview the full report. The report preview includes the following sections:</p>
+    <ul>
+      <li>Items with gaps in control status</li>
+      <li>CSF Coverage</li>
+      <li>Key Risks</li>
+      <li>Attack Scenarios</li>
+    </ul>
+
+    <div class="screenshot">
+      <img src="images/en/report-preview-attack.png" alt="Full report preview showing attack scenarios section">
+      <div class="caption">Full report preview — attack scenarios (Pro edition)</div>
+    </div>
+
+    <h2>PDF Export and Saving <span class="pro-badge">Pro</span></h2>
+    <p>The Pro edition allows you to export reports as PDF files. Saving as HTML / Markdown is also available in Pro.</p>
+    <ol>
+      <li>Review the content on the Report preview screen.</li>
+      <li>Click the "Export PDF" button on the Report Preview screen.</li>
+      <li>Select a save location and the PDF file will be generated.</li>
+    </ol>
+
+    <div class="warn-box">
+      <p>PDF export requires the WebView2 Runtime. If it is not installed, install it separately. See <a href="troubleshooting.html?lang=en">Troubleshooting</a> for details.</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="attack-view.html?lang=en">&larr; Previous: Attack View</a>
+      <a href="settings.html?lang=en">Next: Settings &rarr;</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 Sumikko Lab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>

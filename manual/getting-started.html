@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>はじめに | SecureNavigator マニュアル — Sumikko Lab</title>
+<meta name="description" content="SecureNavigator のインストール方法と初期設定。Microsoft Store からのセットアップ、初回アセスメントの作成手順を解説します。">
+<link rel="canonical" href="https://secure-navigator.sumikkolab.com/manual/getting-started.html">
+<meta property="og:title" content="はじめに | SecureNavigator マニュアル — Sumikko Lab">
+<meta property="og:description" content="SecureNavigator のインストール方法と初期設定。Microsoft Store からのセットアップ、初回アセスメントの作成手順を解説します。">
+<meta property="og:url" content="https://secure-navigator.sumikkolab.com/manual/getting-started.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="SecureNavigator — Sumikko Lab">
+<meta property="og:image" content="https://secure-navigator.sumikkolab.com/assets/secure-navigator-icon.png">
+<meta property="og:image:alt" content="SecureNavigator のアイコン">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">目次</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>Chapter 1: はじめに</h1>
+    <p class="subtitle">インストール・初回起動・利用規約の同意</p>
+
+    <h2>動作要件</h2>
+    <table class="manual-table">
+      <tr><th>項目</th><th>要件</th></tr>
+      <tr><td>OS</td><td>Windows 10 Version 2004 以降 / Windows 11</td></tr>
+      <tr><td>ランタイム</td><td>WebView2 Runtime（PDF 出力に必要）</td></tr>
+      <tr><td>インターネット</td><td>不要（完全オフライン動作）</td></tr>
+    </table>
+
+    <div class="info-box">
+      <p>SecureNavigator は完全オフラインで動作します。インターネット接続が必要になるのは、Microsoft Store からのインストール・更新時のみです。</p>
+    </div>
+
+    <h2>インストール方法</h2>
+    <p>SecureNavigator は <strong>Microsoft Store</strong> からインストールします。</p>
+    <ol>
+      <li>Microsoft Store を開き、「SecureNavigator」を検索します。</li>
+      <li>「入手」ボタンをクリックしてインストールします。</li>
+      <li>インストール完了後、スタートメニューから「SecureNavigator」を起動できます。</li>
+    </ol>
+
+    <h2>初回起動と利用規約</h2>
+    <p>SecureNavigator を初めて起動すると、利用規約と免責事項の同意画面が表示されます。</p>
+    <ol>
+      <li>利用規約と免責事項の内容を確認します。「利用規約を表示」から規約を開けます。</li>
+      <li>「利用規約と免責事項に同意します」にチェックを入れ、「同意して開始」ボタンをクリックすると、セッション選択画面に進みます。</li>
+      <li>「同意しない」を選択した場合は、先に進めません。</li>
+    </ol>
+
+    <div class="screenshot">
+      <img src="images/ja/terms-dialog.png" alt="利用規約の同意画面。規約テキストと「同意して開始」「同意しない」ボタンが表示されている">
+      <div class="caption">利用規約の同意画面</div>
+    </div>
+
+    <h2>画面構成の概要</h2>
+    <p>SecureNavigator は、診断の流れに沿って、ボタンで次の画面へ進みます。</p>
+    <table class="manual-table">
+      <tr><th>画面</th><th>説明</th></tr>
+      <tr><td>セッション選択</td><td>「新しい診断を開始する」で診断を作成するか、保存済みの診断を開きます。</td></tr>
+      <tr><td>ヒアリング</td><td>セキュリティ対策に関する質問に回答する画面です。</td></tr>
+      <tr><td>診断結果サマリ</td><td>「結果を見る」で開きます。診断結果のサマリ、弱点マップ、攻撃シナリオ、不足がみられる面とテーマ、フレームワークの参考確認を確認できます。</td></tr>
+      <tr><td>ATT&CK テクニックカバレッジ（攻撃ビュー）</td><td>「ATT&CK を見る」で開きます。攻撃の経路図、戦術チップ、状況別の群、用語の補足を確認できます。</td></tr>
+      <tr><td>レポートプレビュー</td><td>「レポートプレビュー」で開きます。プレビュー・保存・PDF 出力は Pro で利用できます。</td></tr>
+      <tr><td>設定</td><td>設定ボタンから開くダイアログです。表示言語の切替、ライセンスの確認、外部リンクの表示を行います。</td></tr>
+    </table>
+
+    <div class="screenshot">
+      <img src="images/ja/session-start.png" alt="SecureNavigator のセッション選択画面。診断の開始ボタンと保存済みの診断が表示されている">
+      <div class="caption">セッション選択画面</div>
+    </div>
+
+    <div class="chapter-nav">
+      <span></span>
+      <a href="creating-assessment.html">次へ: 診断の作成 &rarr;</a>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Table of Contents</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>Chapter 1: Getting Started</h1>
+    <p class="subtitle">Installation, first launch, and terms acceptance</p>
+
+    <h2>System Requirements</h2>
+    <table class="manual-table">
+      <tr><th>Item</th><th>Requirement</th></tr>
+      <tr><td>OS</td><td>Windows 10 Version 2004 or later / Windows 11</td></tr>
+      <tr><td>Runtime</td><td>WebView2 Runtime (required for PDF export)</td></tr>
+      <tr><td>Internet</td><td>Not required (fully offline operation)</td></tr>
+    </table>
+
+    <div class="info-box">
+      <p>SecureNavigator operates entirely offline. An internet connection is only needed when installing or updating through the Microsoft Store.</p>
+    </div>
+
+    <h2>Installation</h2>
+    <p>SecureNavigator is installed from the <strong>Microsoft Store</strong>.</p>
+    <ol>
+      <li>Open the Microsoft Store and search for "SecureNavigator".</li>
+      <li>Click "Get" to install the application.</li>
+      <li>After installation, launch "SecureNavigator" from the Start menu.</li>
+    </ol>
+
+    <h2>First Launch and Terms Acceptance</h2>
+    <p>When you launch SecureNavigator for the first time, the Terms of Use and Disclaimer acceptance screen is displayed.</p>
+    <ol>
+      <li>Review the Terms of Use and Disclaimer. Select "View Terms" to open them.</li>
+      <li>Check "I agree to the Terms of Use and Disclaimer", then click "Accept and Start" to proceed to the session selection screen.</li>
+      <li>If you select "Decline", you cannot proceed.</li>
+    </ol>
+
+    <h2>Screen Overview</h2>
+    <p>SecureNavigator guides you through the screens with buttons, following the flow of the assessment.</p>
+    <table class="manual-table">
+      <tr><th>Screen</th><th>Description</th></tr>
+      <tr><td>Session Selection</td><td>Start a new assessment with "Start New Assessment", or open a saved assessment.</td></tr>
+      <tr><td>Hearing</td><td>Answer questions about your organization's security controls.</td></tr>
+      <tr><td>Diagnosis results summary</td><td>Opened with "View results". View the result summary, weakness map, attack scenarios, layers and themes with gaps, and framework reference checks.</td></tr>
+      <tr><td>ATT&CK technique coverage (Attack View)</td><td>Opened with "View ATT&CK". See the attack flow, tactic chips, status groups, and glossary.</td></tr>
+      <tr><td>Report Preview</td><td>Opened with "Report preview". Preview, saving, and PDF export are available in Pro.</td></tr>
+      <tr><td>Settings</td><td>A dialog opened from the settings button. Switch the display language, check the license, and open external links.</td></tr>
+    </table>
+
+    <div class="screenshot">
+      <img src="images/en/session-start.png" alt="SecureNavigator session selection screen with the assessment start button and saved assessments">
+      <div class="caption">Session selection screen</div>
+    </div>
+
+    <div class="chapter-nav">
+      <span></span>
+      <a href="creating-assessment.html?lang=en">Next: Creating an Assessment &rarr;</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 Sumikko Lab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>

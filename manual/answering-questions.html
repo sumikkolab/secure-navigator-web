@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>質問への回答 | SecureNavigator マニュアル — Sumikko Lab</title>
+<meta name="description" content="SecureNavigator の質問回答画面の操作方法。セキュリティ対策の実装状況を回答し、防御力を評価する手順を解説します。">
+<link rel="canonical" href="https://secure-navigator.sumikkolab.com/manual/answering-questions.html">
+<meta property="og:title" content="質問への回答 | SecureNavigator マニュアル — Sumikko Lab">
+<meta property="og:description" content="SecureNavigator の質問回答画面の操作方法。セキュリティ対策の実装状況を回答し、防御力を評価する手順を解説します。">
+<meta property="og:url" content="https://secure-navigator.sumikkolab.com/manual/answering-questions.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="SecureNavigator — Sumikko Lab">
+<meta property="og:image" content="https://secure-navigator.sumikkolab.com/assets/secure-navigator-icon.png">
+<meta property="og:image:alt" content="SecureNavigator のアイコン">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">目次</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>Chapter 3: 質問への回答</h1>
+    <p class="subtitle">ホーム、集中・高速の回答画面、回答選択肢、ナビゲーション</p>
+
+    <h2>ヒアリング画面の概要</h2>
+    <p>ヒアリング画面に入ると、最初に「ホーム」が表示されます。ホームから、1 問ずつ回答する「集中」と、全テーマの質問を行で並べて続けて回答する「高速」のどちらかに進みます。「結果を見る」で結果画面に進めます。回答の途中でも暫定結果を確認できます。回答は 1 問ごとに自動で保存されます。</p>
+
+    <h2>ホーム</h2>
+    <p>ホームでは、全体の進捗と、次の操作が表示されます。</p>
+    <ul>
+      <li><strong>全体の進捗</strong>: 回答済みの数を確認できます。</li>
+      <li><strong>つづきから再開</strong>: 前回の続きから回答を再開します。</li>
+      <li><strong>高速で回答</strong>: 「高速」の画面に進みます。</li>
+      <li><strong>1 問ずつ（集中）</strong>: 「集中」の画面に進みます。</li>
+      <li><strong>未回答だけ見る</strong>: 未回答の質問に絞って表示します。</li>
+      <li><strong>テーマごとのカード</strong>: テーマごとに進捗（未着手・途中・完了）が表示されます。「はじめる」（回答が進んでいるテーマは「つづきから」、完了したテーマは「見直す」）で、そのテーマの質問に進みます。</li>
+    </ul>
+
+    <h2>カード UI（集中）</h2>
+    <p>「集中」では、各質問がカード形式で 1 問ずつ表示されます。カードには質問テキスト、所属するテーマ名、および回答選択肢が含まれます。「回答後に自動で次へ」をオンにすると、回答後に自動で次の質問に進みます。</p>
+
+    <h2>回答選択肢</h2>
+    <p>各質問に対して、以下の4つの選択肢から回答を選びます。</p>
+    <table class="manual-table">
+      <tr><th>選択肢</th><th>意味</th></tr>
+      <tr><td>実施済み</td><td>対策が組織内で導入・運用されている。</td></tr>
+      <tr><td>一部実施</td><td>対策は部分的に導入されているが、全体には行き渡っていない。</td></tr>
+      <tr><td>未実施</td><td>対策が導入されていない。</td></tr>
+      <tr><td>未確認</td><td>対策の実施状況が不明。確認が必要な場合に選択。</td></tr>
+    </table>
+
+    <div class="info-box">
+      <p>「後で確認」にチェックを入れた質問は、「未回答・後で確認」の一覧でまとめて確認できます。一覧は「未回答または後で確認」「未回答のみ」「後で確認のみ」で絞り込めます。</p>
+    </div>
+
+    <h2>ナビゲーション</h2>
+    <p>ヒアリング画面では、以下の方法で質問間を移動できます。</p>
+    <ul>
+      <li><strong>ホーム</strong>: テーマごとのカードから、任意のテーマの質問に移動できます。</li>
+      <li><strong>戻る / 次へボタン</strong>: 「集中」で、前の質問や次の質問に移動します。</li>
+      <li><strong>テーマのチップ・行の移動</strong>: 「高速」で、テーマの絞り込みや、↑↓・PageUp / PageDown による移動ができます。</li>
+      <li><strong>進捗表示</strong>: 全体とテーマ内の進捗が表示されます。</li>
+    </ul>
+
+    <div class="screenshot">
+      <img src="images/ja/hearing-review.png" alt="未回答の質問を一覧で確認できるレビューウィンドウ">
+      <div class="caption">未回答レビューウィンドウ</div>
+    </div>
+
+    <h2>表示：集中と高速</h2>
+    <p>質問画面には、「集中」と「高速」の 2 つのタブがあります。タブで切り替えられます。</p>
+
+    <h3>集中</h3>
+    <p>1つの質問だけを画面に大きく表示するモードです。集中して1問ずつ回答したい場合に適しています。「戻る」「次へ」で前後の質問に移動し、「このテーマの質問」で同じテーマの質問を確認できます。</p>
+
+    <h3>高速</h3>
+    <p>全テーマの質問を 1 行ずつ並べて表示するモードです。各行の回答ボタンを押すと、続けて回答できます。</p>
+    <ul>
+      <li><strong>テーマのチップ</strong>: 画面上部のテーマ名のチップ（件数つき。すべて回答したテーマには完了の印）を選ぶと、そのテーマの行に絞り込めます。</li>
+      <li><strong>未回答だけ表示</strong>: オンにすると、未回答の質問だけが表示されます。</li>
+      <li><strong>キー操作</strong>: 下の表のキーで、マウスを使わずに回答できます。</li>
+    </ul>
+    <table class="manual-table">
+      <tr><th>キー</th><th>動作</th></tr>
+      <tr><td>1〜4</td><td>回答して次の行へ移動します（同じキーをもう一度押すと取り消し）。</td></tr>
+      <tr><td>↑ ↓</td><td>行を移動します。</td></tr>
+      <tr><td>PageUp / PageDown</td><td>テーマを移動します。</td></tr>
+      <tr><td>H</td><td>「後で確認」にします。</td></tr>
+      <tr><td>Space / Enter / F1</td><td>この質問についての説明を表示します。</td></tr>
+      <tr><td>Esc</td><td>説明を閉じます。</td></tr>
+    </table>
+
+    <div class="screenshot">
+      <img src="images/ja/hearing-fast.png" alt="高速の画面。上部にテーマのチップが並び、全テーマの質問が 1 行ずつ、回答ボタンつきで表示されている">
+      <div class="caption">質問画面（高速）</div>
+    </div>
+
+    <h2>「後で確認」機能</h2>
+    <p>今すぐ答えられない質問には、「後で確認」にチェックを入れておきます（高速では H キー）。チェックした質問は、「未回答・後で確認」の一覧でまとめて確認できます。</p>
+
+    <div class="chapter-nav">
+      <a href="creating-assessment.html">&larr; 前へ: 診断の作成</a>
+      <a href="viewing-results.html">次へ: 結果の確認 &rarr;</a>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Table of Contents</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>Chapter 3: Answering Questions</h1>
+    <p class="subtitle">Home, Focus and Fast views, answer options, navigation</p>
+
+    <h2>Hearing Screen Overview</h2>
+    <p>When you open the Hearing screen, the Home screen appears first. From Home, go to Focus, which shows one question at a time, or Fast, which lists the questions of all themes in rows so you can answer them one after another. Select "View results" to proceed to the Results screen. A provisional result is available even before all questions are answered. Each answer is saved automatically.</p>
+
+    <h2>Home</h2>
+    <p>Home shows your overall progress and what to do next.</p>
+    <ul>
+      <li><strong>Overall progress</strong>: Shows how many questions you have answered.</li>
+      <li><strong>Resume</strong>: Continues from where you left off.</li>
+      <li><strong>Answer quickly</strong>: Opens the Fast view.</li>
+      <li><strong>One at a time (Focus)</strong>: Opens the Focus view.</li>
+      <li><strong>Show unanswered only</strong>: Narrows the questions down to those that are unanswered.</li>
+      <li><strong>Theme cards</strong>: Each theme shows its progress (Not started, In progress, or Done). Select "Start" (shown as "Continue" for a theme in progress and "Review" for a completed theme) to go to the questions of that theme.</li>
+    </ul>
+
+    <h2>Card UI (Focus)</h2>
+    <p>In Focus, each question is displayed as a card, one at a time. The card contains the question text, the theme it belongs to, and the answer options. When the automatic-advance option is turned on, the next question is displayed automatically after you answer.</p>
+
+    <h2>Answer Options</h2>
+    <p>For each question, select one of the following four options.</p>
+    <table class="manual-table">
+      <tr><th>Option</th><th>Meaning</th></tr>
+      <tr><td>Implemented</td><td>The control has been deployed and is operational within the organization.</td></tr>
+      <tr><td>Partially Implemented</td><td>The control is partially in place but not fully deployed across the organization.</td></tr>
+      <tr><td>Not Implemented</td><td>The control has not been deployed.</td></tr>
+      <tr><td>Unverified</td><td>The implementation status is unknown and requires verification.</td></tr>
+    </table>
+
+    <div class="info-box">
+      <p>Questions marked "Review later" can be reviewed together in the "Unanswered & review later" list, which you can filter to show unanswered questions, review-later questions, or both.</p>
+    </div>
+
+    <h2>Navigation</h2>
+    <p>The Hearing screen provides multiple ways to navigate between questions.</p>
+    <ul>
+      <li><strong>Home</strong>: Use the theme cards to go to the questions of any theme.</li>
+      <li><strong>Back / Next buttons</strong>: In Focus, move to the previous or next question.</li>
+      <li><strong>Theme chips and row movement</strong>: In Fast, narrow the rows by theme, and move with Up / Down and PageUp / PageDown.</li>
+      <li><strong>Progress</strong>: Overall progress and progress within the theme are shown.</li>
+    </ul>
+
+    <div class="screenshot">
+      <img src="images/en/hearing-review.png" alt="Unanswered review window showing questions that still need answers">
+      <div class="caption">Unanswered review window</div>
+    </div>
+
+    <h2>Views: Focus and Fast</h2>
+    <p>The question screen has two tabs, Focus and Fast. Switch between them with the tabs.</p>
+
+    <h3>Focus</h3>
+    <p>Displays one question at a time on the screen. This view is ideal for concentrating on each question individually. Use "Back" and "Next" to move between questions, and the theme's question list to see the other questions of the same theme.</p>
+
+    <h3>Fast</h3>
+    <p>Lists the questions of all themes, one per row. Select an answer button on a row to keep answering one question after another.</p>
+    <ul>
+      <li><strong>Theme chips</strong>: Select a theme chip at the top of the screen (with its question count, and a check mark once every question is answered) to narrow the rows down to that theme.</li>
+      <li><strong>Show unanswered only</strong>: When turned on, only unanswered questions are shown.</li>
+      <li><strong>Keyboard</strong>: Use the keys in the table below to answer without the mouse.</li>
+    </ul>
+    <table class="manual-table">
+      <tr><th>Key</th><th>Action</th></tr>
+      <tr><td>1-4</td><td>Answer and go to the next row (press the same key again to undo).</td></tr>
+      <tr><td>Up / Down</td><td>Move between rows.</td></tr>
+      <tr><td>PageUp / PageDown</td><td>Move between themes.</td></tr>
+      <tr><td>H</td><td>Mark for later review.</td></tr>
+      <tr><td>Space / Enter / F1</td><td>Show information about this question.</td></tr>
+      <tr><td>Esc</td><td>Close the information.</td></tr>
+    </table>
+
+    <div class="screenshot">
+      <img src="images/en/hearing-fast.png" alt="Fast view. Theme chips are shown at the top, and the questions of all themes are listed one per row with answer buttons">
+      <div class="caption">Question screen (Fast view)</div>
+    </div>
+
+    <h2>Review Later</h2>
+    <p>If you cannot answer a question right away, mark it as "Review later" (press H in Fast). Marked questions can be reviewed together in the "Unanswered & review later" list.</p>
+
+    <div class="chapter-nav">
+      <a href="creating-assessment.html?lang=en">&larr; Previous: Creating an Assessment</a>
+      <a href="viewing-results.html?lang=en">Next: Viewing Results &rarr;</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 Sumikko Lab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>

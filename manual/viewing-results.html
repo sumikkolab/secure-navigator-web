@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>結果の確認 | SecureNavigator マニュアル — Sumikko Lab</title>
+<meta name="description" content="SecureNavigator の評価結果画面。結果サマリ、弱点マップ、攻撃シナリオ、ガイドライン参考確認の確認方法を解説します。">
+<link rel="canonical" href="https://secure-navigator.sumikkolab.com/manual/viewing-results.html">
+<meta property="og:title" content="結果の確認 | SecureNavigator マニュアル — Sumikko Lab">
+<meta property="og:description" content="SecureNavigator の評価結果画面。結果サマリ、弱点マップ、攻撃シナリオ、ガイドライン参考確認の確認方法を解説します。">
+<meta property="og:url" content="https://secure-navigator.sumikkolab.com/manual/viewing-results.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="SecureNavigator — Sumikko Lab">
+<meta property="og:image" content="https://secure-navigator.sumikkolab.com/assets/secure-navigator-icon.png">
+<meta property="og:image:alt" content="SecureNavigator のアイコン">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="lang-toggle">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="section-ja visible" id="content-ja">
+    <div class="nav-links">
+      <a href="index.html">目次</a>
+      <a href="../support.html">サポート</a>
+    </div>
+
+    <h1>Chapter 4: 結果の確認</h1>
+    <p class="subtitle">結果サマリ、ガイドライン対応状況、攻撃シナリオ、不足がみられる面とテーマ</p>
+
+    <h2>結果画面の概要</h2>
+    <p>ヒアリング画面の「結果を見る」で結果画面を開けます。回答の途中では暫定結果が表示されます。結果画面は複数のセクションで構成されており、組織のセキュリティ対策状況をさまざまな角度から確認できます。成熟度・弱点マップ・フレームワークなどの用語には、ポインターを合わせると補足が表示されます。</p>
+
+    <div class="screenshot">
+      <img src="images/ja/result-summary.png" alt="結果画面の全体表示。上部にKPIスコア、中央に弱点マップが表示されている">
+      <div class="caption">結果画面の全体表示</div>
+    </div>
+
+    <h2>対策が十分でない領域の例</h2>
+    <p>結果画面には、診断結果から、対策が十分でない領域の例が表示されます。これは診断結果からルールベースで算出された参考情報であり、利用者の環境や運用状況に合わせて判断してください。</p>
+
+    <h2>弱点マップ（領域 x 観点のマトリクス）</h2>
+    <p>弱点マップは、セキュリティ対策の領域ごとに、方針・技術・運用・検知・対応・総合の観点で状況を表示するマトリクスです。</p>
+    <p>各セルは対策の状況に応じて表示され、組織全体のセキュリティ対策のバランスと弱点を把握できます。凡例は、十分（80% 以上）・途中（21〜79%）・不足（20% 以下）です。</p>
+
+    <div class="screenshot">
+      <img src="images/ja/attack-scenarios.png" alt="攻撃シナリオの結果の表示">
+      <div class="caption">攻撃シナリオ結果</div>
+    </div>
+
+    <h2>攻撃シナリオテーブル</h2>
+    <p>SecureNavigator は6つの代表的な攻撃シナリオについて、回答から各ステップの守りの状態を評価します。表には、攻撃シナリオ・結果・想定被害が表示されます。</p>
+    <p>ステップごとの詳細は、「ATT&CK を見る」で開く攻撃ビュー画面で確認できます。</p>
+
+    <div class="screenshot">
+      <img src="images/ja/roadmap.png" alt="不足がみられる面とテーマの表示。下部にCSF参考確認が表示されている">
+      <div class="caption">不足がみられる面とテーマ</div>
+    </div>
+
+    <h2>不足がみられる面とテーマ</h2>
+    <p>診断結果から、実施が低い面とテーマを整理して表示します。面は、方針・技術・運用など、守りを見る観点の区分です。テーマは、質問をまとめた話題の区分（認証管理など）です。</p>
+    <div class="screenshot">
+      <img src="images/ja/framework-ipa.png" alt="IPAガイドライン参考確認の表示">
+      <div class="caption">IPAガイドライン参考確認</div>
+    </div>
+
+    <h2>フレームワーク参考確認</h2>
+    <p>診断結果を各セキュリティフレームワーク・ガイドラインの要素に照らし合わせて、対応状況を参考情報として表示します。</p>
+    <table class="manual-table">
+      <tr><th>フレームワーク</th><th>対応エディション</th></tr>
+      <tr><td>IPA 中小企業の情報セキュリティ対策ガイドライン</td><td>Free / Pro</td></tr>
+      <tr><td>経済産業省 サイバーセキュリティ経営ガイドライン</td><td>Pro のみ</td></tr>
+      <tr><td>NIST Cybersecurity Framework 2.0</td><td>Pro のみ</td></tr>
+    </table>
+
+    <div class="info-box">
+      <p>フレームワーク参考確認は自己点検のための参考情報です。公的な認証、適合証明、公式な準拠判定を意味するものではありません。</p>
+    </div>
+
+    <div class="screenshot">
+      <img src="images/ja/framework-csf.png" alt="NIST CSF 2.0 フレームワーク参考確認の展開表示">
+      <div class="caption">NIST CSF 2.0 フレームワーク参考確認</div>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="answering-questions.html">&larr; 前へ: 質問への回答</a>
+      <a href="attack-view.html">次へ: 攻撃ビュー &rarr;</a>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="section-en" id="content-en">
+    <div class="nav-links">
+      <a href="index.html?lang=en">Table of Contents</a>
+      <a href="../support.html?lang=en">Support</a>
+    </div>
+
+    <h1>Chapter 4: Viewing Results</h1>
+    <p class="subtitle">Result summary, guideline mapping, attack scenarios, layers and themes with gaps</p>
+
+    <h2>Results Screen Overview</h2>
+    <p>Select "View Results" on the Hearing screen to open the Results screen. A provisional result is shown while answers are incomplete. It consists of multiple sections that present your organization's security posture from different perspectives. Hover over terms such as maturity, weakness map, and framework to see a short explanation.</p>
+
+    <div class="screenshot">
+      <img src="images/en/result-summary.png" alt="Full results screen showing KPI score at the top and weakness map in the center">
+      <div class="caption">Results screen overview</div>
+    </div>
+
+    <h2>Examples of Areas Where Controls Are Not Sufficient</h2>
+    <p>The Results screen shows examples of areas where controls are not sufficient, based on the assessment results. They are rule-based reference information and should be evaluated against the user's environment and operating context.</p>
+
+    <h2>Weakness Map (Domain x Perspective Matrix)</h2>
+    <p>The weakness map is a matrix showing, for each domain, the status in terms of Policy, Technology, Operations, Detection, Response, and Overall.</p>
+    <p>Each cell reflects the control status, and a legend is shown with the map. This allows you to visually grasp the balance and gaps in your organization's security controls.</p>
+
+    <div class="screenshot">
+      <img src="images/en/attack-scenarios.png" alt="Attack scenario results display">
+      <div class="caption">Attack scenario results</div>
+    </div>
+
+    <h2>Attack Scenarios Table</h2>
+    <p>SecureNavigator evaluates 6 representative attack scenarios at each step, based on your answers. The table shows the attack scenario, the result, and the expected damage.</p>
+    <p>Select "View ATT&CK" to open the Attack View screen and examine step-by-step details.</p>
+
+    <div class="screenshot">
+      <img src="images/en/framework-ipa.png" alt="IPA guideline reference check display">
+      <div class="caption">IPA guideline reference check</div>
+    </div>
+
+    <h2>Layers and Themes with Gaps</h2>
+    <p>Based on the assessment results, layers and themes with low implementation are listed. A layer is a viewpoint such as policy, technology, or operations. A theme is a topic group of questions, such as authentication.</p>
+    <div class="screenshot">
+      <img src="images/en/roadmap.png" alt="Layers and themes with gaps, with CSF reference checks at the bottom">
+      <div class="caption">Layers and themes with gaps</div>
+    </div>
+
+    <h2>Framework Reference Checks</h2>
+    <p>Assessment results are mapped against elements of each security framework and guideline, displaying reference status views.</p>
+    <table class="manual-table">
+      <tr><th>Framework</th><th>Available In</th></tr>
+      <tr><td>IPA SME Information Security Guidelines</td><td>Free / Pro</td></tr>
+      <tr><td>METI Cybersecurity Management Guidelines</td><td>Pro only</td></tr>
+      <tr><td>NIST Cybersecurity Framework 2.0</td><td>Pro only</td></tr>
+    </table>
+
+    <div class="info-box">
+      <p>Framework reference checks are reference information for self-assessment. They do not constitute official certification, conformity attestation, or official compliance determination.</p>
+    </div>
+
+    <div class="screenshot">
+      <img src="images/en/framework-csf.png" alt="NIST CSF 2.0 framework reference check expanded view">
+      <div class="caption">NIST CSF 2.0 framework reference check</div>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="answering-questions.html?lang=en">&larr; Previous: Answering Questions</a>
+      <a href="attack-view.html?lang=en">Next: Attack View &rarr;</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 Sumikko Lab. SecureNavigator.<br>
+    <a href="mailto:support@sumikkolab.com">support@sumikkolab.com</a>
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('content-ja').classList.toggle('visible', lang === 'ja');
+  document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en') switchLang('en');
+})();
+</script>
+</body>
+</html>
