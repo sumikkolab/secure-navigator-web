@@ -87,28 +87,44 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "SecureNavigator",
-  "description": "攻撃シナリオ分析、ガイドライン参考確認、対応候補の整理、レポート生成を支援するオフライン評価ツール。",
-  "url": "https://secure-navigator.sumikkolab.com/",
-  "dateModified": "2026-10-25",
-  "applicationCategory": "SecurityApplication",
-  "operatingSystem": "Windows 10, Windows 11",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "JPY"
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "Sumikko Lab",
-    "url": "https://secure-navigator.sumikkolab.com/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Sumikko Lab",
-    "url": "https://secure-navigator.sumikkolab.com/"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://secure-navigator.sumikkolab.com/#organization",
+      "name": "Sumikko Lab",
+      "url": "https://sumikkolab.com/",
+      "email": "support@sumikkolab.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://secure-navigator.sumikkolab.com/#website",
+      "url": "https://secure-navigator.sumikkolab.com/",
+      "name": "SecureNavigator",
+      "inLanguage": ["ja", "en"],
+      "publisher": { "@id": "https://secure-navigator.sumikkolab.com/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://secure-navigator.sumikkolab.com/#software",
+      "name": "SecureNavigator",
+      "description": "攻撃シナリオ分析、ガイドライン参考確認、対応候補の整理、レポート生成を支援するオフライン評価ツール。",
+      "url": "https://secure-navigator.sumikkolab.com/",
+      "dateModified": "2026-10-25",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Windows 10, Windows 11",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Sumikko Lab",
+        "url": "https://secure-navigator.sumikkolab.com/"
+      },
+      "publisher": { "@id": "https://secure-navigator.sumikkolab.com/#organization" }
+    }
+  ]
 }
 </script>
 </head>
@@ -359,7 +375,18 @@
 </div>
 
 <script>
+var descMeta = document.querySelector('meta[name="description"]');
+var pageText = {
+  ja: { title: document.title, description: descMeta.content },
+  en: {
+    title: 'SecureNavigator | Offline Security Assessment and Improvement Planning Tool',
+    description: 'SecureNavigator is an offline assessment tool that supports attack scenario analysis, reference checks against guidelines, organizing suggested actions, and report generation. MITRE ATT&CK, the IPA and METI guidelines (Japan), and NIST CSF 2.0 are treated as reference material.'
+  }
+};
 function switchLang(lang) {
+  document.documentElement.lang = lang;
+  document.title = pageText[lang].title;
+  descMeta.content = pageText[lang].description;
   document.querySelectorAll('.section-ja').forEach(el => el.classList.toggle('visible', lang === 'ja'));
   document.querySelectorAll('.section-en').forEach(el => el.classList.toggle('visible', lang === 'en'));
   document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
