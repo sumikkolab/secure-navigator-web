@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SecureNavigator | 攻撃視点とガイドラインで整理するオフライン評価ツール</title>
-<meta name="description" content="SecureNavigator は、攻撃シナリオ分析、ガイドライン参考確認、対応候補の整理、レポート生成を支援するオフライン評価ツールです。MITRE ATT&CK、IPA、経産省、NIST CSF 2.0 を参考情報として扱います。">
+<title>中小企業のセキュリティ自己点検と攻撃シナリオ別の弱点整理 | SecureNavigator</title>
+<meta name="description" content="中小企業の管理者が、専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したいときに使う Windows 向けのオフライン評価ツールです。6 つの攻撃シナリオ別に弱い面と対応候補を整理し、IPA 中小企業向けガイドラインを参考に確認でき、診断データは外部に送信されません（レポートの PDF 出力は Pro）。">
 <link rel="canonical" href="https://secure-navigator.sumikkolab.com/">
-<meta property="og:title" content="SecureNavigator | 攻撃視点とガイドラインで整理するオフライン評価ツール">
-<meta property="og:description" content="SecureNavigator は、攻撃シナリオ分析、ガイドライン参考確認、対応候補の整理、レポート生成を支援するオフライン評価ツールです。MITRE ATT&CK、IPA、経産省、NIST CSF 2.0 を参考情報として扱います。">
+<meta property="og:title" content="中小企業のセキュリティ自己点検と攻撃シナリオ別の弱点整理 | SecureNavigator">
+<meta property="og:description" content="中小企業の管理者が、専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したいときに使う Windows 向けのオフライン評価ツールです。6 つの攻撃シナリオ別に弱い面と対応候補を整理し、IPA 中小企業向けガイドラインを参考に確認でき、診断データは外部に送信されません（レポートの PDF 出力は Pro）。">
 <meta property="og:url" content="https://secure-navigator.sumikkolab.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
@@ -15,6 +15,8 @@
 <meta property="og:image" content="https://secure-navigator.sumikkolab.com/assets/secure-navigator-icon.png">
 <meta property="og:image:alt" content="SecureNavigator のアイコン">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="中小企業のセキュリティ自己点検と攻撃シナリオ別の弱点整理 | SecureNavigator">
+<meta name="twitter:description" content="中小企業の管理者が、専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したいときに使う Windows 向けのオフライン評価ツールです。6 つの攻撃シナリオ別に弱い面と対応候補を整理し、IPA 中小企業向けガイドラインを参考に確認でき、診断データは外部に送信されません（レポートの PDF 出力は Pro）。">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Segoe UI', 'Yu Gothic UI', sans-serif; line-height: 1.7; color: #1a1a2e; background: #f8f9fa; }
@@ -107,7 +109,17 @@
       "@type": "SoftwareApplication",
       "@id": "https://secure-navigator.sumikkolab.com/#software",
       "name": "SecureNavigator",
-      "description": "攻撃シナリオ分析、ガイドライン参考確認、対応候補の整理、レポート生成を支援するオフライン評価ツール。",
+      "description": "中小企業の管理者が専門知識なしで自社のセキュリティ対策の抜けを自己点検し、想定される攻撃シナリオに対する弱点を整理して、経営層への報告に使える Windows 向けのオフライン評価ツール。診断データは外部に送信されない。",
+      "featureList": [
+        "専門知識がなくても対策の抜けを知りたい → 質問に答えて弱点マップに整理（かんたん診断は約 5 分）",
+        "想定される攻撃に対する弱点を知りたい → 6 つの攻撃シナリオを段階ごとに分析し、経路図で攻撃が止まる地点を確認",
+        "何が足りないかを面別に把握したい → 実施が低い面ごとに対応候補と理由を表示（期間・順位は示さない）",
+        "経営層への報告資料を作りたい → レポートのプレビューと PDF / HTML / Markdown 保存（Pro）",
+        "中小企業が IPA のガイドラインで自己点検したい → IPA 中小企業向けガイドラインを参考にした確認",
+        "経産省のガイドラインや NIST CSF 2.0 でも確認したい → 参考確認（Pro）",
+        "診断データを社外に出せない環境で使いたい → 完全オフライン動作で外部に送信しない",
+        "時間がなく質問が多くて進まない → 診断範囲の目安表示、高速表示、1 問ごとの自動保存"
+      ],
       "url": "https://secure-navigator.sumikkolab.com/",
       "dateModified": "2026-10-25",
       "applicationCategory": "SecurityApplication",
@@ -135,7 +147,7 @@
     <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
     <button id="btn-en" onclick="switchLang('en')">English</button>
   </div>
-  <h1>SecureNavigator<span class="section-ja visible"> — 攻撃視点とガイドラインで整理するオフライン評価ツール</span><span class="section-en"> — Offline Security Assessment and Improvement Planning Tool</span></h1>
+  <h1>SecureNavigator<span class="section-ja visible"> — 中小企業の自己点検と、攻撃シナリオ別の弱点整理をオフラインで</span><span class="section-en"> — Offline security self-check for small business, with gaps mapped to attack scenarios</span></h1>
   <div class="section-ja visible">
     <p class="tagline">セキュリティ対策を攻撃視点とガイドラインで整理し、レポートへ変換する</p>
     <p class="sub-tagline">想定攻撃に対する防御上の弱点を分析し、着手候補を整理。説明・報告・改善検討に使えるレポートを生成するオフライン評価ツール。</p>
@@ -178,6 +190,43 @@
       <p>多くのセキュリティ評価ツールは「対策が存在するか」を確認します。しかし実務で必要なのは<strong>「想定される攻撃に対して、どこが弱いのか」</strong>の整理です。</p>
       <p>SecureNavigator は、MITRE ATT&CK の攻撃手法を基に、<strong>対策の弱点 → 攻撃の進行経路 → 想定被害</strong>をルールベースで分析。防御上の弱点と着手候補を整理し、報告・改善検討に使えるレポートを生成します。</p>
     </div>
+
+    <h2>こんな課題を解決します</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>専門知識がなくても、自社のセキュリティ対策の抜けを知るには？</h3>
+        <p>質問に答えるだけで、組織の対策状況を弱点マップ（領域 x 観点）に整理します。基本的な状況をすぐ確認したいときは、プロファイルの入力が要らない「かんたん診断（約 5 分）」を選べます。</p>
+      </div>
+      <div class="feature-card">
+        <h3>想定される攻撃に対して、自社のどこが弱いか分からないときは？</h3>
+        <p>MITRE ATT&CK を基にした 6 つの代表的な攻撃シナリオ（標的型攻撃など）に対し、防御力をステップごとに分析します。攻撃ビューの経路図では、攻撃が外部から内部へ進む流れを段階ごとに示し、各段階の守りの状態（止められた・検知できる・突破される など）と、流れが止まる地点を確認できます。</p>
+      </div>
+      <div class="feature-card">
+        <h3>何が足りないかを、面やテーマ別に把握したいときは？</h3>
+        <p>診断結果から、実施が低い面（方針・技術・検知・対応・運用）ごとに、対応候補とその理由を画面に表示します。期間や順位は示しません。</p>
+      </div>
+      <div class="feature-card">
+        <h3>経営層や上長への報告資料を作るのに困るときは？ <span class="pro-badge">Pro</span></h3>
+        <p>Pro 版では、診断結果をレポートとしてプレビューし、PDF・HTML・Markdown で保存できます。レポートには、対策状況に不足がある項目、CSF カバレッジ、主要リスク、想定攻撃シナリオの節が含まれ、説明・報告・改善検討の資料に使えます。</p>
+      </div>
+      <div class="feature-card">
+        <h3>中小企業が IPA のガイドラインで自己点検したいときは？</h3>
+        <p>IPA 中小企業向けガイドラインを参考に、対応状況を整理します（Free 版でも利用できます）。参考情報としての確認であり、準拠や適合を判定するものではありません。</p>
+      </div>
+      <div class="feature-card">
+        <h3>経産省のガイドラインや NIST CSF 2.0 でも確認したいときは？ <span class="pro-badge">Pro</span></h3>
+        <p>Pro 版では、経産省サイバーセキュリティ経営ガイドラインと NIST CSF 2.0 を参考にした確認結果も表示します。いずれも参考確認であり、準拠・認証・適合の判定ではありません。</p>
+      </div>
+      <div class="feature-card">
+        <h3>診断データを社外に出せない環境で使いたいときは？</h3>
+        <p>SecureNavigator は完全オフラインで動作し、診断データを外部に送信せず、利用者のローカル環境にのみ保存します。動作にインターネット接続は不要です（Windows 10 Version 2004 以降 / Windows 11）。</p>
+      </div>
+      <div class="feature-card">
+        <h3>時間がなく、質問が多くて進まないときは？</h3>
+        <p>開始時の質問への回答に合わせて、診断の範囲（テーマ数・問数・目安の時間）を確認できます。質問画面は、1 問ずつ答える「集中」と、質問を行で並べて続けて答える「高速」を切り替えられ、回答は 1 問ごとに自動で保存されます。</p>
+      </div>
+    </div>
+    <p class="compare-note">※ Free 版でも全問の診断と画面での結果確認ができます。PDF などのレポート出力、経産省ガイドライン・NIST CSF 2.0 の参考確認、ATT&CK テクニック詳細は Pro の機能で、Free の保存は 1 件です。ガイドラインとの照合は参考確認であり、認証・適合・準拠の判定はしません。</p>
 
     <h2>主な機能</h2>
     <div class="features">
@@ -270,6 +319,43 @@
       <p>Most security assessment tools verify whether controls exist. But what practitioners need is: <strong>"Against likely attacks, where are we weak?"</strong></p>
       <p>SecureNavigator uses MITRE ATT&CK techniques to analyze <strong>control gaps → potential attack paths → estimated impact</strong> through rule-based assessment. It organizes defensive weaknesses and suggested actions into reports you can use for communication and planning.</p>
     </div>
+
+    <h2>Problems this solves</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>How can I find the gaps in our security controls without specialist knowledge?</h3>
+        <p>Just answer the questions, and SecureNavigator organizes your security status into a weakness map (area x perspective). If you want a quick overview, choose Quick Diagnosis (about 5 minutes), which needs no profile input.</p>
+      </div>
+      <div class="feature-card">
+        <h3>How do I see where we are weak against likely attack scenarios?</h3>
+        <p>It analyzes your defenses step by step against 6 representative attack scenarios (such as targeted attacks) based on MITRE ATT&CK. The attack view's path diagram shows how an attack moves from outside to inside, the defense status at each stage (stopped, detectable, breached, and so on), and the point where the flow stops.</p>
+      </div>
+      <div class="feature-card">
+        <h3>How do I find out what we are missing, area by area?</h3>
+        <p>For each layer with low implementation (policy, technology, detection, response, operations), the results screen lists suggested actions and their reasons. No time frames or rankings are shown.</p>
+      </div>
+      <div class="feature-card">
+        <h3>How do I create a security report for management? <span class="pro-badge">Pro</span></h3>
+        <p>In Pro, you can preview the assessment as a report and save it as PDF, HTML, or Markdown. The report includes sections for items with gaps in control status, CSF coverage, key risks, and attack scenarios, so you can use it for communication and planning.</p>
+      </div>
+      <div class="feature-card">
+        <h3>How can a small business self-check against the IPA guideline?</h3>
+        <p>SecureNavigator organizes your status using the IPA guidelines for small and medium-sized enterprises (Japan) as reference material, and this is available in Free. It is a reference check, not a determination of compliance or conformity.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Can I also review our posture against the METI guidelines or NIST CSF 2.0? <span class="pro-badge">Pro</span></h3>
+        <p>In Pro, the results also show reference checks based on the METI Cybersecurity Guidelines (Japan) and NIST CSF 2.0. These are reference checks, not a determination of compliance, conformity, or certification.</p>
+      </div>
+      <div class="feature-card">
+        <h3>What if our assessment data cannot leave our environment?</h3>
+        <p>SecureNavigator runs fully offline. It never sends your assessment data out and stores it only on your local device. No internet connection is needed to use it (Windows 10 Version 2004 or later / Windows 11).</p>
+      </div>
+      <div class="feature-card">
+        <h3>What if there are too many questions and not enough time?</h3>
+        <p>As you answer the opening questions, you can see the scope of the assessment (themes, questions, estimated time). The question screen lets you switch between Focus, one question at a time, and Fast, with questions in rows for continuous answering. Each answer is saved automatically.</p>
+      </div>
+    </div>
+    <p class="compare-note">* The Free edition lets you complete the full assessment and view results on screen. PDF and other report export, METI guidelines / NIST CSF 2.0 reference checks, and ATT&CK technique details are Pro features, and Free saves 1 session. Guideline checks are reference checks; SecureNavigator does not determine certification, conformity, or compliance.</p>
 
     <h2>Key Features</h2>
     <div class="features">
@@ -376,17 +462,20 @@
 
 <script>
 var descMeta = document.querySelector('meta[name="description"]');
+var metaTargets = ['meta[property="og:title"]', 'meta[property="og:description"]', 'meta[name="twitter:title"]', 'meta[name="twitter:description"]'].map(function (s) { return document.querySelector(s); });
 var pageText = {
   ja: { title: document.title, description: descMeta.content },
   en: {
-    title: 'SecureNavigator | Offline Security Assessment and Improvement Planning Tool',
-    description: 'SecureNavigator is an offline assessment tool that supports attack scenario analysis, reference checks against guidelines, organizing suggested actions, and report generation. MITRE ATT&CK, the IPA and METI guidelines (Japan), and NIST CSF 2.0 are treated as reference material.'
+    title: 'Offline Security Self-Assessment for Small Business: Find Gaps Against Attack Scenarios | SecureNavigator',
+    description: 'SecureNavigator helps small business administrators self-check their security controls without specialist knowledge and see where they are weak against attack scenarios based on MITRE ATT&CK. It organizes suggested actions with reference to the IPA guidelines for small and medium-sized enterprises (Japan), supports reports for management (PDF export is Pro), and runs fully offline on Windows 10/11 without sending assessment data out.'
   }
 };
 function switchLang(lang) {
   document.documentElement.lang = lang;
   document.title = pageText[lang].title;
   descMeta.content = pageText[lang].description;
+  metaTargets[0].content = metaTargets[2].content = pageText[lang].title;
+  metaTargets[1].content = metaTargets[3].content = pageText[lang].description;
   document.querySelectorAll('.section-ja').forEach(el => el.classList.toggle('visible', lang === 'ja'));
   document.querySelectorAll('.section-en').forEach(el => el.classList.toggle('visible', lang === 'en'));
   document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
