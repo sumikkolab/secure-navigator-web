@@ -8,12 +8,12 @@ An offline security assessment tool that organizes security posture by attack sc
 
 ## What SecureNavigator Does
 
-SecureNavigator analyzes an organization's security posture from the attacker's perspective using MITRE ATT&CK-based attack scenarios. It reviews defenses against six representative attack patterns, identifies defensive gaps, and maps findings to IPA SME Guidelines (Japan), METI Cybersecurity Management Guidelines (Japan), and NIST CSF 2.0 as reference material. The tool generates exportable reports with suggested actions for communication with management and stakeholders. All processing runs entirely offline — no data ever leaves the user's device.
+SecureNavigator analyzes an organization's security posture from the attacker's perspective using MITRE ATT&CK-based attack scenarios. It reviews defenses against six representative attack patterns, identifies defensive gaps, and maps findings to IPA SME Guidelines (Japan), METI Cybersecurity Management Guidelines (Japan), and NIST CSF 2.0 as reference material. The tool organizes the layers and themes with low implementation and generates exportable reports for communication with management and stakeholders. All processing runs entirely offline — no data ever leaves the user's device.
 
 ## Who It's For
 
 - **IT administrators** — Assess and document security posture for internal review
-- **Security officers** — Identify defensive gaps and consider where to start
+- **Security officers** — Identify defensive gaps and review the layers and themes with low implementation
 - **SME managers** — Understand organizational security status without specialized expertise
 - **Anyone who needs to communicate security improvements** — Generate structured reports for management briefings and improvement planning
 
@@ -22,7 +22,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 - **Fully Offline** — All assessment data stays on the local device. No external communication, no telemetry, no cloud dependency.
 - **Attack Scenario Analysis** — Six attack scenarios based on MITRE ATT&CK techniques analyze how attacks progress through an organization's defenses step by step.
 - **Guideline Reference Checks** — IPA SME Guidelines available in Free. METI Cybersecurity Guidelines and NIST CSF 2.0 available in Pro.
-- **Action Planning View** — Suggested actions and reasons for each layer with gaps (policy, technology, detection, response, operations). No time frames or rankings are shown.
+- **Layers and Themes with Gaps** — Themes with gaps and the reasons for each layer with low implementation (policy, technology, detection, response, operations). No time frames or rankings are shown.
 - **Report Export** — Export assessment results as PDF, HTML, or Markdown reports. [Pro]
 - **Advanced Analysis** — Detailed maturity breakdown, cause-and-action tables, and ATT&CK technique-level analysis. [Pro]
 - **AI-related Reference Checks** — Display results referencing NIST AI RMF, Japan MIC AI Security Guidelines, Japan AI Guidelines for Business, IPA generative AI security materials, and UK NCSC Secure AI System Development guidance, inside the report. [Pro] (Reference checks only — not an indication of compliance, conformity, or certification.)
@@ -44,7 +44,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 |---------|:----:|:---:|
 | Full assessment (all questions) | ✓ | ✓ |
 | Attack scenario simulation | ✓ | ✓ |
-| Action Planning View (on-screen) | ✓ | ✓ |
+| Layers and Themes with Gaps (on-screen) | ✓ | ✓ |
 | IPA SME Guidelines reference checks | ✓ | ✓ |
 | METI Cybersecurity Guidelines reference checks | — | ✓ |
 | NIST CSF 2.0 reference checks | — | ✓ |
@@ -58,9 +58,9 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 
 ## Use Cases
 
-- **Periodic security review** — Organize the current state of defenses and clarify suggested actions.
+- **Periodic security review** — Organize the current state of defenses and clarify the layers and themes with gaps.
 - **Management reporting** — Generate PDF reports that summarize security posture, defensive gaps, and items with gaps in control status for executive briefings.
-- **Action planning** — Use the per-layer view to see where security measures have room for improvement.
+- **Reviewing gaps** — Use the per-layer view to see where security measures have room for improvement.
 - **Guideline reference checks** — Review status using IPA, METI, and NIST CSF 2.0 guidelines as reference material.
 
 ## Privacy & Offline Operation

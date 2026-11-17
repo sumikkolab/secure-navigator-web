@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>中小企業のセキュリティ自己点検と攻撃シナリオ別の弱点整理 | SecureNavigator</title>
-<meta name="description" content="中小企業の管理者が、専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したいときに使う Windows 向けのオフライン評価ツールです。6 つの攻撃シナリオ別に弱い面と対応候補を整理し、IPA 中小企業向けガイドラインを参考に確認でき、診断データは外部に送信されません（レポートの PDF 出力は Pro）。">
+<meta name="description" content="中小企業の管理者が、専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したいときに使う Windows 向けのオフライン評価ツールです。6 つの攻撃シナリオ別に弱い面とテーマを整理し、IPA 中小企業向けガイドラインを参考に確認でき、診断データは外部に送信されません（レポートの PDF 出力は Pro）。">
 <link rel="canonical" href="https://secure-navigator.sumikkolab.com/">
 <meta property="og:title" content="中小企業のセキュリティ自己点検と攻撃シナリオ別の弱点整理 | SecureNavigator">
-<meta property="og:description" content="中小企業の管理者が、専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したいときに使う Windows 向けのオフライン評価ツールです。6 つの攻撃シナリオ別に弱い面と対応候補を整理し、IPA 中小企業向けガイドラインを参考に確認でき、診断データは外部に送信されません（レポートの PDF 出力は Pro）。">
+<meta property="og:description" content="中小企業の管理者が、専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したいときに使う Windows 向けのオフライン評価ツールです。6 つの攻撃シナリオ別に弱い面とテーマを整理し、IPA 中小企業向けガイドラインを参考に確認でき、診断データは外部に送信されません（レポートの PDF 出力は Pro）。">
 <meta property="og:url" content="https://secure-navigator.sumikkolab.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
@@ -16,7 +16,7 @@
 <meta property="og:image:alt" content="SecureNavigator のアイコン">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="中小企業のセキュリティ自己点検と攻撃シナリオ別の弱点整理 | SecureNavigator">
-<meta name="twitter:description" content="中小企業の管理者が、専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したいときに使う Windows 向けのオフライン評価ツールです。6 つの攻撃シナリオ別に弱い面と対応候補を整理し、IPA 中小企業向けガイドラインを参考に確認でき、診断データは外部に送信されません（レポートの PDF 出力は Pro）。">
+<meta name="twitter:description" content="中小企業の管理者が、専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したいときに使う Windows 向けのオフライン評価ツールです。6 つの攻撃シナリオ別に弱い面とテーマを整理し、IPA 中小企業向けガイドラインを参考に確認でき、診断データは外部に送信されません（レポートの PDF 出力は Pro）。">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Segoe UI', 'Yu Gothic UI', sans-serif; line-height: 1.7; color: #1a1a2e; background: #f8f9fa; }
@@ -151,12 +151,12 @@
   <h1>SecureNavigator<span class="section-ja visible"> — 中小企業の自己点検と、攻撃シナリオ別の弱点整理をオフラインで</span><span class="section-en"> — Offline security self-check for small business, with gaps mapped to attack scenarios</span></h1>
   <div class="section-ja visible">
     <p class="tagline">セキュリティ対策を攻撃視点とガイドラインで整理し、レポートへ変換する</p>
-    <p class="sub-tagline">想定攻撃に対する防御上の弱点を分析し、着手候補を整理。説明・報告・改善検討に使えるレポートを生成するオフライン評価ツール。</p>
+    <p class="sub-tagline">想定攻撃に対する防御上の弱点を分析し、実施が低い面とテーマを整理。説明・報告・改善検討に使えるレポートを生成するオフライン評価ツール。</p>
     <p class="updated">最終更新: 2026-11-17</p>
   </div>
   <div class="section-en">
     <p class="tagline">Organize security posture by attack scenarios and guidelines, then convert to reports</p>
-    <p class="sub-tagline">Analyze defensive gaps against likely attacks, organize suggested actions, and generate reports for communication and planning. Completely offline.</p>
+    <p class="sub-tagline">Analyze defensive gaps against likely attacks, organize the layers and themes with low implementation, and generate reports for communication and planning. Completely offline.</p>
     <p class="updated">Last updated: 2026-11-17</p>
   </div>
   <div>
@@ -189,7 +189,7 @@
     <div class="why-section">
       <h2>「対策の有無」だけでなく「どこが攻撃経路になりうるか」を整理する</h2>
       <p>多くのセキュリティ評価ツールは「対策が存在するか」を確認します。しかし実務で必要なのは<strong>「想定される攻撃に対して、どこが弱いのか」</strong>の整理です。</p>
-      <p>SecureNavigator は、MITRE ATT&CK の攻撃手法を基に、<strong>対策の弱点 → 攻撃の進行経路 → 想定被害</strong>をルールベースで分析。防御上の弱点と着手候補を整理し、報告・改善検討に使えるレポートを生成します。</p>
+      <p>SecureNavigator は、MITRE ATT&CK の攻撃手法を基に、<strong>対策の弱点 → 攻撃の進行経路 → 想定被害</strong>をルールベースで分析。防御上の弱点と、実施が低い面・テーマを整理し、報告・改善検討に使えるレポートを生成します。</p>
     </div>
 
     <h2>こんな課題を解決します</h2>
@@ -204,7 +204,7 @@
       </div>
       <div class="feature-card">
         <h3>何が足りないかを、面やテーマ別に把握したいときは？</h3>
-        <p>診断結果から、実施が低い面（方針・技術・検知・対応・運用）ごとに、対応候補とその理由を画面に表示します。期間や順位は示しません。</p>
+        <p>診断結果から、実施が低い面（方針・技術・検知・対応・運用）ごとに、不足がみられるテーマとその理由を画面に表示します。期間や順位は示しません。</p>
       </div>
       <div class="feature-card">
         <h3>経営層や上長への報告資料を作るのに困るときは？ <span class="pro-badge">Pro</span></h3>
@@ -240,8 +240,8 @@
         <p>IPA 中小企業向けガイドライン、経産省サイバーセキュリティ経営ガイドライン、NIST CSF 2.0 を参考に対応状況を整理します。</p>
       </div>
       <div class="feature-card">
-        <h3>対応候補の整理</h3>
-        <p>診断結果から、実施が低い面（方針・技術・検知・対応・運用）ごとに、対応候補とその理由を表示します。期間や順位は示しません。</p>
+        <h3>不足がみられる面とテーマの整理</h3>
+        <p>診断結果から、実施が低い面（方針・技術・検知・対応・運用）ごとに、不足がみられるテーマとその理由を表示します。期間や順位は示しません。</p>
       </div>
       <div class="feature-card">
         <h3>レポート・資料出力 <span class="pro-badge">Pro</span></h3>
@@ -278,7 +278,7 @@
       <tbody>
         <tr><td>診断（全問回答）</td><td>✓</td><td>✓</td></tr>
         <tr><td>攻撃シナリオシミュレーション</td><td>✓</td><td>✓</td></tr>
-        <tr><td>対応候補の整理（画面表示）</td><td>✓</td><td>✓</td></tr>
+        <tr><td>不足がみられる面とテーマの整理（画面表示）</td><td>✓</td><td>✓</td></tr>
         <tr><td>IPA 中小企業向けガイドライン参考確認</td><td>✓</td><td>✓</td></tr>
         <tr><td>経産省サイバーセキュリティ経営ガイドライン参考確認</td><td>—</td><td>✓</td></tr>
         <tr><td>NIST CSF 2.0 参考確認</td><td>—</td><td>✓</td></tr>
@@ -291,7 +291,7 @@
         <tr><td>セッション保存数</td><td>1件</td><td>3件</td></tr>
       </tbody>
     </table>
-    <p>Pro は Microsoft Store のアドオン（アプリ内購入）です。アプリの設定画面の「Pro にアップグレード」から購入できます。価格は <a href="https://apps.microsoft.com/detail/9N7MGPLZW5V4">Microsoft Store の製品ページ</a>で確認できます。</p>
+    <p>Pro は Microsoft Store のアドオン（アプリ内購入）です。アプリの設定画面で「Pro にアップグレード」を選び、表示される画面で「Pro を購入する」を選ぶと購入できます。コードをお持ちの場合は「プロモーション コードを使う」を選び、コードを入力して「引き換える」を選びます。Microsoft の引き換えページ（既定のブラウザーで開きます）で引き換えたあと、アプリで「引き換えを確認」を選びます。価格は <a href="https://apps.microsoft.com/detail/9N7MGPLZW5V4">Microsoft Store の製品ページ</a>で確認できます。</p>
     <p class="compare-note">※ 診断結果のルールベース分析は参考情報であり、セキュリティ状態の完全性や特定目的への適合性を保証するものではありません。</p>
 
     <div class="privacy-note">
@@ -332,12 +332,13 @@
       <p>Pro で保存するレポートは、次の順に章が並びます。</p>
       <ul>
         <li>表紙と前書き（本レポートの位置づけ）</li>
-        <li>エグゼクティブサマリ（総合リスク・主要リスク・対応の候補）</li>
+        <li>エグゼクティブサマリ（総合リスク・主要リスク・対策状況に不足がある項目）</li>
         <li>シナリオ別の攻撃成立理由</li>
         <li>主な指摘事項と根拠（どの回答が根拠かを示します）</li>
         <li>ガイドライン別の確認結果（AI 関連の参考確認もここに表示）</li>
         <li>ATT&amp;CK フェーズ別対策状況（セキュリティ弱点マップを含みます）</li>
         <li>主要な弱点の整理</li>
+        <li>SCS の準備状況（Pro で、診断の開始時に SCS の確認を選んだ診断だけ）</li>
         <li>付録（回答と根拠の一覧など）</li>
         <li>総括</li>
         <li>関連する参考フレームワーク</li>
@@ -381,7 +382,7 @@
     <div class="why-section">
       <h2>Not "Do you have controls?" but "Where are the gaps?"</h2>
       <p>Most security assessment tools verify whether controls exist. But what practitioners need is: <strong>"Against likely attacks, where are we weak?"</strong></p>
-      <p>SecureNavigator uses MITRE ATT&CK techniques to analyze <strong>control gaps → potential attack paths → estimated impact</strong> through rule-based assessment. It organizes defensive weaknesses and suggested actions into reports you can use for communication and planning.</p>
+      <p>SecureNavigator uses MITRE ATT&CK techniques to analyze <strong>control gaps → potential attack paths → estimated impact</strong> through rule-based assessment. It organizes defensive weaknesses and the layers and themes with low implementation into reports you can use for communication and planning.</p>
     </div>
 
     <h2>Problems this solves</h2>
@@ -396,7 +397,7 @@
       </div>
       <div class="feature-card">
         <h3>How do I find out what we are missing, area by area?</h3>
-        <p>For each layer with low implementation (policy, technology, detection, response, operations), the results screen lists suggested actions and their reasons. No time frames or rankings are shown.</p>
+        <p>For each layer with low implementation (policy, technology, detection, response, operations), the results screen shows the themes with gaps and the reasons. No time frames or rankings are shown.</p>
       </div>
       <div class="feature-card">
         <h3>How do I create a security report for management? <span class="pro-badge">Pro</span></h3>
@@ -432,8 +433,8 @@
         <p>Organize status using IPA SME Guidelines (Japan), METI Cybersecurity Guidelines (Japan), and NIST CSF 2.0 as reference material.</p>
       </div>
       <div class="feature-card">
-        <h3>Action Planning View</h3>
-        <p>View suggested actions and their reasons for each layer with gaps (policy, technology, detection, response, operations). No time frames or rankings are shown.</p>
+        <h3>Layers and Themes with Gaps</h3>
+        <p>View the themes with gaps and the reasons for each layer with low implementation (policy, technology, detection, response, operations). No time frames or rankings are shown.</p>
       </div>
       <div class="feature-card">
         <h3>Report &amp; Document Export <span class="pro-badge">Pro</span></h3>
@@ -470,7 +471,7 @@
       <tbody>
         <tr><td>Full Assessment (all questions)</td><td>✓</td><td>✓</td></tr>
         <tr><td>Attack Scenario Simulation</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Action Planning View (on-screen)</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Layers and Themes with Gaps (on-screen)</td><td>✓</td><td>✓</td></tr>
         <tr><td>IPA SME Guidelines reference checks (Japan)</td><td>✓</td><td>✓</td></tr>
         <tr><td>METI Cybersecurity Guidelines reference checks (Japan)</td><td>—</td><td>✓</td></tr>
         <tr><td>NIST CSF 2.0 reference checks</td><td>—</td><td>✓</td></tr>
@@ -483,7 +484,7 @@
         <tr><td>Saved Sessions</td><td>1</td><td>3</td></tr>
       </tbody>
     </table>
-    <p>Pro is a Microsoft Store add-on (in-app purchase). You can buy it from "Upgrade to Pro" in the app's Settings screen. Check the price on the <a href="https://apps.microsoft.com/detail/9N7MGPLZW5V4">Microsoft Store product page</a>.</p>
+    <p>Pro is a Microsoft Store add-on (in-app purchase). In the app's Settings screen, select "Upgrade to Pro", then select "Buy Pro" on the screen that appears. If you have a promo code, select "Use a promo code", enter the code, and select "Redeem". Redeem it on the Microsoft page that opens in your default browser, then select "Check redemption" in the app. Check the price on the <a href="https://apps.microsoft.com/detail/9N7MGPLZW5V4">Microsoft Store product page</a>.</p>
     <p class="compare-note">* Assessment results are rule-based reference information and do not guarantee completeness or fitness for any particular purpose.</p>
 
     <div class="privacy-note">
@@ -524,12 +525,13 @@
       <p>A report saved in Pro contains the following chapters, in this order:</p>
       <ul>
         <li>Cover and preface (what this report covers)</li>
-        <li>Executive Summary (overall risk, key risks, and candidate actions)</li>
+        <li>Executive Summary (overall risk, key risks, and items with gaps in control status)</li>
         <li>Scenario-level Reasons the Attack Advances</li>
         <li>Main Findings and Rationale (shows which answers support each finding)</li>
         <li>Confirmation results by guideline (including the AI-related reference checks)</li>
         <li>ATT&amp;CK Phase Coverage (includes the Security Weakness Map)</li>
         <li>Key Weaknesses Overview</li>
+        <li>SCS readiness (Pro; only for assessments started with the SCS check)</li>
         <li>Appendices (such as the index of answers and rationale)</li>
         <li>Conclusion</li>
         <li>Related reference frameworks</li>
@@ -614,7 +616,7 @@ var pageText = {
   ja: { title: document.title, description: descMeta.content },
   en: {
     title: 'Offline Security Self-Assessment for Small Business: Find Gaps Against Attack Scenarios | SecureNavigator',
-    description: 'SecureNavigator helps small business administrators self-check their security controls without specialist knowledge and see where they are weak against attack scenarios based on MITRE ATT&CK. It organizes suggested actions with reference to the IPA guidelines for small and medium-sized enterprises (Japan), supports reports for management (PDF export is Pro), and runs fully offline on Windows 10/11 without sending assessment data out.'
+    description: 'SecureNavigator helps small business administrators self-check their security controls without specialist knowledge and see where they are weak against attack scenarios based on MITRE ATT&CK. It organizes the layers and themes with low implementation with reference to the IPA guidelines for small and medium-sized enterprises (Japan), supports reports for management (PDF export is Pro), and runs fully offline on Windows 10/11 without sending assessment data out.'
   }
 };
 function switchLang(lang) {
