@@ -13,7 +13,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 ## Who It's For
 
 - **IT administrators** — Assess and document security posture for internal review
-- **Security officers** — Identify defensive gaps and prioritize improvements
+- **Security officers** — Identify defensive gaps and consider where to start
 - **SME managers** — Understand organizational security status without specialized expertise
 - **Anyone who needs to communicate security improvements** — Generate structured reports for management briefings and improvement planning
 
@@ -25,7 +25,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 - **Action Planning View** — Suggested actions and reasons for each layer with gaps (policy, technology, detection, response, operations). No time frames or rankings are shown.
 - **Report Export** — Export assessment results as PDF, HTML, or Markdown reports. [Pro]
 - **Advanced Analysis** — Detailed maturity breakdown, cause-and-action tables, and ATT&CK technique-level analysis. [Pro]
-- **AI-related Reference Checks** — Display results referencing NIST AI RMF, Japan MIC AI Security Guidelines, Japan AI Guidelines for Business, IPA generative AI security materials, and UK NCSC Secure AI System Development guidance. [Pro] (Reference checks only — not an indication of compliance, conformity, or certification.)
+- **AI-related Reference Checks** — Display results referencing NIST AI RMF, Japan MIC AI Security Guidelines, Japan AI Guidelines for Business, IPA generative AI security materials, and UK NCSC Secure AI System Development guidance, inside the report. [Pro] (Reference checks only — not an indication of compliance, conformity, or certification.)
 - **Japanese / English** — Full bilingual support for both assessment interface and generated reports.
 
 ## v1.3 Updates
@@ -48,7 +48,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 | IPA SME Guidelines reference checks | ✓ | ✓ |
 | METI Cybersecurity Guidelines reference checks | — | ✓ |
 | NIST CSF 2.0 reference checks | — | ✓ |
-| AI-related reference checks (results referencing NIST AI RMF / Japan MIC AI Security Guidelines / Japan AI Guidelines for Business / IPA generative AI security materials / UK NCSC Secure AI System Development guidance. Not an indication of compliance, conformity, or certification) | Badge & coverage bar | Badge, coverage bar & details |
+| AI-related reference checks (results referencing NIST AI RMF / Japan MIC AI Security Guidelines / Japan AI Guidelines for Business / IPA generative AI security materials / UK NCSC Secure AI System Development guidance. Not an indication of compliance, conformity, or certification. The results appear inside the report, so they are not shown in Free, which cannot open the report) | — | ✓ (badge, coverage bar & details in the report) |
 | Advanced analysis (maturity detail, cause & action) | — | ✓ |
 | ATT&CK technique detail analysis | — | ✓ |
 | PDF report export | — | ✓ |
@@ -59,7 +59,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 ## Use Cases
 
 - **Periodic security review** — Organize the current state of defenses and clarify suggested actions.
-- **Management reporting** — Generate PDF reports that summarize security posture, defensive gaps, and recommended actions for executive briefings.
+- **Management reporting** — Generate PDF reports that summarize security posture, defensive gaps, and items with gaps in control status for executive briefings.
 - **Action planning** — Use the per-layer view to see where security measures have room for improvement.
 - **Guideline reference checks** — Review status using IPA, METI, and NIST CSF 2.0 guidelines as reference material.
 
@@ -72,11 +72,8 @@ SecureNavigator operates 100% offline. It does not connect to any external serve
 ### Assessment Result Summary
 ![Assessment Result Summary](manual/images/en/result-summary.png)
 
-### Attack Scenario Resilience / Action Planning
-![Attack Scenarios and Action Planning](manual/images/en/attack-scenarios.png)
-
-### Framework Reference Checks (NIST CSF 2.0)
-![NIST CSF Reference Checks](manual/images/en/framework-csf.png)
+### Attack Flow in the Attack View
+![Attack flow in the attack view](manual/images/en/attack-path.png)
 
 ### ATT&CK Technique Coverage (Pro)
 ![ATT&CK Matrix](manual/images/en/attack-view-matrix.png)

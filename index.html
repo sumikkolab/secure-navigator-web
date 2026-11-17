@@ -109,19 +109,20 @@
       "@type": "SoftwareApplication",
       "@id": "https://secure-navigator.sumikkolab.com/#software",
       "name": "SecureNavigator",
-      "description": "中小企業の管理者が専門知識なしで自社のセキュリティ対策の抜けを自己点検し、想定される攻撃シナリオに対する弱点を整理して、経営層への報告に使える Windows 向けのオフライン評価ツール。診断データは外部に送信されない。",
+      "description": "中小企業の管理者が専門知識なしで自社のセキュリティ対策の抜けを自己点検し、6 つの攻撃シナリオに対する弱点を整理する Windows 向けのオフライン評価ツール。経営層への報告に使えるレポートの保存は Pro。診断データは外部に送信しない（例外は Microsoft Store での購入・復元と、起動時のライセンス確認）。準拠・認証の判定、優先順位や期間の決定はしない。",
       "featureList": [
-        "専門知識がなくても対策の抜けを知りたい → 質問に答えて弱点マップに整理（かんたん診断は約 5 分）",
-        "想定される攻撃に対する弱点を知りたい → 6 つの攻撃シナリオを段階ごとに分析し、経路図で攻撃が止まる地点を確認",
-        "何が足りないかを面別に把握したい → 実施が低い面ごとに対応候補と理由を表示（期間・順位は示さない）",
-        "経営層への報告資料を作りたい → レポートのプレビューと PDF / HTML / Markdown 保存（Pro）",
-        "中小企業が IPA のガイドラインで自己点検したい → IPA 中小企業向けガイドラインを参考にした確認",
+        "専門知識がなくても対策の抜けを知りたい → 4 択の質問に答えて弱点マップ（十分・途中・不足の 3 区分）と 3 つの KPI（診断回答率・対策実施率・攻撃対策率）に整理",
+        "想定される攻撃に対する弱点を知りたい → 6 つの攻撃シナリオを防御・検知・被害で判定し、経路図で各段階が止められた・検知できる・突破されるのどれかを表示",
+        "何が足りないかを面別に把握したい → 不足がみられる面とテーマを表示（優先順位・期間はアプリが決めない）",
+        "経営層への報告資料を作りたい → エグゼクティブサマリから始まるレポートのプレビューと PDF / HTML / Markdown 保存（Pro）",
+        "中小企業が IPA のガイドラインで自己点検したい → IPA 中小企業向けガイドラインを参考にした確認（Free でも表示）",
         "経産省のガイドラインや NIST CSF 2.0 でも確認したい → 参考確認（Pro）",
-        "診断データを社外に出せない環境で使いたい → 完全オフライン動作で外部に送信しない",
-        "時間がなく質問が多くて進まない → 診断範囲の目安表示、高速表示、1 問ごとの自動保存"
+        "診断データを社外に出せない環境で使いたい → 診断データを外部に送信しない（例外は Store での購入・復元と起動時のライセンス確認）",
+        "時間がなく質問が多くて進まない → 開始時の質問は約 2 分、回答に合わせた範囲の目安を表示、高速表示、1 問ごとの自動保存",
+        "改善後にもう一度確かめたい → 診断をコピーして再評価し、結果を見比べる（自動の比較機能は無い）"
       ],
       "url": "https://secure-navigator.sumikkolab.com/",
-      "dateModified": "2026-10-25",
+      "dateModified": "2026-11-17",
       "applicationCategory": "SecurityApplication",
       "operatingSystem": "Windows 10, Windows 11",
       "offers": {
@@ -151,12 +152,12 @@
   <div class="section-ja visible">
     <p class="tagline">セキュリティ対策を攻撃視点とガイドラインで整理し、レポートへ変換する</p>
     <p class="sub-tagline">想定攻撃に対する防御上の弱点を分析し、着手候補を整理。説明・報告・改善検討に使えるレポートを生成するオフライン評価ツール。</p>
-    <p class="updated">最終更新: 2026-10-25</p>
+    <p class="updated">最終更新: 2026-11-17</p>
   </div>
   <div class="section-en">
     <p class="tagline">Organize security posture by attack scenarios and guidelines, then convert to reports</p>
     <p class="sub-tagline">Analyze defensive gaps against likely attacks, organize suggested actions, and generate reports for communication and planning. Completely offline.</p>
-    <p class="updated">Last updated: 2026-10-25</p>
+    <p class="updated">Last updated: 2026-11-17</p>
   </div>
   <div>
     <span class="badge">100% Offline</span>
@@ -195,7 +196,7 @@
     <div class="features">
       <div class="feature-card">
         <h3>専門知識がなくても、自社のセキュリティ対策の抜けを知るには？</h3>
-        <p>質問に答えるだけで、組織の対策状況を弱点マップ（領域 x 観点）に整理します。基本的な状況をすぐ確認したいときは、プロファイルの入力が要らない「かんたん診断（約 5 分）」を選べます。</p>
+        <p>質問に答えるだけで、組織の対策状況を弱点マップ（領域 x 観点）に整理します。開始時の質問（答える時間は約 2 分）に答えると、回答に合わせた診断の範囲の目安が画面に表示されます。質問に答えずに「未回答のまま始める」を選ぶと、いちばん小さい範囲の「かんたん」で始まります。</p>
       </div>
       <div class="feature-card">
         <h3>想定される攻撃に対して、自社のどこが弱いか分からないときは？</h3>
@@ -223,7 +224,7 @@
       </div>
       <div class="feature-card">
         <h3>時間がなく、質問が多くて進まないときは？</h3>
-        <p>開始時の質問への回答に合わせて、診断の範囲（テーマ数・問数・目安の時間）を確認できます。質問画面は、1 問ずつ答える「集中」と、質問を行で並べて続けて答える「高速」を切り替えられ、回答は 1 問ごとに自動で保存されます。</p>
+        <p>開始時の質問は約 2 分で答えられ、全問に答える必要はありません。回答に合わせて、診断の範囲（テーマ数・問数・目安の時間）が画面に表示されます。答えずに始めると「かんたん」の範囲になります。質問画面は、1 問ずつ答える「集中」と、質問を行で並べて続けて答える「高速」を切り替えられ、回答は 1 問ごとに自動で保存されます。</p>
       </div>
     </div>
     <p class="compare-note">※ Free 版でも全問の診断と画面での結果確認ができます。PDF などのレポート出力、経産省ガイドライン・NIST CSF 2.0 の参考確認、ATT&CK テクニック詳細は Pro の機能で、Free の保存は 1 件です。ガイドラインとの照合は参考確認であり、認証・適合・準拠の判定はしません。</p>
@@ -281,7 +282,7 @@
         <tr><td>IPA 中小企業向けガイドライン参考確認</td><td>✓</td><td>✓</td></tr>
         <tr><td>経産省サイバーセキュリティ経営ガイドライン参考確認</td><td>—</td><td>✓</td></tr>
         <tr><td>NIST CSF 2.0 参考確認</td><td>—</td><td>✓</td></tr>
-        <tr><td>AI 関連参考確認（NIST AI RMF / 総務省 AI セキュリティガイドライン / AI 事業者ガイドライン / IPA 生成AIセキュリティ資料 / UK NCSC Secure AI System Development 関連ガイダンス を参考にした確認結果の表示。準拠・認証・適合判定を示すものではありません）</td><td>バッジ・カバレッジバー</td><td>バッジ・カバレッジバー・詳細</td></tr>
+        <tr><td>AI 関連参考確認（NIST AI RMF / 総務省 AI セキュリティガイドライン / AI 事業者ガイドライン / IPA 生成AIセキュリティ資料 / UK NCSC Secure AI System Development 関連ガイダンス を参考にした確認結果の表示。準拠・認証・適合判定を示すものではありません。結果はレポートの中に表示されるため、レポートを開けない Free では表示されません）</td><td>—</td><td>✓（レポート内のバッジ・カバレッジバー・詳細）</td></tr>
         <tr><td>高度な分析（成熟度詳細・原因と対策）</td><td>—</td><td>✓</td></tr>
         <tr><td>ATT&CK テクニック詳細分析</td><td>—</td><td>✓</td></tr>
         <tr><td>PDF レポート出力</td><td>—</td><td>✓</td></tr>
@@ -290,17 +291,80 @@
         <tr><td>セッション保存数</td><td>1件</td><td>3件</td></tr>
       </tbody>
     </table>
+    <p>Pro は Microsoft Store のアドオン（アプリ内購入）です。アプリの設定画面の「Pro にアップグレード」から購入できます。価格は <a href="https://apps.microsoft.com/detail/9N7MGPLZW5V4">Microsoft Store の製品ページ</a>で確認できます。</p>
     <p class="compare-note">※ 診断結果のルールベース分析は参考情報であり、セキュリティ状態の完全性や特定目的への適合性を保証するものではありません。</p>
 
     <div class="privacy-note">
       <p>🔒 <strong>完全オフライン動作</strong> — SecureNavigator は外部にデータを送信しません。診断データは利用者のローカル環境にのみ保存されます。</p>
+      <p>例外: Microsoft Store での Pro の購入・復元と、起動時のライセンス状態の確認では、Microsoft Store との通信が発生します（<a href="privacy-policy.html">プライバシーポリシー</a>の「2. ネットワーク通信」を参照）。</p>
     </div>
 
-    <h2>画面イメージ</h2>
-    <div class="screenshot">
-      <img src="manual/images/ja/result-summary.png" alt="診断結果サマリ。KPIスコアと弱点マップが表示されている" style="max-width:100%; border-radius:8px; border:1px solid #e2e8f0;">
-      <div class="caption" style="font-size:0.85rem; color:#64748b; margin-top:8px; text-align:center;">診断結果サマリ</div>
+    <h2>アプリが示す答え（画面とレポート）</h2>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>どこが弱いかを、ひと目で説明できますか？</h3>
+      <p>結果画面の「セキュリティ弱点マップ」は、領域ごとに方針・技術・運用・検知・対応の観点で実施の度合いを色分けします。凡例は「十分（80% 以上）」「途中（21〜79%）」「不足（20% 以下）」の 3 区分です。あわせて「診断回答率」「対策実施率」「攻撃対策率」の 3 つの KPI を表示します。</p>
+      <img src="manual/images/ja/result-summary.png" alt="診断結果サマリ。KPI、対策が十分でない領域の例、弱点マップが表示されている" style="max-width:100%; border-radius:8px; border:1px solid #e2e8f0; margin-top:8px;">
     </div>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>どの攻撃に、どこまで耐えられますか？</h3>
+      <p>次の 6 つの攻撃シナリオについて、各段階を「防御（対策で阻止）」「検知（検知し対応）」「被害（攻撃が到達）」で判定します。</p>
+      <ul>
+        <li>ランサムウェア攻撃</li>
+        <li>標的型攻撃（情報窃取）</li>
+        <li>内部不正（データ持ち出し）</li>
+        <li>サプライチェーン攻撃</li>
+        <li>クラウド侵害</li>
+        <li>ビジネスメール詐欺（BEC）</li>
+      </ul>
+      <p>攻撃ビューの経路図は、各段階の状態を「止められた」「検知できる」「突破される」「未確認」「未到達」の 5 つで示し、攻撃の流れが止まる地点を表示します。開始時の質問の結果が「かんたん」の範囲のときは、範囲の確認画面に「攻撃シナリオ数 3」と表示されます。</p>
+      <img src="manual/images/ja/attack-path.png" alt="攻撃ビューの経路図。ランサムウェア攻撃の各段階の状態と、攻撃の流れが止まる地点が表示されている" style="max-width:100%; border-radius:8px; border:1px solid #e2e8f0; margin-top:8px;">
+    </div>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>何から手を付けるべきかを、アプリが決めてくれますか？</h3>
+      <p>アプリは、優先順位と期間を決めません。結果画面の「不足がみられる面とテーマ」で、実施が低い面（方針・技術・運用など）とテーマ（認証管理など）を示します。どれに、いつ着手するかは、社内の事情に合わせて利用者が判断します。</p>
+    </div>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>経営層への説明資料には、何が載りますか？ <span class="pro-badge">Pro</span></h3>
+      <p>Pro で保存するレポートは、次の順に章が並びます。</p>
+      <ul>
+        <li>表紙と前書き（本レポートの位置づけ）</li>
+        <li>エグゼクティブサマリ（総合リスク・主要リスク・対応の候補）</li>
+        <li>シナリオ別の攻撃成立理由</li>
+        <li>主な指摘事項と根拠（どの回答が根拠かを示します）</li>
+        <li>ガイドライン別の確認結果（AI 関連の参考確認もここに表示）</li>
+        <li>ATT&amp;CK フェーズ別対策状況（セキュリティ弱点マップを含みます）</li>
+        <li>主要な弱点の整理</li>
+        <li>付録（回答と根拠の一覧など）</li>
+        <li>総括</li>
+        <li>関連する参考フレームワーク</li>
+        <li>参照した版</li>
+        <li>免責事項</li>
+      </ul>
+      <img src="manual/images/ja/report-preview.png" alt="レポートのプレビュー画面。対策状況に不足がある項目、CSF カバレッジ、主要リスクが表示されている" style="max-width:100%; border-radius:8px; border:1px solid #e2e8f0; margin-top:8px;">
+    </div>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>質問には、どう答えればよいですか？</h3>
+      <p>各質問には「実施済み」「一部実施」「未実施」「未確認」の 4 択で答えます。専門用語には補足の説明が表示されます。</p>
+      <img src="manual/images/ja/hearing-card.png" alt="質問画面" style="max-width:100%; border-radius:8px; border:1px solid #e2e8f0; margin-top:8px;">
+    </div>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>対策を進めた後に、もう一度確かめられますか？</h3>
+      <p>保存済みの診断の「コピーして再評価（最新版で）」で、前回の回答を引き継いだ診断を作れます。保存できる件数に空きがあれば元の診断を残し、上限に達しているときは元の診断を上書きします。Free は保存が 1 件のため、上書きになります。前回との差を自動で比べる機能はありません。元の診断を残した場合は、画面や保存したレポートで結果を見比べられます。</p>
+    </div>
+
+    <h2>アプリがしないこと</h2>
+    <ul>
+      <li>ガイドラインへの準拠・適合や認証の判定（ガイドラインとの照合は参考確認です）</li>
+      <li>対策にかかる期間や費用の見積もり</li>
+      <li>対策の優先順位の決定</li>
+      <li>前回の診断との自動比較</li>
+    </ul>
 
     <h2>動作要件</h2>
     <ul>
@@ -324,7 +388,7 @@
     <div class="features">
       <div class="feature-card">
         <h3>How can I find the gaps in our security controls without specialist knowledge?</h3>
-        <p>Just answer the questions, and SecureNavigator organizes your security status into a weakness map (area x perspective). If you want a quick overview, choose Quick Diagnosis (about 5 minutes), which needs no profile input.</p>
+        <p>Just answer the questions, and SecureNavigator organizes your security status into a weakness map (area x perspective). The opening questions take about 2 minutes, and the screen then shows the estimated scope of the assessment based on your answers. If you select "Start without answers", the assessment starts with Quick, the smallest scope.</p>
       </div>
       <div class="feature-card">
         <h3>How do I see where we are weak against likely attack scenarios?</h3>
@@ -352,7 +416,7 @@
       </div>
       <div class="feature-card">
         <h3>What if there are too many questions and not enough time?</h3>
-        <p>As you answer the opening questions, you can see the scope of the assessment (themes, questions, estimated time). The question screen lets you switch between Focus, one question at a time, and Fast, with questions in rows for continuous answering. Each answer is saved automatically.</p>
+        <p>The opening questions take about 2 minutes, and you do not have to answer all of them. As you answer, the screen shows the scope of the assessment (themes, questions, estimated time). If you start without answering, the assessment uses the Quick scope. The question screen lets you switch between Focus, one question at a time, and Fast, with questions in rows for continuous answering. Each answer is saved automatically.</p>
       </div>
     </div>
     <p class="compare-note">* The Free edition lets you complete the full assessment and view results on screen. PDF and other report export, METI guidelines / NIST CSF 2.0 reference checks, and ATT&CK technique details are Pro features, and Free saves 1 session. Guideline checks are reference checks; SecureNavigator does not determine certification, conformity, or compliance.</p>
@@ -364,7 +428,7 @@
         <p>Analyze your defenses against 6 representative attack scenarios, step by step.</p>
       </div>
       <div class="feature-card">
-        <h3>Framework Compliance</h3>
+        <h3>Framework Reference Checks</h3>
         <p>Organize status using IPA SME Guidelines (Japan), METI Cybersecurity Guidelines (Japan), and NIST CSF 2.0 as reference material.</p>
       </div>
       <div class="feature-card">
@@ -410,7 +474,7 @@
         <tr><td>IPA SME Guidelines reference checks (Japan)</td><td>✓</td><td>✓</td></tr>
         <tr><td>METI Cybersecurity Guidelines reference checks (Japan)</td><td>—</td><td>✓</td></tr>
         <tr><td>NIST CSF 2.0 reference checks</td><td>—</td><td>✓</td></tr>
-        <tr><td>AI-related Reference Checks (results referencing NIST AI RMF / Japan MIC AI Security Guidelines / Japan AI Guidelines for Business / IPA generative AI security materials / UK NCSC Secure AI System Development guidance. Not an indication of compliance, conformity, or certification)</td><td>Badge &amp; coverage bar</td><td>Badge, coverage bar &amp; details</td></tr>
+        <tr><td>AI-related Reference Checks (results referencing NIST AI RMF / Japan MIC AI Security Guidelines / Japan AI Guidelines for Business / IPA generative AI security materials / UK NCSC Secure AI System Development guidance. Not an indication of compliance, conformity, or certification. The results appear only inside the report, so they are not available in Free, which cannot open the report)</td><td>—</td><td>✓ (badge, coverage bar &amp; details in the report)</td></tr>
         <tr><td>Advanced Analysis (maturity detail, cause &amp; action)</td><td>—</td><td>✓</td></tr>
         <tr><td>ATT&CK Technique Detail Analysis</td><td>—</td><td>✓</td></tr>
         <tr><td>PDF Report Export</td><td>—</td><td>✓</td></tr>
@@ -419,17 +483,80 @@
         <tr><td>Saved Sessions</td><td>1</td><td>3</td></tr>
       </tbody>
     </table>
+    <p>Pro is a Microsoft Store add-on (in-app purchase). You can buy it from "Upgrade to Pro" in the app's Settings screen. Check the price on the <a href="https://apps.microsoft.com/detail/9N7MGPLZW5V4">Microsoft Store product page</a>.</p>
     <p class="compare-note">* Assessment results are rule-based reference information and do not guarantee completeness or fitness for any particular purpose.</p>
 
     <div class="privacy-note">
       <p>🔒 <strong>Fully Offline</strong> — SecureNavigator never transmits your data. All assessment data is stored only on your local device.</p>
+      <p>Exceptions: Buying or restoring Pro in the Microsoft Store and checking the license status at startup involve communication with the Microsoft Store (see "2. Network Communication" in the <a href="privacy-policy.html?lang=en">Privacy Policy</a>).</p>
     </div>
 
-    <h2>Screenshots</h2>
-    <div class="screenshot">
-      <img src="manual/images/en/result-summary.png" alt="Assessment Result Summary showing KPI score and weakness map" style="max-width:100%; border-radius:8px; border:1px solid #e2e8f0;">
-      <div class="caption" style="font-size:0.85rem; color:#64748b; margin-top:8px; text-align:center;">Assessment Result Summary</div>
+    <h2>What the App Tells You (Screens and Report)</h2>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>Can I show at a glance where we are weak?</h3>
+      <p>The Security Weakness Map on the Results screen color-codes each area by perspective: policy, technology, operations, detection, and response. The legend has three levels: Sufficient (80%+), In between (21–79%), and Lacking (20% or less). The screen also shows three KPIs: Response Rate, Implementation Rate, and Attack Coverage Rate.</p>
+      <img src="manual/images/en/result-summary.png" alt="Assessment result summary with KPIs, examples of areas where controls are not sufficient, and the weakness map" style="max-width:100%; border-radius:8px; border:1px solid #e2e8f0; margin-top:8px;">
     </div>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>Which attacks could we withstand, and how far?</h3>
+      <p>For each of the following six attack scenarios, the app rates every stage as Defense (blocked by controls), Detect (detected and handled), or Damage (the attack gets through).</p>
+      <ul>
+        <li>Ransomware Attack</li>
+        <li>Targeted Attack (Data Theft)</li>
+        <li>Insider Threat (Data Exfiltration)</li>
+        <li>Supply Chain Attack</li>
+        <li>Cloud Compromise</li>
+        <li>Business Email Compromise (BEC)</li>
+      </ul>
+      <p>The path diagram in the attack view marks each stage with one of five states: Stopped, Detectable, Breached, Unconfirmed, or Not reached. It also shows where the attack flow stops. When the opening questions result in the Quick scope, the scope confirmation screen shows 3 attack scenarios.</p>
+      <img src="manual/images/en/attack-path.png" alt="Attack flow in the attack view, showing the state of each ransomware attack stage and where the flow stops" style="max-width:100%; border-radius:8px; border:1px solid #e2e8f0; margin-top:8px;">
+    </div>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>Does the app decide what we should tackle first?</h3>
+      <p>No. The app does not set priorities or time frames. The "Layers and themes with gaps" section on the Results screen shows the layers (policy, technology, operations, and so on) and themes (such as authentication) with low implementation. You decide what to address and when, based on your organization's circumstances.</p>
+    </div>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>What goes into a report for management? <span class="pro-badge">Pro</span></h3>
+      <p>A report saved in Pro contains the following chapters, in this order:</p>
+      <ul>
+        <li>Cover and preface (what this report covers)</li>
+        <li>Executive Summary (overall risk, key risks, and candidate actions)</li>
+        <li>Scenario-level Reasons the Attack Advances</li>
+        <li>Main Findings and Rationale (shows which answers support each finding)</li>
+        <li>Confirmation results by guideline (including the AI-related reference checks)</li>
+        <li>ATT&amp;CK Phase Coverage (includes the Security Weakness Map)</li>
+        <li>Key Weaknesses Overview</li>
+        <li>Appendices (such as the index of answers and rationale)</li>
+        <li>Conclusion</li>
+        <li>Related reference frameworks</li>
+        <li>Reference versions used</li>
+        <li>Disclaimer</li>
+      </ul>
+      <img src="manual/images/en/report-preview.png" alt="Report preview screen showing items with gaps in control status, CSF coverage, and key risks" style="max-width:100%; border-radius:8px; border:1px solid #e2e8f0; margin-top:8px;">
+    </div>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>How do I answer the questions?</h3>
+      <p>Each question has four choices: Implemented, Partially Implemented, Not Implemented, and Unverified. Technical terms come with short explanations.</p>
+      <img src="manual/images/en/hearing-card.png" alt="Question screen" style="max-width:100%; border-radius:8px; border:1px solid #e2e8f0; margin-top:8px;">
+    </div>
+
+    <div class="feature-card" style="margin:16px 0;">
+      <h3>Can we check again after making improvements?</h3>
+      <p>Select "Copy &amp; Reassess (Latest)" on a saved assessment to create a new assessment that carries over your previous answers. If you have room to save another assessment, the original is kept; if you have reached the limit, the original is overwritten. Free saves only one assessment, so it is always overwritten. The app does not compare results with the previous assessment automatically. If you keep the original, you can compare the results yourself on screen or in saved reports.</p>
+    </div>
+
+    <h2>What the App Does Not Do</h2>
+    <ul>
+      <li>Determine compliance, conformity, or certification against any guideline (guideline checks are for reference only)</li>
+      <li>Estimate the time or cost of improvements</li>
+      <li>Decide the priority of actions</li>
+      <li>Compare results with a previous assessment automatically</li>
+    </ul>
 
     <h2>System Requirements</h2>
     <ul>
