@@ -53,6 +53,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 | ATT&CK technique detail analysis | — | ✓ |
 | PDF report export | — | ✓ |
 | HTML / Markdown report export | — | ✓ |
+| Export Excel hearing sheet | — | ✓ |
 | Japanese / English | ✓ | ✓ |
 | Saved sessions | 1 | 3 |
 
