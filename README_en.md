@@ -75,9 +75,6 @@ SecureNavigator processes assessment data offline. It does not transmit assessme
 ### Attack Flow in the Attack View
 ![Attack flow in the attack view](manual/images/en/attack-path.png)
 
-### ATT&CK Technique Details (Matrix) (Pro)
-![ATT&CK Matrix](manual/images/en/attack-view-matrix.png)
-
 ### Report Preview (Pro)
 ![Report Preview](manual/images/en/report-preview.png)
 

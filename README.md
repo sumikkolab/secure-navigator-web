@@ -75,9 +75,6 @@ SecureNavigator は、診断データの処理をオフラインで行います�
 ### 攻撃ビューの経路図
 ![攻撃ビューの経路図](manual/images/ja/attack-path.png)
 
-### ATT&CK テクニック詳細（マトリクス）（Pro）
-![ATT&CK マトリクス](manual/images/ja/attack-view-matrix.png)
-
 ### レポートプレビュー（Pro）
 ![レポートプレビュー](manual/images/ja/report-preview.png)
 
