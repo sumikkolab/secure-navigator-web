@@ -25,7 +25,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 - **Layers and Themes with Gaps** — Themes with gaps and the reasons for each layer with low implementation (policy, technology, detection, response, operations). No time frames or rankings are shown.
 - **Report Export** — Export assessment results as PDF, HTML, or Markdown reports. [Pro]
 - **Advanced Analysis** — Detailed maturity breakdown, cause-and-action tables, Attack View contents (attack flow, tactic chips, status groups), and ATT&CK technique-level analysis. [Pro]
-- **AI-related Reference Checks** — Display results referencing NIST AI RMF, Japan MIC AI Security Guidelines, Japan AI Guidelines for Business, IPA generative AI security materials, and UK NCSC Secure AI System Development guidance, inside the report. [Pro] (Reference checks only — not an indication of compliance, conformity, or certification.)
+- **AI-related Reference Checks** — Display results referencing NIST AI RMF, Japan MIC Guideline on Technical Measures for Securing AI, Japan AI Guidelines for Business, IPA generative AI security materials, and UK NCSC Secure AI System Development guidance, inside the report. [Pro] (Reference checks only — not an indication of compliance, conformity, or certification.)
 - **Japanese / English** — Full bilingual support for both assessment interface and generated reports.
 
 ## v1.3 Updates
@@ -48,7 +48,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 | IPA SME Guidelines reference checks | ✓ | ✓ |
 | METI Cybersecurity Guidelines reference checks | — | ✓ |
 | NIST CSF 2.0 reference checks | — | ✓ |
-| AI-related reference checks (results referencing NIST AI RMF / Japan MIC AI Security Guidelines / Japan AI Guidelines for Business / IPA generative AI security materials / UK NCSC Secure AI System Development guidance. Not an indication of compliance, conformity, or certification. The results appear inside the report, so they are not shown in Free, which cannot open the report) | — | ✓ (badge, coverage bar & details in the report) |
+| AI-related reference checks (results referencing NIST AI RMF / Japan MIC Guideline on Technical Measures for Securing AI / Japan AI Guidelines for Business / IPA generative AI security materials / UK NCSC Secure AI System Development guidance. Not an indication of compliance, conformity, or certification. The results appear inside the report, so they are not shown in Free, which cannot open the report) | — | ✓ (badge, coverage bar & details in the report) |
 | Advanced analysis (maturity detail, cause & action) | — | ✓ |
 | Attack View contents (attack flow, tactic chips, status groups, ATT&CK technique detail analysis) | — | ✓ |
 | PDF report export | — | ✓ |
