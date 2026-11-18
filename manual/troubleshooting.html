@@ -62,14 +62,22 @@
     </div>
 
     <h2>データの保存場所と初期化</h2>
-    <p><strong>データの保存場所</strong>: SecureNavigator のデータ（セッション、設定）は以下のフォルダに保存されます。</p>
+    <p><strong>データの保存場所</strong>: SecureNavigator のデータ（セッション、設定）は、通常、以下のフォルダに保存されます。</p>
     <pre><code>%LocalAppData%\SecureNavigator\</code></pre>
     <p>通常は <code>C:\Users\&lt;ユーザー名&gt;\AppData\Local\SecureNavigator\</code> に該当します。</p>
+    <p>Microsoft Store 版では、Windows により <code>%LocalAppData%\Packages</code> 以下の対応する場所に保存される場合があります。</p>
 
-    <p><strong>データの初期化</strong>: すべてのデータを初期状態に戻したい場合は、上記フォルダを削除してからアプリを再起動してください。すべてのセッションと設定がリセットされます。</p>
+    <p><strong>データの初期化</strong>: すべてのデータを初期状態に戻したい場合は、Windows のリセット機能を使用してください。</p>
+    <ol>
+      <li>SecureNavigator を終了します。</li>
+      <li>Windows 11 の場合は、「設定」&gt;「アプリ」&gt;「インストールされているアプリ」から SecureNavigator を見つけ、「詳細オプション」を開きます。Windows 10 の場合は、「設定」&gt;「アプリ」&gt;「アプリと機能」から SecureNavigator を選び、「詳細オプション」を開きます。</li>
+      <li>「リセット」を選び、確認の表示で再度「リセット」を選びます。</li>
+      <li>SecureNavigator を起動します。</li>
+    </ol>
+    <p>リセットすると、SecureNavigator のすべてのセッションと設定が削除されます。</p>
 
     <div class="warn-box">
-      <p>データフォルダの削除はすべての診断データの消失を意味します。この操作は取り消せません。必要に応じて、事前にフォルダのバックアップをとってください。</p>
+      <p>リセットはすべての診断データの消失を意味します。この操作は取り消せません。必要なデータ（保存したレポートなど）は、事前に別の場所へコピーしてください。</p>
     </div>
 
     <h2>アプリが起動しない・クラッシュする</h2>
@@ -129,14 +137,22 @@
     </div>
 
     <h2>Data Location and Reset</h2>
-    <p><strong>Data location</strong>: SecureNavigator data (sessions, settings) is stored in the following folder:</p>
+    <p><strong>Data location</strong>: SecureNavigator data (sessions, settings) is normally stored in the following folder:</p>
     <pre><code>%LocalAppData%\SecureNavigator\</code></pre>
     <p>This typically resolves to <code>C:\Users\&lt;username&gt;\AppData\Local\SecureNavigator\</code>.</p>
+    <p>In the Microsoft Store version, Windows may store the data in the corresponding location under <code>%LocalAppData%\Packages</code> instead.</p>
 
-    <p><strong>Data reset</strong>: To reset all data to the initial state, delete the above folder and restart the application. All sessions and settings will be reset.</p>
+    <p><strong>Data reset</strong>: To reset all data to the initial state, use the Windows reset function.</p>
+    <ol>
+      <li>Close SecureNavigator.</li>
+      <li>On Windows 11, open Settings &gt; Apps &gt; Installed apps, find SecureNavigator, and open Advanced options. On Windows 10, open Settings &gt; Apps &gt; Apps &amp; features, select SecureNavigator, and open Advanced options.</li>
+      <li>Select Reset, and select Reset again in the confirmation prompt.</li>
+      <li>Start SecureNavigator.</li>
+    </ol>
+    <p>Resetting deletes all SecureNavigator sessions and settings.</p>
 
     <div class="warn-box">
-      <p>Deleting the data folder permanently removes all assessment data. This action cannot be undone. Consider backing up the folder before proceeding if needed.</p>
+      <p>Resetting permanently removes all assessment data. This action cannot be undone. Copy any data you need, such as saved reports, to another location before you proceed.</p>
     </div>
 
     <h2>App Does Not Start or Crashes</h2>
