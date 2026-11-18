@@ -8,7 +8,7 @@ An offline security assessment tool that organizes security posture by attack sc
 
 ## What SecureNavigator Does
 
-SecureNavigator analyzes an organization's security posture from the attacker's perspective using MITRE ATT&CK-based attack scenarios. It reviews defenses against six representative attack patterns, identifies defensive gaps, and maps findings to IPA SME Guidelines (Japan), METI Cybersecurity Management Guidelines (Japan), and NIST CSF 2.0 as reference material. The tool organizes the layers and themes with low implementation and generates exportable reports for communication with management and stakeholders. All processing runs locally — no assessment data ever leaves the user's device.
+SecureNavigator analyzes an organization's security posture from the attacker's perspective using MITRE ATT&CK-based attack scenarios. It reviews defenses against up to six representative attack patterns, identifies defensive gaps, and maps findings to IPA SME Guidelines (Japan), METI Cybersecurity Management Guidelines (Japan), and NIST CSF 2.0 as reference material. The tool organizes the layers and themes with low implementation and generates exportable reports for communication with management and stakeholders. All processing runs locally — no assessment data ever leaves the user's device.
 
 ## Who It's For
 
@@ -20,7 +20,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 ## Key Features
 
 - **Assessment data is never sent out** — All assessment data stays on the local device. No telemetry, no cloud dependency. The product communicates only for purchasing or restoring Pro in the Microsoft Store and for the license check at startup.
-- **Attack Scenario Analysis** — Six attack scenarios based on MITRE ATT&CK techniques analyze how attacks progress through an organization's defenses step by step.
+- **Attack Scenario Analysis** — Up to six attack scenarios based on MITRE ATT&CK techniques analyze how attacks progress through an organization's defenses step by step.
 - **Guideline Reference Checks** — IPA SME Guidelines available in Free. METI Cybersecurity Guidelines and NIST CSF 2.0 available in Pro.
 - **Layers and Themes with Gaps** — Themes with gaps and the reasons for each layer with low implementation (policy, technology, detection, response, operations). No time frames or rankings are shown.
 - **Report Export** — Export assessment results as PDF, HTML, or Markdown reports. [Pro]
@@ -75,7 +75,7 @@ SecureNavigator processes assessment data offline. It does not transmit assessme
 ### Attack Flow in the Attack View
 ![Attack flow in the attack view](manual/images/en/attack-path.png)
 
-### ATT&CK Technique Coverage (Pro)
+### ATT&CK Technique Details (Matrix) (Pro)
 ![ATT&CK Matrix](manual/images/en/attack-view-matrix.png)
 
 ### Report Preview (Pro)
