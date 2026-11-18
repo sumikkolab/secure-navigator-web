@@ -114,7 +114,7 @@
         "専門知識がなくても対策の抜けを知りたい → 4 択の質問に答えて弱点マップ（十分・途中・不足の 3 区分）と 3 つの KPI（診断回答率・対策実施率・攻撃対策率）に整理",
         "想定される攻撃に対する弱点を知りたい → 最大 6 つの攻撃シナリオを防御・検知・被害で判定して結果画面の表に表示（Free でも表示）。経路図で各段階が止められた・検知できる・突破されるのどれかを表示（経路図は Pro）。結果と経路図は質問と技術の対応表の範囲での簡易判定",
         "何が足りないかを面別に把握したい → 不足がみられる面とテーマを表示（優先順位・期間はアプリが決めない）",
-        "経営層への報告資料を作りたい → エグゼクティブサマリから始まるレポートのプレビューと PDF / HTML / Markdown 保存（Pro。Markdown は簡易のテキスト出力で、見出しは日本語）",
+        "経営層への報告資料を作りたい → エグゼクティブサマリから始まるレポートのプレビューと PDF / HTML / Markdown 保存（Pro。Markdown は簡易のテキスト出力で、診断概要などの見出しは日本語、エグゼクティブサマリーの節は表示言語に従う）",
         "サプライチェーンセキュリティ対策評価制度（SCS）の準備状況を確認したい → ★3 / ★4 の評価基準の残り件数・不足・未確認・次に対応する評価基準を表示（Pro。登録の可否は判定しない）",
         "中小企業が IPA のガイドラインで自己点検したい → IPA 中小企業向けガイドラインを参考にした確認（Free でも表示）",
         "経産省のガイドラインや NIST CSF 2.0 でも確認したい → 参考確認（Pro）",
@@ -209,7 +209,7 @@
       </div>
       <div class="feature-card">
         <h3>経営層や上長への報告資料を作るのに困るときは？ <span class="pro-badge">Pro</span></h3>
-        <p>Pro 版では、診断結果をレポートとしてプレビューし、PDF・HTML・Markdown で保存できます。レポートには、対策状況に不足がある項目、CSF カバレッジ（NIST CSF 2.0 の機能ごとに、対策の対応状況を整理したもの）、主要リスク、想定攻撃シナリオの節が含まれ、説明・報告・改善検討の資料に使えます。章立てを備えたレポートは PDF と HTML です。Markdown は簡易のテキスト出力で、章の構成が異なり、診断概要・サマリなどの見出しと表の列名は日本語で固定されています。</p>
+        <p>Pro 版では、診断結果をレポートとしてプレビューし、PDF・HTML・Markdown で保存できます。レポートには、対策状況に不足がある項目、CSF カバレッジ（NIST CSF 2.0 の機能ごとに、対策の対応状況を整理したもの）、主要リスク、想定攻撃シナリオの節が含まれ、説明・報告・改善検討の資料に使えます。章立てを備えたレポートは PDF と HTML です。Markdown は簡易のテキスト出力で、章の構成が異なり、診断概要・サマリなどの見出しと表の列名は日本語で出力されます。エグゼクティブサマリーの節は表示言語に従います。</p>
       </div>
       <div class="feature-card">
         <h3>中小企業が IPA のガイドラインで自己点検したいときは？</h3>
@@ -250,7 +250,7 @@
       </div>
       <div class="feature-card">
         <h3>レポート・資料出力 <span class="pro-badge">Pro</span></h3>
-        <p>診断結果を PDF / HTML レポートとして出力。説明・報告・改善検討の資料として活用できます。Markdown 保存は簡易のテキスト出力で、見出しは日本語です。</p>
+        <p>診断結果を PDF / HTML レポートとして出力。説明・報告・改善検討の資料として活用できます。Markdown 保存は簡易のテキスト出力で、診断概要などの見出しは日本語、エグゼクティブサマリーの節は表示言語に従います。</p>
       </div>
       <div class="feature-card">
         <h3>SCS 評価制度の準備状況の確認 <span class="pro-badge">Pro</span></h3>
@@ -262,7 +262,7 @@
       </div>
       <div class="feature-card">
         <h3>日本語 / 英語切替</h3>
-        <p>診断画面と、PDF・HTML のレポートは、日本語と英語に対応しています。Markdown 保存は日本語の見出しで出力されます。</p>
+        <p>診断画面と、PDF・HTML のレポートは、日本語と英語に対応しています。Markdown 保存では、診断概要などの見出しが日本語で出力され、エグゼクティブサマリーの節は表示言語に従います。</p>
       </div>
     </div>
 
@@ -296,7 +296,7 @@
         <tr><td>高度な分析（成熟度詳細・原因と対策）</td><td>—</td><td>✓</td></tr>
         <tr><td>攻撃ビューの内容（経路図・戦術チップ・技術カードの状況別の群・用語欄）</td><td>—</td><td>✓</td></tr>
         <tr><td>PDF レポート出力</td><td>—</td><td>✓</td></tr>
-        <tr><td>HTML レポート出力 / Markdown 保存（Markdown は簡易のテキスト出力。見出しは日本語）</td><td>—</td><td>✓</td></tr>
+        <tr><td>HTML レポート出力 / Markdown 保存（Markdown は簡易のテキスト出力。診断概要などの見出しは日本語、エグゼクティブサマリーの節は表示言語に従う）</td><td>—</td><td>✓</td></tr>
         <tr><td>日本語 / 英語切替</td><td>✓</td><td>✓</td></tr>
         <tr><td>セッション保存数</td><td>1件</td><td>3件</td></tr>
       </tbody>
@@ -341,7 +341,7 @@
 
     <div class="feature-card" style="margin:16px 0;">
       <h3>経営層への説明資料には、何が載りますか？ <span class="pro-badge">Pro</span></h3>
-      <p>Pro で保存する PDF・HTML のレポートは、次の順に章が並びます。Markdown 保存は簡易のテキスト出力で、章の構成がこの一覧とは異なり、診断概要・サマリなどの見出しと表の列名は日本語で固定されています。</p>
+      <p>Pro で保存する PDF・HTML のレポートは、次の順に章が並びます。Markdown 保存は簡易のテキスト出力で、章の構成がこの一覧とは異なり、診断概要・サマリなどの見出しと表の列名は日本語で出力されます。エグゼクティブサマリーの節は表示言語に従います。</p>
       <ul>
         <li>表紙と前書き（本レポートの位置づけ）</li>
         <li>エグゼクティブサマリ（総合リスク・主要リスク・対策状況に不足がある項目）</li>
@@ -413,7 +413,7 @@
       </div>
       <div class="feature-card">
         <h3>How do I create a security report for management? <span class="pro-badge">Pro</span></h3>
-        <p>In Pro, you can preview the assessment as a report and save it as PDF, HTML, or Markdown. The report includes sections for items with gaps in control status, CSF coverage (the control status for each NIST CSF 2.0 function), key risks, and attack scenarios, so you can use it for communication and planning. The chaptered report is the PDF and HTML output. Markdown is a simple text output with a different structure, and its headings and table column names are fixed in Japanese.</p>
+        <p>In Pro, you can preview the assessment as a report and save it as PDF, HTML, or Markdown. The report includes sections for items with gaps in control status, CSF coverage (the control status for each NIST CSF 2.0 function), key risks, and attack scenarios, so you can use it for communication and planning. The chaptered report is the PDF and HTML output. Markdown is a simple text output with a different structure. Its headings (such as the assessment overview and summary) and table column names are output in Japanese. The Executive Summary section follows the display language.</p>
       </div>
       <div class="feature-card">
         <h3>How can a small business self-check against the IPA guideline?</h3>
@@ -454,7 +454,7 @@
       </div>
       <div class="feature-card">
         <h3>Report &amp; Document Export <span class="pro-badge">Pro</span></h3>
-        <p>Export assessment results as PDF / HTML reports for management communication and improvement planning. Markdown saving is a simple text output with Japanese headings.</p>
+        <p>Export assessment results as PDF / HTML reports for management communication and improvement planning. Markdown saving is a simple text output. Its headings, such as the assessment overview, are in Japanese, and the Executive Summary section follows the display language.</p>
       </div>
       <div class="feature-card">
         <h3>SCS Readiness Check <span class="pro-badge">Pro</span></h3>
@@ -466,7 +466,7 @@
       </div>
       <div class="feature-card">
         <h3>Japanese / English</h3>
-        <p>The assessment screens and the PDF and HTML reports support Japanese and English. Markdown saving outputs Japanese headings.</p>
+        <p>The assessment screens and the PDF and HTML reports support Japanese and English. In Markdown saving, headings such as the assessment overview are output in Japanese, and the Executive Summary section follows the display language.</p>
       </div>
     </div>
 
@@ -500,7 +500,7 @@
         <tr><td>Advanced Analysis (maturity detail, cause &amp; action)</td><td>—</td><td>✓</td></tr>
         <tr><td>Attack View contents (attack flow, tactic chips, status groups of technique cards, terms)</td><td>—</td><td>✓</td></tr>
         <tr><td>PDF Report Export</td><td>—</td><td>✓</td></tr>
-        <tr><td>HTML Report Export / Markdown Saving (Markdown is a simple text output with Japanese headings)</td><td>—</td><td>✓</td></tr>
+        <tr><td>HTML Report Export / Markdown Saving (Markdown is a simple text output; headings such as the assessment overview are in Japanese, and the Executive Summary section follows the display language)</td><td>—</td><td>✓</td></tr>
         <tr><td>Japanese / English</td><td>✓</td><td>✓</td></tr>
         <tr><td>Saved Sessions</td><td>1</td><td>3</td></tr>
       </tbody>
@@ -545,7 +545,7 @@
 
     <div class="feature-card" style="margin:16px 0;">
       <h3>What goes into a report for management? <span class="pro-badge">Pro</span></h3>
-      <p>A PDF or HTML report saved in Pro contains the following chapters, in this order. Markdown saving is a simple text output with a different structure, and its headings (such as the assessment overview and summary) and table column names are fixed in Japanese.</p>
+      <p>A PDF or HTML report saved in Pro contains the following chapters, in this order. Markdown saving is a simple text output with a different structure, and its headings (such as the assessment overview and summary) and table column names are output in Japanese. The Executive Summary section follows the display language.</p>
       <ul>
         <li>Cover and preface (what this report covers)</li>
         <li>Executive Summary (overall risk, key risks, and items with gaps in control status)</li>
