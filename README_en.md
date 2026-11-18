@@ -8,7 +8,7 @@ An offline security assessment tool that organizes security posture by attack sc
 
 ## What SecureNavigator Does
 
-SecureNavigator analyzes an organization's security posture from the attacker's perspective using MITRE ATT&CK-based attack scenarios. It reviews defenses against six representative attack patterns, identifies defensive gaps, and maps findings to IPA SME Guidelines (Japan), METI Cybersecurity Management Guidelines (Japan), and NIST CSF 2.0 as reference material. The tool organizes the layers and themes with low implementation and generates exportable reports for communication with management and stakeholders. All processing runs entirely offline — no data ever leaves the user's device.
+SecureNavigator analyzes an organization's security posture from the attacker's perspective using MITRE ATT&CK-based attack scenarios. It reviews defenses against six representative attack patterns, identifies defensive gaps, and maps findings to IPA SME Guidelines (Japan), METI Cybersecurity Management Guidelines (Japan), and NIST CSF 2.0 as reference material. The tool organizes the layers and themes with low implementation and generates exportable reports for communication with management and stakeholders. All processing runs locally — no assessment data ever leaves the user's device.
 
 ## Who It's For
 
@@ -19,7 +19,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 
 ## Key Features
 
-- **Fully Offline** — All assessment data stays on the local device. No external communication, no telemetry, no cloud dependency.
+- **Assessment data is never sent out** — All assessment data stays on the local device. No telemetry, no cloud dependency. The product communicates only for purchasing or restoring Pro in the Microsoft Store and for the license check at startup.
 - **Attack Scenario Analysis** — Six attack scenarios based on MITRE ATT&CK techniques analyze how attacks progress through an organization's defenses step by step.
 - **Guideline Reference Checks** — IPA SME Guidelines available in Free. METI Cybersecurity Guidelines and NIST CSF 2.0 available in Pro.
 - **Layers and Themes with Gaps** — Themes with gaps and the reasons for each layer with low implementation (policy, technology, detection, response, operations). No time frames or rankings are shown.
@@ -31,7 +31,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 ## v1.3 Updates
 
 - The initial questions now fit on one screen, showing the scope of the assessment (themes, questions, estimated time). "Not sure / undecided" is available.
-- Reworked the question screen: switch between Focus and Fast views, filter by theme chips, see each theme's progress on Home, and each answer is saved automatically.
+- Reworked the question screen: switch between Single-question mode and List mode, filter by theme chips, see each theme's progress on Home, and each answer is saved automatically.
 - Updated how the attack view is presented (left-to-right path diagram, tactic chips, groups by situation).
 - Added explanations for technical terms.
 - Corrected English wording in reports.
@@ -65,7 +65,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 
 ## Privacy & Offline Operation
 
-SecureNavigator operates 100% offline. It does not connect to any external server, does not transmit assessment data, and does not include any telemetry or analytics. Assessment responses, evaluation results, and application settings are stored locally in a SQLite database (secnav.db) and a settings file under `%LocalAppData%\SecureNavigator\`. The default location for saved reports is `Documents\SecureNavigator\Reports`. Network activity occurs only for installation and updates via the Microsoft Store, purchase and restore of Pro, and license verification, which are handled by the OS / Store. When you click a link in the app, a public page of the product site opens in your default browser.
+SecureNavigator processes assessment data offline. It does not transmit assessment data, and does not include any telemetry or analytics. Assessment responses, evaluation results, and application settings are stored locally in a SQLite database (secnav.db) and a settings file under `%LocalAppData%\SecureNavigator\`. The default location for saved reports is `Documents\SecureNavigator\Reports`. Network activity occurs only for installation and updates via the Microsoft Store, purchase and restore of Pro, and license verification, which are handled by the OS / Store. When you click a link in the app, a public page of the product site opens in your default browser.
 
 ## Screenshots
 
@@ -95,7 +95,7 @@ SecureNavigator operates 100% offline. It does not connect to any external serve
 
 - Windows 10 Version 2004 or later / Windows 11
 - WebView2 Runtime (required for PDF export)
-- Internet: Not required (fully offline operation)
+- Internet: Not required for assessments (needed for installing or updating through the Microsoft Store, purchasing or restoring Pro, and the license check at startup)
 
 ## License
 

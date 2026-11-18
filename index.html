@@ -118,7 +118,7 @@
         "中小企業が IPA のガイドラインで自己点検したい → IPA 中小企業向けガイドラインを参考にした確認（Free でも表示）",
         "経産省のガイドラインや NIST CSF 2.0 でも確認したい → 参考確認（Pro）",
         "診断データを社外に出せない環境で使いたい → 診断データを外部に送信しない（例外は Store での購入・復元と起動時のライセンス確認）",
-        "時間がなく質問が多くて進まない → 開始時の質問は約 2 分、回答に合わせた範囲の目安を表示、高速表示、1 問ごとの自動保存",
+        "時間がなく質問が多くて進まない → 開始時の質問は約 2 分、回答に合わせた範囲の目安を表示、リスト型の表示、1 問ごとの自動保存",
         "改善後にもう一度確かめたい → 診断をコピーして再評価し、結果を見比べる（自動の比較機能は無い）"
       ],
       "url": "https://secure-navigator.sumikkolab.com/",
@@ -156,11 +156,11 @@
   </div>
   <div class="section-en">
     <p class="tagline">Organize security posture by attack scenarios and guidelines, then convert to reports</p>
-    <p class="sub-tagline">Analyze defensive gaps against likely attacks, organize the layers and themes with low implementation, and generate reports for communication and planning. Completely offline.</p>
+    <p class="sub-tagline">Analyze defensive gaps against likely attacks, organize the layers and themes with low implementation, and generate reports for communication and planning. Assessment data stays on your device.</p>
     <p class="updated">Last updated: 2026-11-17</p>
   </div>
   <div>
-    <span class="badge">100% Offline</span>
+    <span class="badge">Offline Assessment</span>
     <span class="badge">MITRE ATT&CK</span>
     <span class="badge">NIST CSF 2.0</span>
     <span class="badge">日本語 / English</span>
@@ -220,11 +220,11 @@
       </div>
       <div class="feature-card">
         <h3>診断データを社外に出せない環境で使いたいときは？</h3>
-        <p>SecureNavigator は完全オフラインで動作し、診断データを外部に送信せず、利用者のローカル環境にのみ保存します。動作にインターネット接続は不要です（Windows 10 Version 2004 以降 / Windows 11）。</p>
+        <p>SecureNavigator は診断データを外部に送信せず、利用者のローカル環境にのみ保存します。診断データの処理にインターネット接続は不要です（Windows 10 Version 2004 以降 / Windows 11）。接続が必要になるのは、Microsoft Store からのインストール・更新、Pro の購入・復元、起動時のライセンス確認のときです。</p>
       </div>
       <div class="feature-card">
         <h3>時間がなく、質問が多くて進まないときは？</h3>
-        <p>開始時の質問は約 2 分で答えられ、全問に答える必要はありません。回答に合わせて、診断の範囲（テーマ数・問数・目安の時間）が画面に表示されます。答えずに始めると「かんたん」の範囲になります。質問画面は、1 問ずつ答える「集中」と、質問を行で並べて続けて答える「高速」を切り替えられ、回答は 1 問ごとに自動で保存されます。</p>
+        <p>開始時の質問は約 2 分で答えられ、全問に答える必要はありません。回答に合わせて、診断の範囲（テーマ数・問数・目安の時間）が画面に表示されます。答えずに始めると「かんたん」の範囲になります。質問画面は、1 問ずつ答える「個別型」と、質問を行で並べて続けて答える「リスト型」を切り替えられ、回答は 1 問ごとに自動で保存されます。</p>
       </div>
     </div>
     <p class="compare-note">※ Free 版でも全問の診断と画面での結果確認ができます。PDF などのレポート出力、経産省ガイドライン・NIST CSF 2.0 の参考確認、ATT&CK テクニック詳細は Pro の機能で、Free の保存は 1 件です。ガイドラインとの照合は参考確認であり、認証・適合・準拠の判定はしません。</p>
@@ -261,7 +261,7 @@
       <h3>v1.3 更新内容</h3>
       <ul>
         <li>開始時の質問を 1 画面にまとめました。回答に合わせて、診断の範囲（テーマ数・問数・目安の時間）を確認でき、「わからない・未定」も選べます。</li>
-        <li>質問画面を見直しました。「集中」と「高速」を切り替えられ、高速ではテーマのチップで絞り込みながらキーボードで続けて回答できます。ホームで各テーマの進捗を確認でき、回答は 1 問ごとに自動で保存されます。</li>
+        <li>質問画面を見直しました。「個別型」と「リスト型」を切り替えられ、リスト型ではテーマのチップで絞り込みながらキーボードで続けて回答できます。ホームで各テーマの進捗を確認でき、回答は 1 問ごとに自動で保存されます。</li>
         <li>攻撃面の見せ方を更新しました（左から右の経路図・戦術チップ・状況別の群）。</li>
         <li>専門用語の補足を追加しました。</li>
         <li>レポートの英語表記を修正しました。</li>
@@ -287,6 +287,7 @@
         <tr><td>ATT&CK テクニック詳細分析</td><td>—</td><td>✓</td></tr>
         <tr><td>PDF レポート出力</td><td>—</td><td>✓</td></tr>
         <tr><td>HTML / Markdown レポート出力</td><td>—</td><td>✓</td></tr>
+        <tr><td>Excel ヒアリング出力</td><td>—</td><td>✓</td></tr>
         <tr><td>日本語 / 英語切替</td><td>✓</td><td>✓</td></tr>
         <tr><td>セッション保存数</td><td>1件</td><td>3件</td></tr>
       </tbody>
@@ -371,7 +372,7 @@
     <ul>
       <li>Windows 10 Version 2004 以降 / Windows 11</li>
       <li>WebView2 Runtime（PDF 出力に必要）</li>
-      <li>インターネット接続: 不要（完全オフライン動作）</li>
+      <li>インターネット接続: 診断データの処理には不要（Microsoft Store からのインストール・更新、Pro の購入・復元、起動時のライセンス確認では必要）</li>
     </ul>
 
   </div>
@@ -413,11 +414,11 @@
       </div>
       <div class="feature-card">
         <h3>What if our assessment data cannot leave our environment?</h3>
-        <p>SecureNavigator runs fully offline. It never sends your assessment data out and stores it only on your local device. No internet connection is needed to use it (Windows 10 Version 2004 or later / Windows 11).</p>
+        <p>SecureNavigator never sends your assessment data out and stores it only on your local device. Assessments run without an internet connection (Windows 10 Version 2004 or later / Windows 11). A connection is needed only for installing or updating through the Microsoft Store, purchasing or restoring Pro, and the license check at startup.</p>
       </div>
       <div class="feature-card">
         <h3>What if there are too many questions and not enough time?</h3>
-        <p>The opening questions take about 2 minutes, and you do not have to answer all of them. As you answer, the screen shows the scope of the assessment (themes, questions, estimated time). If you start without answering, the assessment uses the Quick scope. The question screen lets you switch between Focus, one question at a time, and Fast, with questions in rows for continuous answering. Each answer is saved automatically.</p>
+        <p>The opening questions take about 2 minutes, and you do not have to answer all of them. As you answer, the screen shows the scope of the assessment (themes, questions, estimated time). If you start without answering, the assessment uses the Quick scope. The question screen lets you switch between Single-question mode, one question at a time, and List mode, with questions in rows for continuous answering. Each answer is saved automatically.</p>
       </div>
     </div>
     <p class="compare-note">* The Free edition lets you complete the full assessment and view results on screen. PDF and other report export, METI guidelines / NIST CSF 2.0 reference checks, and ATT&CK technique details are Pro features, and Free saves 1 session. Guideline checks are reference checks; SecureNavigator does not determine certification, conformity, or compliance.</p>
@@ -454,7 +455,7 @@
       <h3>v1.3 Updates</h3>
       <ul>
         <li>The initial questions now fit on one screen. As you answer, you can see the scope of the assessment (themes, questions, estimated time), and "Not sure / undecided" is available.</li>
-        <li>Reworked the question screen: switch between Focus and Fast views; in Fast view, filter by theme chips while you answer with the keyboard. The Home screen shows each theme's progress, and each answer is saved automatically.</li>
+        <li>Reworked the question screen: switch between Single-question mode and List mode; in List mode, filter by theme chips while you answer with the keyboard. The Home screen shows each theme's progress, and each answer is saved automatically.</li>
         <li>Updated how the attack view is presented (left-to-right path diagram, tactic chips, groups by situation).</li>
         <li>Added explanations for technical terms.</li>
         <li>Corrected English wording in reports.</li>
@@ -480,6 +481,7 @@
         <tr><td>ATT&CK Technique Detail Analysis</td><td>—</td><td>✓</td></tr>
         <tr><td>PDF Report Export</td><td>—</td><td>✓</td></tr>
         <tr><td>HTML / Markdown Report Export</td><td>—</td><td>✓</td></tr>
+        <tr><td>Export Excel hearing sheet</td><td>—</td><td>✓</td></tr>
         <tr><td>Japanese / English</td><td>✓</td><td>✓</td></tr>
         <tr><td>Saved Sessions</td><td>1</td><td>3</td></tr>
       </tbody>
@@ -564,7 +566,7 @@
     <ul>
       <li>Windows 10 Version 2004 or later / Windows 11</li>
       <li>WebView2 Runtime (required for PDF export)</li>
-      <li>Internet: Not required (fully offline operation)</li>
+      <li>Internet: Not required for assessments (needed for installing or updating through the Microsoft Store, purchasing or restoring Pro, and the license check at startup)</li>
     </ul>
 
   </div>
@@ -616,7 +618,7 @@ var pageText = {
   ja: { title: document.title, description: descMeta.content },
   en: {
     title: 'Offline Security Self-Assessment for Small Business: Find Gaps Against Attack Scenarios | SecureNavigator',
-    description: 'SecureNavigator helps small business administrators self-check their security controls without specialist knowledge and see where they are weak against attack scenarios based on MITRE ATT&CK. It organizes the layers and themes with low implementation with reference to the IPA guidelines for small and medium-sized enterprises (Japan), supports reports for management (PDF export is Pro), and runs fully offline on Windows 10/11 without sending assessment data out.'
+    description: 'SecureNavigator helps small business administrators self-check their security controls without specialist knowledge and see where they are weak against attack scenarios based on MITRE ATT&CK. It organizes the layers and themes with low implementation with reference to the IPA guidelines for small and medium-sized enterprises (Japan), supports reports for management (PDF export is Pro), and runs on Windows 10/11 without sending assessment data out.'
   }
 };
 function switchLang(lang) {
