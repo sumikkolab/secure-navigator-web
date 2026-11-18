@@ -53,7 +53,6 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 | ATT&CK technique detail analysis | — | ✓ |
 | PDF report export | — | ✓ |
 | HTML / Markdown report export | — | ✓ |
-| Export Excel hearing sheet | — | ✓ |
 | Japanese / English | ✓ | ✓ |
 | Saved sessions | 1 | 3 |
 
@@ -66,7 +65,7 @@ SecureNavigator analyzes an organization's security posture from the attacker's 
 
 ## Privacy & Offline Operation
 
-SecureNavigator processes assessment data offline. It does not transmit assessment data, and does not include any telemetry or analytics. Assessment responses, evaluation results, and application settings are stored locally in a SQLite database (secnav.db) and a settings file under `%LocalAppData%\SecureNavigator\`. The default location for saved reports is `Documents\SecureNavigator\Reports`. Network activity occurs only for installation and updates via the Microsoft Store, purchase and restore of Pro, and license verification, which are handled by the OS / Store. When you click a link in the app, a public page of the product site opens in your default browser.
+SecureNavigator processes assessment data offline. It does not transmit assessment data, and does not include any telemetry or analytics. Assessment responses, evaluation results, and application settings are stored locally in a SQLite database (secnav.db) and a settings file under `%LocalAppData%\SecureNavigator\`. The default location for saved reports is `Documents\SecureNavigator\Reports`. Network activity occurs only for installation and updates via the Microsoft Store, purchase and restore of Pro, and license verification, which are handled by the OS / Store. Only when you select a button or link on screen, a public page of the product site, manual, support, or privacy policy opens in your default browser. When you select "Redeem" for a promo code, the Microsoft redemption page opens in your default browser.
 
 ## Screenshots
 
