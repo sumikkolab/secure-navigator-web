@@ -8,7 +8,7 @@ An offline security assessment tool that organizes security posture by attack sc
 
 ## What SecureNavigator Does
 
-SecureNavigator analyzes an organization's security posture from the attacker's perspective using MITRE ATT&CK-based attack scenarios. It reviews defenses against up to six representative attack patterns, identifies defensive gaps, and maps findings to IPA SME Guidelines (Japan), METI Cybersecurity Management Guidelines (Japan), and NIST CSF 2.0 as reference material. The tool organizes the layers and themes with low implementation and generates exportable reports for communication with management and stakeholders. All processing runs locally — no assessment data ever leaves the user's device.
+SecureNavigator analyzes an organization's security posture from the attacker's perspective using MITRE ATT&CK-based attack scenarios. It reviews defenses against up to six representative attack patterns, identifies defensive gaps, and maps findings to IPA SME Guidelines (Japan), METI Cybersecurity Guidelines (Japan), and NIST CSF 2.0 as reference material. The tool organizes the layers and themes with low implementation and generates exportable reports for communication with management and stakeholders. All processing runs locally — no assessment data ever leaves the user's device.
 
 ## Who It's For
 
