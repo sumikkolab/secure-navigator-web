@@ -1,0 +1,25 @@
+# SecureNavigator
+
+> 専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したい中小企業の管理者向けの、Sumikko Lab の Windows 向けオフライン評価ツールです。想定される攻撃に対する弱点と、実施が低い面・テーマを整理します。
+> An offline assessment tool for Windows by Sumikko Lab for small business administrators who want to self-check security gaps without specialist knowledge and explain them to management. It organizes weaknesses against likely attacks, and the layers and themes with low implementation.
+
+## 概要 / Overview
+
+- 発行元 / Publisher: Sumikko Lab
+- できること / Features: 質問への回答にもとづく弱点マップ、最大 6 つの攻撃シナリオの分析、不足がみられる面とテーマの表示、IPA 中小企業向けガイドラインを参考にした確認 / A weakness map based on your answers, analysis of up to 6 attack scenarios, layers and themes with gaps, and a reference check using the IPA guidelines for small and medium-sized enterprises (Japan)
+- Pro の機能 / Pro features: 攻撃ビューの経路図、レポートの PDF・HTML・Markdown 保存、経産省ガイドラインと NIST CSF 2.0 の参考確認、SCS 評価制度の準備状況の確認 / Attack path diagram, report saving as PDF, HTML, or Markdown, reference checks using the METI guidelines (Japan) and NIST CSF 2.0, and the SCS rating scheme readiness check
+- プラン / Plans: Free でも全問の診断と画面での結果確認が可能。Pro は Microsoft Store のアドオン(アプリ内購入) / Free covers the full assessment and on-screen results. Pro is a Microsoft Store add-on (in-app purchase)
+- 判定の範囲 / Scope: ガイドラインとの照合は参考確認で、認証・適合・準拠の判定はしない / Guideline checks are for reference only and do not determine certification, conformity, or compliance
+- データと接続 / Data and network: 診断データは外部に送信せず、利用者の端末に保存。診断データの処理にインターネット接続は不要(Microsoft Store からのインストール・更新、Pro の購入・復元、起動時のライセンス確認では必要) / Assessment data is not sent out and is stored on your device. Assessments need no internet connection (a connection is needed for installing or updating through the Microsoft Store, purchasing or restoring Pro, and the license check at startup)
+- 動作環境 / Requirements: Windows 10 バージョン 2004 以降、Windows 11。PDF 出力には WebView2 Runtime が必要 / Windows 10 version 2004 or later, Windows 11. WebView2 Runtime is required for PDF export
+- 言語 / Languages: 日本語、英語 / Japanese, English
+- 利用の制限 / Use restriction: Free・Proとも、自社以外への評価・助言・診断・コンサルティングなどの商用利用は禁止 / In both Free and Pro, commercial use for parties other than your own organization, such as evaluation, advisory, assessment, or consulting services, is prohibited
+
+## リンク / Links
+
+- [トップ / Home](https://secure-navigator.sumikkolab.com/)
+- [ユーザー マニュアル / User manual](https://secure-navigator.sumikkolab.com/manual/)
+- [サポート / Support](https://secure-navigator.sumikkolab.com/support.html)
+- [利用規約 / Terms of use](https://secure-navigator.sumikkolab.com/terms-of-use.html)
+- [プライバシー ポリシー / Privacy policy](https://secure-navigator.sumikkolab.com/privacy-policy.html)
+- [Microsoft Store](https://apps.microsoft.com/detail/9N7MGPLZW5V4)
