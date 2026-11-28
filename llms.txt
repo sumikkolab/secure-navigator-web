@@ -1,7 +1,7 @@
 # SecureNavigator
 
-> 専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したい中小企業の管理者向けの、Sumikko Lab の Windows 向けオフライン評価ツールです。想定される攻撃に対する弱点と、実施が低い面・テーマを整理します。
-> An offline assessment tool for Windows by Sumikko Lab for small business administrators who want to self-check security gaps without specialist knowledge and explain them to management. It organizes weaknesses against likely attacks, and the layers and themes with low implementation.
+> 専門知識がなくても自社のセキュリティ対策の抜けを自己点検し、経営層へ説明したい中小企業の管理者向けの、Sumikko Lab の Windows 向けオフライン評価ツールです。想定される攻撃に対する弱点と、対策の実施が不十分な面・テーマを整理します。
+> An offline assessment tool for Windows by Sumikko Lab for small business administrators who want to self-check security gaps without specialist knowledge and explain them to management. It organizes weaknesses against likely attacks, and the layers and themes where few measures are in place.
 
 ## 概要 / Overview
 
